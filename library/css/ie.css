@@ -203,6 +203,9 @@ NAVIGATION STYLES
   .nav li {
     border-bottom: 0; }
 
+.mobile-hide {
+  display: inline-block; }
+
 /* .menu is clearfixed inside mixins.scss */
 .menu {
   /* end .menu ul */ }
@@ -213,15 +216,41 @@ NAVIGATION STYLES
     .menu ul li {
       text-align: left;
       /*
-				plan your menus and drop-downs wisely.
-				*/ }
+			plan your menus and drop-downs wisely.
+			*/ }
       .menu ul li a {
         /*
-					you can use hover styles here even though this size
-					has the possibility of being a mobile device.
-					*/ }
+				you can use hover styles here even though this size
+				has the possibility of being a mobile device.
+				*/ }
 
 /* end .menu */
+#searchform {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  #searchform input[type="search"] {
+    margin-bottom: 0;
+    border-radius: 20px 0 0 20px;
+    padding: 0 1em;
+    height: 0;
+    background-color: #3BD0ED;
+    border: 0;
+    height: 30px;
+    color: #fff; }
+    #searchform input[type="search"]:focus {
+      background-color: #fff;
+      color: gray; }
+  #searchform #searchsubmit {
+    border: 0;
+    background: transparent;
+    position: relative;
+    background-color: #3BD0ED;
+    height: 30px;
+    border-radius: 0 20px 20px 0;
+    padding-right: 1em;
+    color: #fff; }
+
 /*********************
 POSTS & CONTENT STYLES
 *********************/
@@ -289,7 +318,8 @@ GENERAL STYLES
     text-shadow: 0px 0px 0px #084854;
     margin-top: auto; }
   .hero--hero-text {
-    font-size: 3.5rem; }
+    font-size: 5.5rem;
+    line-height: .8; }
   .hero--line-two {
     font-size: 3.5rem; }
   .hero--logo-bar {
@@ -366,10 +396,7 @@ NAVIGATION STYLES
 			*/ }
       .nav li a:hover, .nav li a:focus {
         text-decoration: none;
-        color: #fff;
-        text-shadow: 1px 0px 4px rgba(8, 72, 84, 0.7); }
-      .nav li a:active {
-        text-shadow: 0px 0px 2px #084854; }
+        color: #fff; }
     .nav li ul.sub-menu,
     .nav li ul.children {
       margin-top: 0;
@@ -425,17 +452,6 @@ SIDEBARS & ASIDES
       margin-top: 0.75em;
       padding-left: 1em; }
 
-/* links widget */
-/* meta widget */
-/* pages widget */
-/* recent-posts widget */
-/* archives widget */
-/* tag-cloud widget */
-/* calendar widget */
-/* category widget */
-/* recent-comments widget */
-/* search widget */
-/* text widget */
 /*********************
 FOOTER STYLES
 *********************/

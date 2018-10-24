@@ -60,53 +60,87 @@ NAVIGATION STYLES
 	}
 }
 
+.mobile-hide {
+	display: inline-block;
+}
 
-	/* .menu is clearfixed inside mixins.scss */
-	.menu {
-		ul {
-			li {
-				text-align: left;
+/* .menu is clearfixed inside mixins.scss */
+.menu {
+	ul {
+		li {
+			text-align: left;
 
-				a {
-
-					/*
-					you can use hover styles here even though this size
-					has the possibility of being a mobile device.
-					*/
-					&:hover, &:focus {
-
-					}
-				}
-
-				&:first-child {}
-				&:last-child {}
+			a {
 
 				/*
-				plan your menus and drop-downs wisely.
+				you can use hover styles here even though this size
+				has the possibility of being a mobile device.
 				*/
-				ul.sub-menu,
-				ul.children {
-					li {
-						a {
-							&:hover,
-							&:focus {}
-							&:link {}
-						}
-						&:first-child {}
-						&:last-child {}
-					}
+				&:hover, &:focus {
+
 				}
-			} /* end .menu ul li */
+			}
 
-			/* highlight current page */
-			li.current-menu-item,
-			li.current_page_item,
-			li.current_page_ancestor {
-				a {}
-			}  /* end current highlighters */
-		} /* end .menu ul */
-	} /* end .menu */
+			&:first-child {}
+			&:last-child {}
 
+			/*
+			plan your menus and drop-downs wisely.
+			*/
+			ul.sub-menu,
+			ul.children {
+				li {
+					a {
+						&:hover,
+						&:focus {}
+						&:link {}
+					}
+					&:first-child {}
+					&:last-child {}
+				}
+			}
+		} /* end .menu ul li */
+
+		/* highlight current page */
+		li.current-menu-item,
+		li.current_page_item,
+		li.current_page_ancestor {
+			a {}
+		}  /* end current highlighters */
+	} /* end .menu ul */
+} /* end .menu */
+
+
+#searchform {
+	display: flex;
+
+	input[type="search"] {
+		margin-bottom: 0;
+		border-radius: 20px 0 0 20px;
+		padding: 0 1em;
+		height: 0;
+		background-color: $primary;
+		border:0;
+		height: 30px;
+		color: $white;
+
+		&:focus {
+			background-color: $white;
+			color: gray;
+		}
+	}
+
+	#searchsubmit {
+		border:0;
+		background: transparent;
+		position: relative;
+		background-color: $primary;
+		height: 30px;
+		border-radius: 0 20px 20px 0;
+		padding-right: 1em;
+		color: $white;
+	}
+}
 /*********************
 POSTS & CONTENT STYLES
 *********************/

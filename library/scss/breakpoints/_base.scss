@@ -15,7 +15,6 @@ and will be used across all viewports.
 GENERAL STYLES
 *********************/
 
-
 body {
 	font-family: $body-text;
 	font-size: 100%;
@@ -59,12 +58,14 @@ img {
 		flex-wrap: wrap;
 		justify-content: center;
 
-
-
 		li {
 			border-bottom: 0px;
 		}
 	}
+}
+
+.mobile-hide {
+	display: none;
 }
 
 
@@ -274,10 +275,6 @@ ul[id^="menu-"] {
 	//justify-content: space-evenly;
 }
 
-.menu-right {
-	order: 3;
-}
-
 #mobile-nav {
 	text-align: center;
 	margin-bottom: 1em;
@@ -286,36 +283,14 @@ ul[id^="menu-"] {
 	position: relative;
 	z-index: 99;
 	order: 4;
-	color: $white;
-	text-transform: uppercase;
+	color: $primary;
 	font-family: $sans-serif;
 	font-weight: 500;
 
 	&.show {
 		margin-top: 0em;
 		padding: .5em;
-
-		/*&:after {
-			font-family: 'Font Awesome 5 Free';
-			content: "\f106";
-			text-align: center;
-			width: 100%;
-			display: inline;
-
-
-		}*/
 	}
-
-	/*&:after {
-		font-family: 'Font Awesome 5 Free';
-		content: "\f107";
-		text-align: center;
-		width: 100%;
-		display: inline;
-
-
-	}*/
-
 }
 
 
@@ -336,8 +311,8 @@ ul[id^="menu-"] {
 	}
 
 	li {
-	border-bottom: 1px solid white;
-	text-align: center;
+		border-bottom: 1px solid white;
+		text-align: center;
 
 		a {
 			display: block;
@@ -348,16 +323,8 @@ ul[id^="menu-"] {
 			font-weight: 500;
 			letter-spacing: .02em;
 			transition: all .5sec;
-			//text-shadow: 1px 1px .5px #269eb9;
 
-			/*
-			remember this is for mobile ONLY, so there's no need
-			to even declare hover styles here, you can do it in
-			the style.scss file where it's relevant. We want to
-			keep this file as small as possible!
-			*/
 			&:hover, &:focus {
-
 			}
 		}
 
@@ -365,16 +332,8 @@ ul[id^="menu-"] {
 
 		&:last-child {}
 
-		/*
-		so you really have to rethink your dropdowns for mobile.
-		you don't want to have it expand too much because the
-		screen is so small. How you manage your menu should
-		depend on the project. Here's some great info on it:
-		http://www.alistapart.com/articles/organizing-mobile/
-		*/
 		ul.sub-menu,
 		ul.children {
-
 			li {
 
 				a {
@@ -392,7 +351,6 @@ ul[id^="menu-"] {
 				&:last-child {}
 
 			}
-
 		}
 
 	} /* end .menu li */
@@ -401,9 +359,7 @@ ul[id^="menu-"] {
 	li.current-menu-item,
 	li.current_page_item,
 	li.current_page_ancestor {
-
 		a {}
-
 	}  /* end current highlighters */
 
 } /* end .nav */
@@ -429,8 +385,6 @@ $title-lineheight: $title-pad + 1;
 	position: relative;
 	left: $title-pad;
 	padding-left: 0;
-	//box-shadow: $title-pad 0 0 $background-color,
-		//					$title-pad*-1 0 0 $background-color;
 }
 
 .inner-page {
@@ -464,7 +418,6 @@ $title-lineheight: $title-pad + 1;
 		}
 	}
 
-
 	&--background-image {
 		@include hero-height;
 		background-size:cover;
@@ -486,18 +439,23 @@ $title-lineheight: $title-pad + 1;
 	}
 
 	&--content {
-		margin:auto;
 		width: 100%;
-		max-width: 1280px;
+
+		#inner-content {
+			height: 100%;
+		}
 
 		&_articles {
 			width: 100%;
-			background-color: rgba($white, 0.8);
+			background: linear-gradient(to bottom, rgba($gradient-1, 0.4) 0%, rgba($gradient-1, 0.7) 100%);
 			justify-content: space-around;
-			border-radius: $radius;
 			margin-left: 0;
 			margin-right: 0;
 
+			&-header {
+				 background-color:rgba(245,245,255,0.9);
+				 margin-top:auto;
+			}
 
 			h2 {
 				background-color: rgba($gray, 0.3);
@@ -514,16 +472,21 @@ $title-lineheight: $title-pad + 1;
 	}
 
 	&--text {
-
-
 		p {
-			max-width: 600px;
-			margin:0 auto;
 			margin-bottom: 2em;
-			font-size: 1.3em;
-			color: $white;
+			font-size: 1.1em;
+			color: #fff;
 			font-weight: 500;
-			text-shadow: 1px 1px 3px rgba($black, 0.5), 0px 0px 6px rgba($black, 0.3), 0px 0px 10px rgba($black, 0.2);
+			text-align: left;
+			background-color: $dark-primary;
+			left: -46em;
+			padding-left: 46.5em;
+			width: 74em;
+			position: relative;
+			padding-top: .5em;
+			padding-bottom: .5em;
+			padding-right: .5em;
+			border-right: 4px solid $md-primary;
 		}
 	}
 
@@ -531,9 +494,10 @@ $title-lineheight: $title-pad + 1;
 		font-family: $display;
 		display: block;
 		text-transform: uppercase;
-		text-shadow: 1px 1px 3px $dark-primary;
-		color: $white;
+		color: $dark-primary;
 		font-weight: 700;
+		text-align: left;
+		max-width: 600px;
 	}
 
 	&--line-two {
@@ -548,20 +512,17 @@ $title-lineheight: $title-pad + 1;
 
 	&--logo-bar {
 		display: flex;
-		background: rgba(255,255,255,0.80);
+		background: rgba(255,255,255,0.90);
 		justify-content: center;
 		align-items: center;
 		min-height: 80px;
 		flex-wrap: wrap;
 		margin:0;
-		margin-top: auto;
-
 
 		li {
 			flex-basis: 50px;
 			margin-right: 3em;
 			margin-bottom: -6px;
-
 
 			img {
 				width: 100%;
@@ -602,17 +563,17 @@ $title-lineheight: $title-pad + 1;
 		margin:0 auto;
 		position: relative;
 	}
+
 	&--background-image {
 		background-image: url('../images/mt-sample-background.jpg');
-		//opacity: 0.5;
 		position: absolute;
 		width: 100%;
 		top: 0px;
 		height: 300px;
-		//filter: grayscale(1);
 		border-radius: $radius;
 		background-size: cover;
 	}
+
 	&--title {
 		font-family: $display;
 		font-weight: 700;
@@ -656,7 +617,6 @@ $title-lineheight: $title-pad + 1;
 		.primary-btn {
 			margin: 0 3rem;
 		}
-
 
 		.reveal {
 			background-color: $primary;
@@ -849,6 +809,13 @@ div[class^="content_section--"] {
 	}
 }
 
+.featured-content {
+	&__header {
+		background-color: $dark-primary;
+		width: 100%;
+		display: flex;
+	}
+}
 
 //TESTIMONIAL SLIDER
 #carousel {
@@ -884,7 +851,6 @@ div[class^="content_section--"] {
   text-align: center;
   position: relative;
   padding-bottom: 2em;
-
 }
 
 #testimonial--buttons {
@@ -906,161 +872,134 @@ div[class^="content_section--"] {
   display:inline-block;
   width:35px;
 }
+
 i#prev {
   margin-left: -18px;
 }
+
 i#next {
   float: right;
   margin-right: -17px;
 }
 
 i#prev:hover, i#next:hover {
-color:$dark-primary;
+	color:$dark-primary;
 }
 
 .quoteContainer {
-display: table;
-width: 100%;
+	display: table;
+	width: 100%;
 }
+
 //END TESTIMONIAL
+
 #content {
 	margin-top: 1.5em;
 	width: 100%;
 }
 
-		.hentry {
-			background-color: $white;
-			border-radius: 3px;
-			margin-bottom: 1.5em;
-			border: 0px solid $border-color;
+.hentry {
+	background-color: $white;
+	border-radius: 3px;
+	margin-bottom: 1.5em;
+	border: 0px solid $border-color;
 
-			header {
-				border-bottom: 1px solid $lt-gray;
-				padding: 1.5em;
-				padding-top: 0;
-			}
+	header {
+		border-bottom: 1px solid $lt-gray;
+		padding: 1.5em;
+		padding-top: 0;
+	}
 
-			footer {
-				padding: 1.5em;
-				border-top: 1px solid $lt-gray;
+	footer {
+		padding: 1.5em;
+		border-top: 1px solid $lt-gray;
 
-				p {
-					margin: 0;
-				}
-			}
-
-		} /* end .hentry */
-
-		.single-title,
-		.page-title,
-		.entry-title {
+		p {
 			margin: 0;
 		}
+	}
 
-		.single-title {}
+} /* end .hentry */
 
-		.page-title {
-			text-transform: uppercase;
-			color: $primary;
-			margin-bottom: 0;
-			text-align: center;
-			margin-top: 2em !important;
-		}
+/* post meta */
+.byline {
+	color: $meta-gray;
+	font-style: italic;
+	margin: 0;
 
-		.entry-title {}
+	time {}
+}
 
-		.archive-title {}
+/* entry content */
+.entry-content {
+	padding: 1.5em 1.5em 0;
 
-		/* want to style individual post classes? Booya! */
-		.post-id {}         /* post by id (i.e. post-3) */
-		.post {}            /* general post style */
-		.page {}            /* general article on a page style */
-		.attachment {}      /* general style on an attatchment */
-		.sticky {}          /* sticky post style */
-		.hentry {}          /* hentry class */
-		.category-slug {}   /* style by category (i.e. category-videos) */
-		.tag-slug {}        /* style by tag (i.e. tag-news) */
+	p {
+		margin: 0 0 1.5em;
+	}
 
-		/* post meta */
-		.byline {
+	ul, ol, table, dl {}
+
+	ul, ol {
+
+		li {}
+
+	}
+
+	ul {
+
+		li {}
+
+	}
+
+	ol {
+
+		li {}
+
+	}
+
+	table {
+		width: 100%;
+		border: 1px solid $gray;
+		margin-bottom: 1.5em;
+
+		caption {
+			margin: 0 0 7px;
+			font-size: 0.75em;
 			color: $meta-gray;
-			font-style: italic;
-			margin: 0;
-
-			time {}
+			text-transform: uppercase;
+			letter-spacing: 1px;
 		}
+	}
 
-		/* entry content */
-		.entry-content {
-			padding: 1.5em 1.5em 0;
+	tr {
+		border-bottom: 1px solid $gray;
 
-			p {
-				margin: 0 0 1.5em;
-			}
+		&:nth-child(even) {
+			background-color: $lt-gray;
+		}
+	}
 
+	td {
+		padding: 7px;
+		border-right: 1px solid $gray;
 
-			ul, ol, table, dl {}
+		&:last-child {
+			border-right: 0;
+		}
+	}
 
-			ul, ol {
+	th {
+		background-color: $lt-gray;
+		border-bottom: 1px solid $gray;
+		border-right: 1px solid $gray;
 
-				li {}
+		&:last-child {
+			border-right: 0;
+		}
+	}
 
-			}
-
-			ul {
-
-				li {}
-
-			}
-
-			ol {
-
-				li {}
-
-			}
-
-			table {
-				width: 100%;
-				border: 1px solid $gray;
-				margin-bottom: 1.5em;
-
-				caption {
-					margin: 0 0 7px;
-					font-size: 0.75em;
-					color: $meta-gray;
-					text-transform: uppercase;
-					letter-spacing: 1px;
-				}
-			}
-
-			tr {
-				border-bottom: 1px solid $gray;
-
-				&:nth-child(even) {
-					background-color: $lt-gray;
-				}
-			}
-
-			td {
-				padding: 7px;
-				border-right: 1px solid $gray;
-
-				&:last-child {
-					border-right: 0;
-				}
-			}
-
-			th {
-				background-color: $lt-gray;
-				border-bottom: 1px solid $gray;
-				border-right: 1px solid $gray;
-
-				&:last-child {
-					border-right: 0;
-				}
-			}
-
-			blockquote {
+	blockquote {
 				margin: 0 0 1.5em 0.75em;
 				padding: 0 0 0 0.75em;
 				border-left: 3px solid $primary;
@@ -1071,43 +1010,29 @@ width: 100%;
 
 			}
 
-			dl {}
-
-			dt {}
-
-			dd {
+	dd {
 				margin-left: 0;
 				font-size: 0.9em;
 				color: #787878;
 				margin-bottom: 1.5em;
 			}
 
-			img {
+	img {
 				margin: 0 0 1.5em 0;
 				max-width: 100%;
 				height: auto;
 			}
 
-			/*
-			image alignment on a screen this size may be
-			a bit difficult. It's set to start aligning
-			and floating images at the next breakpoint,
-			but it's up to you. Feel free to change it up.
-			*/
-			.alignleft, img.alignleft {}
-			.alignright, img.alignright {}
-			.aligncenter, img.aligncenter {}
+	.size-auto,
+	.size-full,
+	.size-large,
+	.size-medium,
+	.size-thumbnail {
+		max-width: 100%;
+		height: auto;
+	}
 
-			.size-auto,
-			.size-full,
-			.size-large,
-			.size-medium,
-			.size-thumbnail {
-				max-width: 100%;
-				height: auto;
-			}
-
-			pre {
+	pre {
 				background: $black;
 				color: $lt-gray;
 				font-size: 0.9em;
@@ -1116,9 +1041,9 @@ width: 100%;
 				border-radius: 3px;
 			}
 
-		} /* end .entry-content */
+} /* end .entry-content */
 
-		.wp-caption {
+.wp-caption {
 			max-width: 100%;
 			background: #eee;
 			padding: 5px;
@@ -1139,81 +1064,67 @@ width: 100%;
 		} /* end .wp-caption */
 
 
-		/* image gallery styles */
-		.gallery-columns-2 .gallery-item {
-			max-width: 50%;
-		}
+/* image gallery styles */
+.gallery-columns-2 .gallery-item {
+	max-width: 50%;
+}
 
-		.gallery-columns-3 .gallery-item {
-			max-width: 33.33%;
-		}
+.gallery-columns-3 .gallery-item {
+	max-width: 33.33%;
+}
 
-		.gallery-columns-4 .gallery-item {
-			max-width: 25%;
-		}
+.gallery-columns-4 .gallery-item {
+	max-width: 25%;
+}
 
-		.gallery-columns-5 .gallery-item {
-			max-width: 20%;
-		}
+.gallery-columns-5 .gallery-item {
+	max-width: 20%;
+}
 
-		.gallery-columns-6 .gallery-item {
-			max-width: 16.66%;
-		}
+.gallery-columns-6 .gallery-item {
+	max-width: 16.66%;
+}
 
-		.gallery-columns-7 .gallery-item {
-			max-width: 14.28%;
-		}
+.gallery-columns-7 .gallery-item {
+	max-width: 14.28%;
+}
 
-		.gallery-columns-8 .gallery-item {
-			max-width: 12.5%;
-		}
+.gallery-columns-8 .gallery-item {
+	max-width: 12.5%;
+}
 
-		.gallery-columns-9 .gallery-item {
-			max-width: 11.11%;
-		}
-		.gallery {
-			.gallery-item {
-				display: inline-block;
-		    padding: 1.79104477%;
-		    text-align: center;
-		    vertical-align: top;
-		    width: 100%;
+.gallery-columns-9 .gallery-item {
+	max-width: 11.11%;
+}
 
-				.gallery-icon {
-					img {
-						margin-bottom: 0;
-					}
-				}
+.gallery {
+	.gallery-item {
+		display: inline-block;
+    padding: 1.79104477%;
+    text-align: center;
+    vertical-align: top;
+    width: 100%;
+
+		.gallery-icon {
+			img {
+				margin-bottom: 0;
 			}
-			dl {
+		}
+	}
+} /* end .gallery */
 
-				a {}
+/* gallery caption styles */
+.gallery-caption {}
 
-				img {}
-
-			}
-
-			dt {}
-
-			dd {}
-
-		} /* end .gallery */
-
-		/* gallery caption styles */
-		.gallery-caption {}
-
-		.size-full {}
-		.size-large {}
-		.size-medium {}
-		.size-thumbnail {}
+.size-full {}
+.size-large {}
+.size-medium {}
+.size-thumbnail {}
 
 	// the tag output
 	.tags {
 		margin: 0;
 	}
-
-
-
 /******************************************************************
 PAGE NAVI STYLES
 ******************************************************************/

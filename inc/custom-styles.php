@@ -9,6 +9,16 @@ body.site  {
 
 .header--inner .nav li a, .nf-form-cont .nf-form-title h3 {color:<?php the_field('primary','option');?> !important;}
 
+.hero--content_articles {background: linear-gradient(to bottom, rgba(<?php the_field('primary','option');?>, 0.5) 0%, rgba(<?php the_field('primary_medium','option');?>, 0.7) 100%);}
+
+.hero--hero-text {color:<?php the_field('primary_dark','option');?> !important;}
+
+#mobile-nav {color:<?php the_field('primary','option');?> !important;}
+
+input[type="search"], #searchsubmit {background-color:<?php the_field('primary','option');?> !important;}
+
+input[type="search"]:focus {background-color:white !important;}
+
 .single article .thumbnail img {
   -webkit-box-shadow: 5px 5px <?php the_field('primary','option');?> !important;
           box-shadow: 5px 5px <?php the_field('primary','option');?> !important;
@@ -19,7 +29,7 @@ body.site a:active{color:<?php the_field('primary_medium','option');?>;}
 
 .content_section--testimonials .testimonial--client-name,.content_section--testimonials .testimonial--client-title, .content_section .contact-email .fas, .content_section .contact-address .fas, i#prev:hover, i#next:hover, .article__thumbnail:hover .article__thumbnail--overlay .reveal:before {color:<?php the_field('primary_dark','option');?>;}
 
-body.site a {color:<?php the_field('accent','option');?> !important;}
+body.site a {color:<?php the_field('primary_dark','option');?> !important;}
 
 .highlight {background:<?php the_field('primary','option');?> !important;}
 

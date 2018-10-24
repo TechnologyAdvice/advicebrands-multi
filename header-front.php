@@ -68,7 +68,7 @@
 							</a>
 						<?php endif; ?>
 						<?php wp_reset_postdata(); ?>
-						<div class="col-xs-12 col-sm-10">
+						<div class="col-xs-12 col-sm-7">
 							<nav role="navigation" class="row" itemscope itemtype="http://schema.org/SiteNavigationElement">
 								<?php
 									wp_nav_menu(
@@ -89,6 +89,7 @@
 								?>
 							</nav>
 						</div>
+						<div class="col-xs-0 col-sm-3 mobile-hide"><?php get_search_form(); ?></div>
 						<div id="mobile-nav" class="col-xs-12">
 							Menu <i class="fas fa-bars"></i>
 						</div>

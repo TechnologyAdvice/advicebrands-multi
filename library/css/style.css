@@ -1778,6 +1778,9 @@ img {
   #inner-footer .nav li {
     border-bottom: 0px; }
 
+.mobile-hide {
+  display: none; }
+
 /********************
 WORDPRESS BODY CLASSES
 style a page via class
@@ -1940,11 +1943,6 @@ and more scalable.
 ul[id^="menu-"] {
   width: 100%; }
 
-.menu-right {
-  -webkit-box-ordinal-group: 4;
-      -ms-flex-order: 3;
-          order: 3; }
-
 #mobile-nav {
   text-align: center;
   margin-bottom: 1em;
@@ -1956,31 +1954,12 @@ ul[id^="menu-"] {
   -webkit-box-ordinal-group: 5;
       -ms-flex-order: 4;
           order: 4;
-  color: #fff;
-  text-transform: uppercase;
+  color: #3BD0ED;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 500;
-  /*&:after {
-		font-family: 'Font Awesome 5 Free';
-		content: "\f107";
-		text-align: center;
-		width: 100%;
-		display: inline;
-
-
-	}*/ }
+  font-weight: 500; }
   #mobile-nav.show {
     margin-top: 0em;
-    padding: .5em;
-    /*&:after {
-			font-family: 'Font Awesome 5 Free';
-			content: "\f106";
-			text-align: center;
-			width: 100%;
-			display: inline;
-
-
-		}*/ }
+    padding: .5em; }
 
 .nav {
   border-bottom: 0;
@@ -2005,14 +1984,7 @@ ul[id^="menu-"] {
     height: 100%; }
   .nav li {
     border-bottom: 1px solid white;
-    text-align: center;
-    /*
-		so you really have to rethink your dropdowns for mobile.
-		you don't want to have it expand too much because the
-		screen is so small. How you manage your menu should
-		depend on the project. Here's some great info on it:
-		http://www.alistapart.com/articles/organizing-mobile/
-		*/ }
+    text-align: center; }
     .nav li a {
       display: block;
       color: #fff;
@@ -2022,13 +1994,7 @@ ul[id^="menu-"] {
       font-weight: 500;
       letter-spacing: .02em;
       -webkit-transition: all .5sec;
-      transition: all .5sec;
-      /*
-			remember this is for mobile ONLY, so there's no need
-			to even declare hover styles here, you can do it in
-			the style.scss file where it's relevant. We want to
-			keep this file as small as possible!
-			*/ }
+      transition: all .5sec; }
     .nav li ul.sub-menu li a,
     .nav li ul.children li a {
       padding-left: 30px; }
@@ -2102,17 +2068,20 @@ POSTS & CONTENT STYLES
       .hero--background-image--inner_single {
         height: 100%; }
   .hero--content {
-    margin: auto;
-    width: 100%;
-    max-width: 1280px; }
+    width: 100%; }
+    .hero--content #inner-content {
+      height: 100%; }
     .hero--content_articles {
       width: 100%;
-      background-color: rgba(255, 255, 255, 0.8);
+      background: -webkit-gradient(linear, left top, left bottom, from(rgba(53, 160, 182, 0.4)), to(rgba(53, 160, 182, 0.7)));
+      background: linear-gradient(to bottom, rgba(53, 160, 182, 0.4) 0%, rgba(53, 160, 182, 0.7) 100%);
       -ms-flex-pack: distribute;
           justify-content: space-around;
-      border-radius: 0.5rem;
       margin-left: 0;
       margin-right: 0; }
+      .hero--content_articles-header {
+        background-color: rgba(245, 245, 255, 0.9);
+        margin-top: auto; }
       .hero--content_articles h2 {
         background-color: rgba(172, 192, 196, 0.3);
         margin-top: 0;
@@ -2124,20 +2093,28 @@ POSTS & CONTENT STYLES
         border-top-right-radius: 0.5rem;
         border-bottom: 2px solid; }
   .hero--text p {
-    max-width: 600px;
-    margin: 0 auto;
     margin-bottom: 2em;
-    font-size: 1.3em;
+    font-size: 1.1em;
     color: #fff;
     font-weight: 500;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5), 0px 0px 6px rgba(0, 0, 0, 0.3), 0px 0px 10px rgba(0, 0, 0, 0.2); }
+    text-align: left;
+    background-color: #084854;
+    left: -46em;
+    padding-left: 46.5em;
+    width: 74em;
+    position: relative;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    padding-right: .5em;
+    border-right: 4px solid #12abc9; }
   .hero--hero-text {
     font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
     display: block;
     text-transform: uppercase;
-    text-shadow: 1px 1px 3px #084854;
-    color: #fff;
-    font-weight: 700; }
+    color: #084854;
+    font-weight: 700;
+    text-align: left;
+    max-width: 600px; }
   .hero--line-two {
     font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
     display: block;
@@ -2150,7 +2127,7 @@ POSTS & CONTENT STYLES
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.9);
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -2160,8 +2137,7 @@ POSTS & CONTENT STYLES
     min-height: 80px;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin: 0;
-    margin-top: auto; }
+    margin: 0; }
     .hero--logo-bar li {
       -ms-flex-preferred-size: 50px;
           flex-basis: 50px;
@@ -2383,6 +2359,13 @@ div[class^="content_section--"] {
     bottom: -.2rem;
     position: relative; }
 
+.featured-content__header {
+  background-color: #084854;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
 #carousel {
   width: 100%;
   position: relative;
@@ -2470,27 +2453,6 @@ i#prev:hover, i#next:hover {
       margin: 0; }
 
 /* end .hentry */
-.single-title,
-.page-title,
-.entry-title {
-  margin: 0; }
-
-.page-title {
-  text-transform: uppercase;
-  color: #3BD0ED;
-  margin-bottom: 0;
-  text-align: center;
-  margin-top: 2em !important; }
-
-/* want to style individual post classes? Booya! */
-/* post by id (i.e. post-3) */
-/* general post style */
-/* general article on a page style */
-/* general style on an attatchment */
-/* sticky post style */
-/* hentry class */
-/* style by category (i.e. category-videos) */
-/* style by tag (i.e. tag-news) */
 /* post meta */
 .byline {
   color: #9fa6b4;
@@ -2499,13 +2461,7 @@ i#prev:hover, i#next:hover {
 
 /* entry content */
 .entry-content {
-  padding: 1.5em 1.5em 0;
-  /*
-			image alignment on a screen this size may be
-			a bit difficult. It's set to start aligning
-			and floating images at the next breakpoint,
-			but it's up to you. Feel free to change it up.
-			*/ }
+  padding: 1.5em 1.5em 0; }
   .entry-content p {
     margin: 0 0 1.5em; }
   .entry-content table {
@@ -2929,6 +2885,8 @@ NAVIGATION STYLES
             justify-content: flex-end; }
     .nav li {
       border-bottom: 0; }
+  .mobile-hide {
+    display: inline-block; }
   /* .menu is clearfixed inside mixins.scss */
   .menu {
     /* end .menu ul */ }
@@ -2939,14 +2897,39 @@ NAVIGATION STYLES
       .menu ul li {
         text-align: left;
         /*
-				plan your menus and drop-downs wisely.
-				*/ }
+			plan your menus and drop-downs wisely.
+			*/ }
         .menu ul li a {
           /*
-					you can use hover styles here even though this size
-					has the possibility of being a mobile device.
-					*/ }
+				you can use hover styles here even though this size
+				has the possibility of being a mobile device.
+				*/ }
   /* end .menu */
+  #searchform {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    #searchform input[type="search"] {
+      margin-bottom: 0;
+      border-radius: 20px 0 0 20px;
+      padding: 0 1em;
+      height: 0;
+      background-color: #3BD0ED;
+      border: 0;
+      height: 30px;
+      color: #fff; }
+      #searchform input[type="search"]:focus {
+        background-color: #fff;
+        color: gray; }
+    #searchform #searchsubmit {
+      border: 0;
+      background: transparent;
+      position: relative;
+      background-color: #3BD0ED;
+      height: 30px;
+      border-radius: 0 20px 20px 0;
+      padding-right: 1em;
+      color: #fff; }
   /*********************
 POSTS & CONTENT STYLES
 *********************/
@@ -3016,7 +2999,8 @@ GENERAL STYLES
       text-shadow: 0px 0px 0px #084854;
       margin-top: auto; }
     .hero--hero-text {
-      font-size: 3.5rem; }
+      font-size: 5.5rem;
+      line-height: .8; }
     .hero--line-two {
       font-size: 3.5rem; }
     .hero--logo-bar {
@@ -3086,10 +3070,7 @@ NAVIGATION STYLES
 			*/ }
         .nav li a:hover, .nav li a:focus {
           text-decoration: none;
-          color: #fff;
-          text-shadow: 1px 0px 4px rgba(8, 72, 84, 0.7); }
-        .nav li a:active {
-          text-shadow: 0px 0px 2px #084854; }
+          color: #fff; }
       .nav li ul.sub-menu,
       .nav li ul.children {
         margin-top: 0;
@@ -3141,17 +3122,6 @@ SIDEBARS & ASIDES
       .widget ul li ul {
         margin-top: 0.75em;
         padding-left: 1em; }
-  /* links widget */
-  /* meta widget */
-  /* pages widget */
-  /* recent-posts widget */
-  /* archives widget */
-  /* tag-cloud widget */
-  /* calendar widget */
-  /* category widget */
-  /* recent-comments widget */
-  /* search widget */
-  /* text widget */
   /*********************
 FOOTER STYLES
 *********************/
