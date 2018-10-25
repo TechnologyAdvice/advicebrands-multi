@@ -19,6 +19,8 @@ input[type="search"], #searchsubmit {background-color:<?php the_field('primary',
 
 input[type="search"]:focus {background-color:white !important;}
 
+.article__thumbnail h3
+
 .single article .thumbnail img {
   -webkit-box-shadow: 5px 5px <?php the_field('primary','option');?> !important;
           box-shadow: 5px 5px <?php the_field('primary','option');?> !important;

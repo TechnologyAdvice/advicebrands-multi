@@ -2082,6 +2082,18 @@ POSTS & CONTENT STYLES
       .hero--content_articles-header {
         background-color: rgba(245, 245, 255, 0.9);
         margin-top: auto; }
+      .hero--content_articles > div {
+        max-Width: 1440px; }
+        .hero--content_articles > div > div {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center; }
+          .hero--content_articles > div > div:nth-child(2) {
+            border-left: 1px solid #084854;
+            border-right: 1px solid #084854; }
       .hero--content_articles h2 {
         background-color: rgba(172, 192, 196, 0.3);
         margin-top: 0;
@@ -2162,35 +2174,16 @@ POSTS & CONTENT STYLES
 .article__thumbnail {
   padding: 1em;
   display: inline-block; }
-  .article__thumbnail--container {
-    background-color: #3BD0ED;
-    height: 300px;
-    border-radius: 0.5rem;
-    overflow: hidden;
-    max-width: 400px;
-    margin: 0 auto;
-    position: relative; }
-  .article__thumbnail--background-image {
-    background-image: url("../images/mt-sample-background.jpg");
-    position: absolute;
+  .article__thumbnail a {
+    text-decoration: none;
+    color: #084854; }
+  .article__thumbnail img {
     width: 100%;
-    top: 0px;
-    height: 300px;
-    border-radius: 0.5rem;
-    background-size: cover; }
-  .article__thumbnail--title {
-    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 700;
-    color: #f6fdfe;
-    font-size: 1.7rem;
-    text-align: left;
-    line-height: 1;
-    padding: 1rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    position: relative;
-    top: -75%; }
+    height: auto; }
+  .article__thumbnail h3 {
+    font-weight: normal;
+    font-size: 1em;
+    color: #fff !important; }
   .article__thumbnail:hover .article__thumbnail--overlay {
     bottom: 0%; }
     .article__thumbnail:hover .article__thumbnail--overlay .reveal {
@@ -2199,48 +2192,6 @@ POSTS & CONTENT STYLES
       .article__thumbnail:hover .article__thumbnail--overlay .reveal:before {
         content: "\f0d7";
         line-height: 1.7rem; }
-  .article__thumbnail--overlay {
-    background-color: rgba(255, 255, 255, 0.97);
-    z-index: 99;
-    position: relative;
-    bottom: -93%;
-    height: 300px;
-    -webkit-transition: all 0.4s;
-    transition: all 0.4s;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    text-decoration: none;
-    color: #5c6b80; }
-    .article__thumbnail--overlay .primary-btn, .article__thumbnail--overlay .comment-reply-link, .article__thumbnail--overlay #submit {
-      margin: 0 3rem; }
-    .article__thumbnail--overlay .reveal {
-      background-color: #3BD0ED;
-      height: 1.6rem;
-      -webkit-box-shadow: 0px -2px 2px #084854;
-              box-shadow: 0px -2px 2px #084854;
-      -webkit-transition: all 0.4s;
-      transition: all 0.4s; }
-      .article__thumbnail--overlay .reveal:before {
-        color: #12abc9;
-        display: inline-block;
-        font-style: normal;
-        font-variant: normal;
-        text-rendering: auto;
-        -webkit-font-smoothing: antialiased;
-        font-family: "Font Awesome 5 Free";
-        font-weight: 900;
-        content: "\f0de";
-        font-size: 2rem;
-        line-height: 2.4rem; }
-    .article__thumbnail--overlay .content {
-      text-align: left;
-      color: #084854;
-      padding: 2rem; }
 
 .first {
   padding-left: 0; }

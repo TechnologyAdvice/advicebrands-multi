@@ -17,76 +17,132 @@
 	</div>
 	<div class="hero--content_articles-header">header row</div>
 	<div class="hero--content_articles row">
-		<?php
-			// the query
-			$the_query = new WP_Query( array(
-				//'category_name' => 'news',
-				'posts_per_page' => 6,
-			));
-		?>
-
-		<?php if ( $the_query->have_posts() ) :  while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-		<div class="col-sm-4 article__thumbnail">
-			<div class="article__thumbnail--container">
+		<div class="row">
+		<!--first block-->
+			<div class="col-sm-4">
 				<?php
-					$attachment_id = get_post_thumbnail_id($post->ID);
-					$size = "full"; // (thumbnail, medium, large, full or custom size)
-					$image = wp_get_attachment_image_src( $attachment_id, $size );
-						// url = $image[0];
-						// width = $image[1];
-						// height = $image[2];
+						$meta_query  = WC()->query->get_meta_query();
+						$tax_query   = WC()->query->get_tax_query();
+						$tax_query[] = array(
+							 'taxonomy' => 'product_visibility',
+							 'field'    => 'name',
+							 'terms'    => 'featured',
+							 'operator' => 'IN',
+						);
+
+						$args = array(
+							 'post_type'           => 'product',
+							 'post_status'         => 'publish',
+							 'ignore_sticky_posts' => 1,
+							 'product_cat'				 => 'business intelligence',
+							 'posts_per_page'      => 2,
+							 'orderby'             => $atts['orderby'],
+							 'order'               => $atts['order'],
+							 'meta_query'          => $meta_query,
+							 'tax_query'           => $tax_query,
+						);
+		        $loop = new WP_Query( $args );
+		        while ( $loop->have_posts() ) : $loop->the_post(); global $product;
 				?>
-				<div class="article__thumbnail--background-image" style="background-image:url('<?php echo $image[0]; ?>');"></div>
-				<a href="<?php the_permalink() ?>" class="article__thumbnail--overlay">
-					<div class="reveal"></div>
-					<div class="content"><?php echo wp_trim_words( get_the_content(), 25, '...' ); ?></div>
-					<div class="primary-btn">Learn More</div>
-				</a>
-				<span class="article__thumbnail--title highlight highlight--wrapping"><?php the_title(); ?></span>
+				<div class="col-sm-5 article__thumbnail">
+					<a href="<?php echo get_permalink( $loop->post->ID ) ?>" title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>">
+
+							<?php if (has_post_thumbnail( $loop->post->ID )) echo get_the_post_thumbnail($loop->post->ID, 'shop_catalog'); ?>
+
+							<h3><?php the_title(); ?></h3>
+
+					</a>
+				</div>
+				<?php endwhile; ?>
+				<?php wp_reset_query(); ?>
 			</div>
+		<!--end first block-->
+		<!--second block-->
+			<div class="col-sm-4">
+				<?php
+						$meta_query  = WC()->query->get_meta_query();
+						$tax_query   = WC()->query->get_tax_query();
+						$tax_query[] = array(
+							 'taxonomy' => 'product_visibility',
+							 'field'    => 'name',
+							 'terms'    => 'featured',
+							 'operator' => 'IN',
+						);
+
+						$args = array(
+							 'post_type'           => 'product',
+							 'post_status'         => 'publish',
+							 'ignore_sticky_posts' => 1,
+							 'product_cat'				 => 'business intelligence',
+							 'posts_per_page'      => 2,
+							 'orderby'             => $atts['orderby'],
+							 'order'               => $atts['order'],
+							 'meta_query'          => $meta_query,
+							 'tax_query'           => $tax_query,
+						);
+		        $loop = new WP_Query( $args );
+		        while ( $loop->have_posts() ) : $loop->the_post(); global $product;
+				?>
+				<div class="col-sm-5 article__thumbnail">
+					<a href="<?php echo get_permalink( $loop->post->ID ) ?>" title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>">
+
+							<?php if (has_post_thumbnail( $loop->post->ID )) echo get_the_post_thumbnail($loop->post->ID, 'shop_catalog'); ?>
+
+							<h3><?php the_title(); ?></h3>
+
+					</a>
+				</div>
+				<?php endwhile; ?>
+				<?php wp_reset_query(); ?>
+			</div>
+		<!--end second block-->
+		<!--third block-->
+			<div class="col-sm-4">
+				<?php
+						$meta_query  = WC()->query->get_meta_query();
+						$tax_query   = WC()->query->get_tax_query();
+						$tax_query[] = array(
+							 'taxonomy' => 'product_visibility',
+							 'field'    => 'name',
+							 'terms'    => 'featured',
+							 'operator' => 'IN',
+						);
+
+						$args = array(
+							 'post_type'           => 'product',
+							 'post_status'         => 'publish',
+							 'ignore_sticky_posts' => 1,
+							 'product_cat'				 => 'business intelligence',
+							 'posts_per_page'      => 2,
+							 'orderby'             => $atts['orderby'],
+							 'order'               => $atts['order'],
+							 'meta_query'          => $meta_query,
+							 'tax_query'           => $tax_query,
+						);
+		        $loop = new WP_Query( $args );
+		        while ( $loop->have_posts() ) : $loop->the_post(); global $product;
+				?>
+				<div class="col-sm-5 article__thumbnail">
+					<a href="<?php echo get_permalink( $loop->post->ID ) ?>" title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>">
+
+							<?php if (has_post_thumbnail( $loop->post->ID )) echo get_the_post_thumbnail($loop->post->ID, 'shop_catalog'); ?>
+
+							<h3><?php the_title(); ?></h3>
+
+					</a>
+				</div>
+				<?php endwhile; ?>
+				<?php wp_reset_query(); ?>
+			</div>
+		<!--end third block-->
 		</div>
-		<?php endwhile; endif; ?>
-		<?php wp_reset_postdata(); ?>
 	</div>
 		<?php include 'partials/logo-bar.php'; ?>
 	</div>
 	<section class="featured-content__header">
 		<h1>Featured Content</h1>
 	</section>
-	<section class="articles wrap" style="max-Width:1035px;margin-bottom:3rem;background-color:red;">
-		<h2>All articles</h2>
-		<div class="row">
-			<?php
-				// the query
-				$the_query = new WP_Query( array(
-					//'category_name' => 'news',
-					'posts_per_page' => 9,
-					//'offset' => 3,
-				));
-			?>
-			<?php if ( $the_query->have_posts() ) :  while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-				<div class="col-xs-12 col-sm-4 col-md-6 col-lg-4 article__thumbnail">
-				<div class="article__thumbnail--container">
-					<?php
-						$attachment_id = get_post_thumbnail_id($post->ID);
-						$size = "full"; // (thumbnail, medium, large, full or custom size)
-						$image = wp_get_attachment_image_src( $attachment_id, $size );
-							// url = $image[0];
-							// width = $image[1];
-							// height = $image[2];
-					?>
-					<div class="article__thumbnail--background-image" style="background-image:url('<?php echo $image[0]; ?>');"></div>
-						<a href="<?php the_permalink() ?>" class="article__thumbnail--overlay">
-							<div class="reveal"></div>
-							<div class="content"><?php echo wp_trim_words( get_the_content(), 25, '...' ); ?></div>
-							<div class="primary-btn">Learn More</div>
-						</a>
-						<span class="article__thumbnail--title highlight highlight--wrapping"><?php the_title(); ?></span>
-					</div>
-				</div>
-			<?php endwhile; endif; ?>
-			<?php wp_reset_postdata(); ?>
-		</div>
-	</div>
-</section>
+	<section class="articles wrap">
+		<?php include 'partials/featured-loop.php'; ?>
+	</section>
 <?php get_footer('front'); ?>
