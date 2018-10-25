@@ -1,3 +1,8 @@
+<?php if ( is_active_sidebar( 'category-filter' ) ) : ?>
+	<div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
+		<?php dynamic_sidebar( 'category-filter' ); ?>
+	</div>
+<?php endif; ?>
 <?php
   if(!function_exists('wc_get_products')) {
     return;

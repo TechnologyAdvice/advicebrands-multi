@@ -68,26 +68,9 @@ if ( ! isset( $content_width ) ) {
 add_image_size( 'logo', 300, false );
 add_image_size( 'full-width', 1440, false );
 
+
+
 /*
-to add more sizes, simply copy a line from above
-and change the dimensions & name. As long as you
-upload a "featured image" as large as the biggest
-set width or height, all the other sizes will be
-auto-cropped.
-
-To call a different size, simply change the text
-inside the thumbnail function.
-
-For example, to call the 300 x 100 sized image,
-we would use the function:
-<?php the_post_thumbnail( 'starter-thumb-300' ); ?>
-for the 600 x 150 image:
-<?php the_post_thumbnail( 'starter-thumb-600' ); ?>
-
-You can change the names and dimensions to whatever
-you like. Enjoy!
-
-
 add_filter( 'image_size_names_choose', 'starter_custom_image_sizes' );
 
 function starter_custom_image_sizes( $sizes ) {
@@ -191,6 +174,16 @@ function starter_register_sidebars() {
 		'id' => 'sidebar1',
 		'name' => __( 'Sidebar 1', 'startertheme' ),
 		'description' => __( 'The first (primary) sidebar.', 'startertheme' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widgettitle">',
+		'after_title' => '</h4>',
+	));
+
+  register_sidebar(array(
+		'id' => 'category-filter',
+		'name' => __( 'Category Filter', 'startertheme' ),
+		'description' => __( 'Filter Assets by Category', 'startertheme' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
