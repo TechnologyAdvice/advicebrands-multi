@@ -13,7 +13,7 @@ body.site  {
 
 .hero--hero-text {color:#084854 !important;}
 
-#mobile-nav {color:#3BD0ED !important;}
+#mobile-nav, .featured-content .articles a {color:#3BD0ED !important;}
 
 input[type="search"], #searchsubmit {background-color:#3BD0ED !important;}
 

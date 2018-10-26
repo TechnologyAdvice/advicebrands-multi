@@ -139,10 +139,8 @@
 	</div>
 		<?php include 'partials/logo-bar.php'; ?>
 	</div>
-	<section class="featured-content__header">
+	<section class="featured-content row">
 		<h1>Featured Content</h1>
-	</section>
-	<section class="articles wrap">
 		<?php include 'partials/product-loop.php'; ?>
 	</section>
 <?php get_footer('front'); ?>

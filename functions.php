@@ -66,6 +66,7 @@ if ( ! isset( $content_width ) ) {
 
 // Thumbnail sizes
 add_image_size( 'logo', 300, false );
+add_image_size( 'product', 400, false );
 add_image_size( 'full-width', 1440, false );
 
 
@@ -279,45 +280,6 @@ add_action( 'admin_menu', 'rudr_add_new_tags_metabox');
  	}
 
 
-/************* COMMENT LAYOUT *********************/
-
-// Comment Layout
-function starter_comments( $comment, $args, $depth ) {
-   $GLOBALS['comment'] = $comment; ?>
-  <div id="comment-<?php comment_ID(); ?>" <?php comment_class('cf'); ?>>
-    <article  class="cf">
-      <header class="comment-author vcard">
-        <?php
-        /*
-          this is the new responsive optimized comment image. It used the new HTML5 data-attribute to display comment gravatars on larger screens only. What this means is that on larger posts, mobile sites don't have a ton of requests for comment images. This makes load time incredibly fast! If you'd like to change it back, just replace it with the regular wordpress gravatar call:
-          echo get_avatar($comment,$size='32',$default='<path_to_url>' );
-        */
-        ?>
-        <?php // custom gravatar call ?>
-        <?php
-          // create variable
-          $bgauthemail = get_comment_author_email();
-        ?>
-        <img data-gravatar="http://www.gravatar.com/avatar/<?php echo md5( $bgauthemail ); ?>?s=40" class="load-gravatar avatar avatar-48 photo" height="40" width="40" src="<?php echo get_template_directory_uri(); ?>/library/images/nothing.gif" />
-        <?php // end custom gravatar call ?>
-        <?php printf(__( '<cite class="fn">%1$s</cite> %2$s', 'startertheme' ), get_comment_author_link(), edit_comment_link(__( '(Edit)', 'startertheme' ),'  ','') ) ?>
-        <time datetime="<?php echo comment_time('Y-m-j'); ?>"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php comment_time(__( 'F jS, Y', 'startertheme' )); ?> </a></time>
-
-      </header>
-      <?php if ($comment->comment_approved == '0') : ?>
-        <div class="alert alert-info">
-          <p><?php _e( 'Your comment is awaiting moderation.', 'startertheme' ) ?></p>
-        </div>
-      <?php endif; ?>
-      <section class="comment_content cf">
-        <?php comment_text() ?>
-      </section>
-      <?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
-    </article>
-  <?php // </li> is added by WordPress automatically ?>
-<?php
-} // don't remove this bracket!
-
 
 /*
 This is a modification of a function found in the
@@ -332,47 +294,7 @@ function starter_fonts() {
 
 add_action('wp_enqueue_scripts', 'starter_fonts');
 
-//hook into the init action and call create_bullets_nonhierarchical_taxonomy when it fires
-
-add_action( 'init', 'create_bullets_nonhierarchical_taxonomy', 0 );
-
 wp_enqueue_style( 'custom-styles', get_template_directory_uri() . '/library/css/custom-styles.css' );
-
-
-function create_bullets_nonhierarchical_taxonomy() {
-
-// Labels part for the GUI
-
-  $labels = array(
-    'name' => _x( 'Bullet Points', 'taxonomy general name' ),
-    'singular_name' => _x( 'Bullet Point', 'taxonomy singular name' ),
-    'search_items' =>  __( 'Search Bullet Points' ),
-    'popular_items' => __( 'Popular Bullet Points' ),
-    'all_items' => __( 'All Bullet Points' ),
-    'parent_item' => null,
-    'parent_item_colon' => null,
-    'edit_item' => __( 'Edit Bullet Point' ),
-    'update_item' => __( 'Update Bullet Point' ),
-    'add_new_item' => __( 'Add New Bullet Point' ),
-    'new_item_name' => __( 'New Bullet Point Name' ),
-    'separate_items_with_commas' => __( 'Separate bullets with commas' ),
-    'add_or_remove_items' => __( 'Add or remove bullets' ),
-    'choose_from_most_used' => __( 'Choose from the most used bullets' ),
-    'menu_name' => __( 'Bullet Points' ),
-  );
-
-// Now register the non-hierarchical taxonomy like tag
-
-  register_taxonomy('bullets','post',array(
-    'hierarchical' => false,
-    'labels' => $labels,
-    'show_ui' => true,
-    'show_admin_column' => true,
-    'update_count_callback' => '_update_post_term_count',
-    'query_var' => true,
-    'rewrite' => array( 'slug' => 'bullets' ),
-  ));
-}
 
 //Call custom-styles.php
 function generate_options_css() {

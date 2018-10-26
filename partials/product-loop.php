@@ -26,24 +26,26 @@
        'taxonomy'            => 'product_cat',
     );
 
-    $loop = new WP_Query( $args );
-
-    $product_categories = get_terms( 'product_cat', $args );
-
-    wp_dropdown_categories($args);
-
-    while ( $loop->have_posts() ) : $loop->the_post(); global $products;
-
-?>
-<div>
-  <a href="<?php echo get_permalink( $loop->post->ID ) ?>" title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>">
-
-      <?php if (has_post_thumbnail( $loop->post->ID )) echo get_the_post_thumbnail($loop->post->ID, 'shop_catalog'); ?>
-
-      <h3><?php the_title(); ?></h3>
-      <p><?php echo apply_filters( 'the_content', $post->post_content ); ?></p>
-
-  </a>
-</div>
-<?php endwhile; ?>
+    $loop = new WP_Query( $args ); ?>
+<ul class="row articles">
+  <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+  <li class="col-xs-12">
+    <div class="wrap row">
+      <div class="col-xs-4 img">
+        <a href="<?php echo get_permalink( $loop->post->ID ) ?>" title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>">
+          <?php if (has_post_thumbnail( $loop->post->ID )) echo get_the_post_thumbnail($loop->post->ID, 'product'); ?>
+        </a>
+      </div>
+      <div class="col-xs-1 spacer">&nbsp;</div>
+      <div class="col-xs-7 content">
+        <a href="<?php echo get_permalink( $loop->post->ID ) ?>" title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>" class="h2">
+          <?php the_title(); ?>
+        </a>
+        <?php echo apply_filters( 'the_content', $post->post_content ); ?>
+        <a href="<?php echo get_permalink( $loop->post->ID ) ?>" title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>" class="primary-btn" style="max-width:200px;color:white !important;">Learn More</a>
+      </div>
+    </div>
+  </li>
+  <?php endwhile; ?>
 <?php wp_reset_query(); ?>
+</ul>
