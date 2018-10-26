@@ -11,7 +11,7 @@ body.site  {
 
 .hero--content_articles {background: linear-gradient(to bottom, rgba(#3BD0ED, 0.5) 0%, rgba(#12abc9, 0.7) 100%);}
 
-.hero--hero-text, .article__thumbnail h3 {color:#084854 !important;}
+.hero--hero-text {color:#084854 !important;}
 
 #mobile-nav {color:#3BD0ED !important;}
 
@@ -27,7 +27,7 @@ input[type="search"]:focus {background-color:white !important;}
   border: 1px solid #3BD0ED !important; }
 
 
-body.site a:active{color:#12abc9;}
+body.site a:active, .featured-content__header h1 {color:#12abc9;}
 
 .content_section--testimonials .testimonial--client-name,.content_section--testimonials .testimonial--client-title, .content_section .contact-email .fas, .content_section .contact-address .fas, i#prev:hover, i#next:hover, .article__thumbnail:hover .article__thumbnail--overlay .reveal:before {color:#084854;}
 

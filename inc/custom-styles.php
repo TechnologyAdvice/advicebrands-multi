@@ -27,7 +27,7 @@ input[type="search"]:focus {background-color:white !important;}
   border: 1px solid <?php the_field('primary','option');?> !important; }
 
 
-body.site a:active{color:<?php the_field('primary_medium','option');?>;}
+body.site a:active, .featured-content__header h1 {color:<?php the_field('primary_medium','option');?>;}
 
 .content_section--testimonials .testimonial--client-name,.content_section--testimonials .testimonial--client-title, .content_section .contact-email .fas, .content_section .contact-address .fas, i#prev:hover, i#next:hover, .article__thumbnail:hover .article__thumbnail--overlay .reveal:before {color:<?php the_field('primary_dark','option');?>;}
 

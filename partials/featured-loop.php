@@ -9,8 +9,6 @@
   }
 
   $paged                   = (get_query_var('paged')) ? absint(get_query_var('paged')) : 1;
-  $ordering                = WC()->query->get_catalog_ordering_args();
-  $ordering['orderby']     = array_shift(explode(' ', $ordering['orderby']));
   $products_per_page       = apply_filters('loop_shop_per_page', wc_get_default_products_per_row() * wc_get_default_product_rows_per_page());
 
   $featured_products       = wc_get_products(array(

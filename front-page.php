@@ -143,6 +143,6 @@
 		<h1>Featured Content</h1>
 	</section>
 	<section class="articles wrap">
-		<?php include 'partials/featured-loop.php'; ?>
+		<?php include 'partials/product-loop.php'; ?>
 	</section>
 <?php get_footer('front'); ?>
