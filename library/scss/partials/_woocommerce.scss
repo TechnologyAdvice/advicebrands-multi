@@ -1,0 +1,9 @@
+.woocommerce {
+  div {
+    &.product {
+      div.images, div.summary {
+        width:100%;
+      }
+    }
+  }
+}

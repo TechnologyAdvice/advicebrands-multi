@@ -47,5 +47,5 @@ body.site  {
 }
 
 // White
-
+#wpadminbar a {color: white !important;}
 input[type="search"]:focus {background-color:white !important;}

@@ -596,6 +596,9 @@ BOX SIZING
 /* @include box-sizing(border-box); */
 /* NOTE: value of "padding-box" is only supported in Gecko. So
 probably best not to use it. I mean, were you going to anyway? */
+.woocommerce div.product div.images, .woocommerce div.product div.summary {
+  width: 100%; }
+
 .container-fluid,
 .container {
   margin-right: auto;
@@ -2150,7 +2153,8 @@ POSTS & CONTENT STYLES
     min-height: 80px;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin: 0; }
+    margin: 0;
+    width: 100%; }
     .hero--logo-bar li {
       -ms-flex-preferred-size: 50px;
           flex-basis: 50px;
