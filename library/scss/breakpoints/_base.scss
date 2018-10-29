@@ -589,6 +589,7 @@ $title-lineheight: $title-pad + 1;
 		color: $white !important;
 		transition: all .3s;
 		padding-left: .5em;
+		line-height: 1.3;
 	}
 
 	&:hover {
@@ -603,7 +604,7 @@ $title-lineheight: $title-pad + 1;
 
 		h3 {
 			color: black !important;
-			font-weight: bold;
+			font-weight: normal;
 		}
 	}
 
