@@ -99,11 +99,7 @@
 				<div class="hero hero--inner"><div>
 				</div>
 						<?php } else { ?>
-<<<<<<< HEAD
 							<!-- header (other) -->
-=======
-							<!-- header(other) -->
->>>>>>> product-page
 							<header class="header header--inner" role="banner" itemscope itemtype="http://schema.org/WPHeader">
 								<?php if(have_posts()) : while(have_posts()) : the_post(); ?>
 								<div id="inner-header" class="wrap row">
