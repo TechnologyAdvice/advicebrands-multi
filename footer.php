@@ -55,8 +55,5 @@
 		<?php wp_footer(); ?>
 
 			<!--script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script-->
-		<!--closes .container -->
-		</div>
 	</body>
-
 </html> <!-- end of site. what a ride! -->
