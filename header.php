@@ -48,59 +48,42 @@
 		<!-- header (single) -->
 			<header class="header header--inner" role="banner" itemscope itemtype="http://schema.org/WPHeader">
 				<?php if(have_posts()) : ?>
-				<div id="inner-header" class="wrap row">
-						<div class="header-nav col-xs-12">
-						<a href="/" rel="nofollow" class="logo col-xs-12 col-sm-4">
-							<div>
-								<img src="<?php the_field('primary_logo', 'option'); ?>">
-							</div>
-						</a>
-					<div class="col-xs-12 col-sm-4 menu-left">
-						<nav role="navigation" class="row" itemscope itemtype="http://schema.org/SiteNavigationElement">
-							<?php
-								wp_nav_menu(
-									array(
-										'container' => false,                           // remove nav container
-										'container_class' => 'menu ',                 // class of container (should you choose to use it)
-										'menu' => __( 'The Left Menu', 'bonestheme' ),  // nav name
-										'menu_class' => 'nav top-nav ',               // adding custom nav class
-										'theme_location' => 'main-nav-left',                 // where it's located in the theme
-										'before' => '',                                 // before the menu
+					<div id="inner-header" class="wrap row">
+						<div class="header-nav row">
+							<a href="/" rel="nofollow" class="logo col-xs-12 col-sm-2">
+									<?php if( get_field('secondary_logo', 'option')): ?>
+										<img src="<?php the_field('secondary_logo', 'option'); ?>">
+									<?php elseif( get_field('primary_logo', 'option')) : ?>
+										<img src="<?php the_field('primary_logo', 'option'); ?>">
+									<?php endif; ?>
+							</a>
+							<div class="col-xs-12 col-sm-7">
+								<nav role="navigation" class="row" itemscope itemtype="http://schema.org/SiteNavigationElement">
+									<?php
+										wp_nav_menu(
+											array(
+												'container' => false,                           // remove nav container
+												'container_class' => 'menu ',                 // class of container (should you choose to use it)
+												'menu' => __( 'The Main Menu', 'bonestheme' ),  // nav name
+												'menu_class' => 'nav top-nav ',               // adding custom nav class
+												'theme_location' => 'main-nav',                 // where it's located in the theme
+													'before' => '',                                 // before the menu
 													'after' => '',                                  // after the menu
 													'link_before' => '',                            // before each link
 													'link_after' => '',                             // after each link
 													'depth' => 0,                                   // limit the depth of the nav
-										'fallback_cb' => '',                             // fallback function (if there is one)
-									)
-								);
-								?>
-						</nav>
+												'fallback_cb' => '',                             // fallback function (if there is one)
+											)
+										);
+									?>
+								</nav>
+							</div>
+							<div class="col-xs-0 col-sm-3 mobile-hide"><?php get_search_form(); ?></div>
+							<div id="mobile-nav" class="col-xs-12">
+								Menu <i class="fas fa-bars"></i>
+							</div>
+						</div>
 					</div>
-					<div class="col-xs-12 col-sm-4 menu-right">
-						<nav role="navigation" class="row" itemscope itemtype="http://schema.org/SiteNavigationElement">
-							<?php
-								wp_nav_menu(
-									array(
-									'container' => false,                           // remove nav container
-									'container_class' => 'menu ',                 // class of container (should you choose to use it)
-									'menu' => __( 'The Right Menu', 'bonestheme' ),  // nav name
-									'menu_class' => 'nav top-nav ',               // adding custom nav class
-									'theme_location' => 'main-nav-right',                 // where it's located in the theme
-									'before' => '',                                 // before the menu
-												'after' => '',                                  // after the menu
-												'link_before' => '',                            // before each link
-												'link_after' => '',                             // after each link
-												'depth' => 0,                                   // limit the depth of the nav
-									'fallback_cb' => '',                             // fallback function (if there is one)
-									)
-								);
-							?>
-						</nav>
-					</div>
-					<div id="mobile-nav" class="col-xs-12">
-						Menu <i class="fas fa-bars"></i>
-					</div>
-				</div>
 			</header>
 			<div id="container">
 				<?php
@@ -117,7 +100,6 @@
 				</div>
 						<?php } else { ?>
 							<!-- header (other) -->
-							this is (other)
 							<header class="header header--inner" role="banner" itemscope itemtype="http://schema.org/WPHeader">
 								<?php if(have_posts()) : while(have_posts()) : the_post(); ?>
 								<div id="inner-header" class="wrap row">
@@ -154,6 +136,7 @@
 										<div id="mobile-nav" class="col-xs-12">
 											Menu <i class="fas fa-bars"></i>
 										</div>
+									</div>
 								</div>
 							</header>
 							<div id="container">
@@ -183,51 +166,4 @@
 									<?php endwhile; endif ?>
 									<?php wp_reset_postdata(); ?>
 								</div>
-								<div class="col-xs-12 col-sm-4 menu-left">
- 		 						<nav role="navigation" class="row" itemscope itemtype="http://schema.org/SiteNavigationElement">
- 		 							<?php
- 		 								wp_nav_menu(
- 		 									array(
- 		 										'container' => false,                           // remove nav container
- 		 										'container_class' => 'menu ',                 // class of container (should you choose to use it)
- 		 										'menu' => __( 'The Left Menu', 'bonestheme' ),  // nav name
- 		 										'menu_class' => 'nav top-nav ',               // adding custom nav class
- 		 										'theme_location' => 'main-nav-left',                 // where it's located in the theme
- 		 										'before' => '',                                 // before the menu
- 		 													'after' => '',                                  // after the menu
- 		 													'link_before' => '',                            // before each link
- 		 													'link_after' => '',                             // after each link
- 		 													'depth' => 0,                                   // limit the depth of the nav
- 		 										'fallback_cb' => '',                             // fallback function (if there is one)
- 		 									)
- 		 								);
- 		 								?>
- 		 						</nav>
- 		 					</div>
- 		 					<div class="col-xs-12 col-sm-4 menu-right">
- 		 						<nav role="navigation" class="row" itemscope itemtype="http://schema.org/SiteNavigationElement">
- 		 							<?php
- 		 								wp_nav_menu(
- 		 									array(
- 		 									'container' => false,                           // remove nav container
- 		 									'container_class' => 'menu ',                 // class of container (should you choose to use it)
- 		 									'menu' => __( 'The Right Menu', 'bonestheme' ),  // nav name
- 		 									'menu_class' => 'nav top-nav ',               // adding custom nav class
- 		 									'theme_location' => 'main-nav-right',                 // where it's located in the theme
- 		 									'before' => '',                                 // before the menu
- 		 												'after' => '',                                  // after the menu
- 		 												'link_before' => '',                            // before each link
- 		 												'link_after' => '',                             // after each link
- 		 												'depth' => 0,                                   // limit the depth of the nav
- 		 									'fallback_cb' => '',                             // fallback function (if there is one)
- 		 									)
- 		 								);
- 		 							?>
- 		 						</nav>
- 		 					</div>
- 		 					<div id="mobile-nav" class="col-xs-12">
- 		 						Menu <i class="fas fa-bars"></i>
- 		 					</div>
- 		 				</div>
- 		 			</header>
 			 <? } ?>
