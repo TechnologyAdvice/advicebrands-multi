@@ -2008,6 +2008,9 @@ ul[id^="menu-"] {
 /*********************
 POSTS & CONTENT STYLES
 *********************/
+.content-area {
+  text-align: left; }
+
 .highlight {
   display: inline;
   background: #e0d03d;
@@ -2051,6 +2054,9 @@ POSTS & CONTENT STYLES
   .hero--inner {
     height: 120px;
     min-height: 120px !important; }
+    .hero--inner .hero--hero-text {
+      font-size: 3.5rem;
+      line-height: 1; }
     .hero--inner .hero--background-image {
       height: 120px;
       min-height: 120px !important; }

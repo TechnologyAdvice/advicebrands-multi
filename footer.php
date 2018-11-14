@@ -1,5 +1,5 @@
 <?php include 'partials/logo-bar.php'; ?>
-	<footer class="footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
+		<footer class="footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
 				<?php if(have_posts()) : the_post(); ?>
 				<div id="inner-footer" class="wrap row">
 					<?php if( get_field('secondary_logo', 'option')): ?>
@@ -10,8 +10,6 @@
 						<div class="col-xs-12 col-md-3 footer_logo">
 							<img src="<?php the_field('primary_logo', 'option') ?>">
 						</div>
-
-
 						<!--nothing-->
 					<?php endif; ?>
 					<div class="col-xs-12 col-md-9">
@@ -31,7 +29,6 @@
 							)); ?>
 						</nav>
 					</div>
-
 					<div class="physical_address col-xs-12 col-md-6 first">
 						<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.<br><?php the_field('physical_address', 'option'); ?></p>
 					</div>
@@ -51,18 +48,15 @@
 								endif;
 								?>
 					</div>
-
 				</div>
-
-			</footer>
-
-
+		</footer>
 		<?php endif; ?>
 		<?php // all js scripts are loaded in library/starter.php ?>
 		<?php wp_footer(); ?>
 
-		<!--script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script-->
-
+			<!--script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script-->
+		<!--closes .container -->
+		</div>
 	</body>
 
 </html> <!-- end of site. what a ride! -->

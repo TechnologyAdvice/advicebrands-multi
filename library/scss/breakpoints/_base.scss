@@ -370,6 +370,10 @@ ul[id^="menu-"] {
 POSTS & CONTENT STYLES
 *********************/
 
+.content-area {
+	text-align: left;
+}
+
 $background-color: rgba($accent, 1);
 $color-white: #fff;
 $title-pad: 0.25em;
@@ -413,6 +417,11 @@ $title-lineheight: $title-pad + 1;
 
 	&--inner {
 		@include hero-height-inner;
+
+		.hero--hero-text {
+			font-size: 3.5rem;
+			line-height: 1;
+		}
 
 		.hero--background-image {
 			@include hero-height-inner;

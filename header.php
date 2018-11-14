@@ -101,7 +101,7 @@
 						<?php } else { ?>
 							<!-- header (other) -->
 							<header class="header header--inner" role="banner" itemscope itemtype="http://schema.org/WPHeader">
-								<?php if(have_posts()) : while(have_posts()) : the_post(); ?>
+								<?php if(have_posts()) : ?>
 								<div id="inner-header" class="wrap row">
 									<div class="header-nav row">
 										<a href="/" rel="nofollow" class="logo col-xs-12 col-sm-2">
@@ -149,21 +149,21 @@
 										// height = $image[2];
 									?>
 								<div class="hero--background-image hero--background-image--inner" style="background-image:url('<?php echo $image[0]; ?>');"></div>
-							<?php endwhile; endif; ?>
+							<?php endif; ?>
 								<div class="hero hero--inner">
-							<div class="overlay overlay--inner">
-								<div class="wrap hero hero--inner">
-									<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-										<main id="main" class="col-xs-12" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
-
-											<div class="hero--text">
-												<h1>
-													<span class="hero--hero-text"><?php the_title(); ?></span>
-												</h1>
-											</div>
-
-										</main>
-									<?php endwhile; endif ?>
-									<?php wp_reset_postdata(); ?>
+									<div class="overlay overlay--inner">
+										<div class="wrap hero hero--inner">
+											<?php if (have_posts()) : ?>
+												<main id="main" class="col-xs-12" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+													<div class="hero--text">
+														<h1>
+															<span class="hero--hero-text"><?php the_title(); ?></span>
+														</h1>
+													</div>
+												</main>
+											<?php endif; ?>
+											<?php wp_reset_postdata(); ?>
+										</div>
+									</div>
 								</div>
 			 <? } ?>
