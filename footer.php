@@ -1,4 +1,7 @@
-<?php include 'partials/logo-bar.php'; ?>
+<?php if (is_product()) {}
+	else {
+		include 'partials/logo-bar.php';
+} ?>
 		<footer class="footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
 				<?php if(have_posts()) : the_post(); ?>
 				<div id="inner-footer" class="wrap row">

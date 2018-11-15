@@ -51,6 +51,7 @@ get_header(); ?>
 		?>
 	</div>
 </div>
+<div><?php the_field('vendor_specific'); ?></div>
 <?php get_footer();
 
 /* Omit closing PHP tag at the end of PHP files to avoid "headers already sent" issues. */

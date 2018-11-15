@@ -41,6 +41,7 @@
         <a href="<?php echo get_permalink( $loop->post->ID ) ?>" title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>" class="h2">
           <?php the_title(); ?>
         </a>
+        <?php the_field('bullets'); ?>
         <?php echo apply_filters( 'the_content', $post->post_excerpt ); ?>
         <a href="<?php echo get_permalink( $loop->post->ID ) ?>" title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>" class="primary-btn" style="max-width:200px;color:white !important;">Learn More</a>
       </div>

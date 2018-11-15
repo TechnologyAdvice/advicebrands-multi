@@ -414,12 +414,12 @@ table {
   white-space: nowrap;
   overflow: hidden; }
 
-.clearfix, .cf, .comment-respond {
+.clearfix, .cf {
   zoom: 1; }
-  .clearfix:before, .clearfix:after, .cf:before, .comment-respond:before, .cf:after, .comment-respond:after {
+  .clearfix:before, .clearfix:after, .cf:before, .cf:after {
     content: "";
     display: table; }
-  .clearfix:after, .cf:after, .comment-respond:after {
+  .clearfix:after, .cf:after {
     clear: both; }
 
 /*
@@ -430,18 +430,6 @@ span.amp {
   font-family: Baskerville,'Goudy Old Style',Palatino,'Book Antiqua',serif !important;
   font-style: italic; }
 
-/******************************************************************
-Site Name:
-Author:
-
-Stylesheet: Variables
-
-Here is where we declare all our variables like colors, fonts,
-base values, and defaults. We want to make sure this file ONLY
-contains variables that way our files don't get all messy.
-No one likes a mess.
-
-******************************************************************/
 /*********************
 COLORS
 Need help w/ choosing your colors? Try this site out:
@@ -598,10 +586,35 @@ BOX SIZING
 probably best not to use it. I mean, were you going to anyway? */
 .woocommerce div.product {
   margin-top: 3em; }
-  .woocommerce div.product div.images, .woocommerce div.product div.summary {
+  .woocommerce div.product .product_title {
+    border-bottom: #ef6826 solid 2px;
+    color: #fff;
+    font-size: 2em;
+    font-weight: 600;
+    line-height: 1;
+    margin-bottom: 0.5em;
+    padding-bottom: 0.5em; }
+  .woocommerce div.product .woocommerce-product-details__short-description p {
+    color: #fff; }
+  .woocommerce div.product div.images,
+  .woocommerce div.product div.summary {
     width: 100%; }
+  .woocommerce div.product div.summary {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .woocommerce div.product .posted_in {
+    color: #fff; }
+    .woocommerce div.product .posted_in a {
+      color: #ef6826 !important; }
 
-.woocommerce-tabs ul.tabs, .woocommerce-tabs h2 {
+.woocommerce .button.button.alt {
+  background-color: #ef6826;
+  font-weight: 400;
+  min-width: 200px; }
+
+.woocommerce-tabs ul.tabs,
+.woocommerce-tabs h2 {
   display: none; }
 
 .container-fluid,
@@ -1369,7 +1382,7 @@ Here's a quick video to show how it works:
 http://www.youtube.com/watch?v=hwdVpKiJzac
 
 *********************/
-.primary-btn, .comment-reply-link, #submit, input[type="submit"], .nf-field-element input[type=button] {
+.primary-btn, input[type="submit"], .nf-field-element input[type=button] {
   display: inline-block;
   position: relative;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -1386,11 +1399,11 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   cursor: pointer;
   -webkit-transition: background-color 0.14s ease-in-out;
   transition: background-color 0.14s ease-in-out; }
-  .primary-btn:hover, .comment-reply-link:hover, #submit:hover, input:hover[type="submit"], .nf-field-element input:hover[type=button], .primary-btn:focus, .comment-reply-link:focus, #submit:focus, input:focus[type="submit"], .nf-field-element input:focus[type=button] {
+  .primary-btn:hover, input:hover[type="submit"], .nf-field-element input:hover[type=button], .primary-btn:focus, input:focus[type="submit"], .nf-field-element input:focus[type=button] {
     color: #fff;
     text-decoration: none;
     outline: none; }
-  .primary-btn:active, .comment-reply-link:active, #submit:active, input:active[type="submit"], .nf-field-element input:active[type=button] {
+  .primary-btn:active, input:active[type="submit"], .nf-field-element input:active[type=button] {
     top: 1px; }
 
 /*
@@ -1398,11 +1411,11 @@ An example button.
 You can use this example if you want. Just replace all the variables
 and it will create a button dependant on those variables.
 */
-.primary-btn, .comment-reply-link, #submit, input[type="submit"], .nf-field-element input[type=button] {
-  background-color: #3BD0ED; }
-  .primary-btn:hover, .comment-reply-link:hover, #submit:hover, .primary-btn:focus, .comment-reply-link:focus, #submit:focus, input[type="submit"]:hover, input[type="submit"]:focus, .nf-field-element input[type=button]:hover, .nf-field-element input[type=button]:focus {
+.primary-btn, input[type="submit"], .nf-field-element input[type=button] {
+  background-color: #3bd0ed; }
+  .primary-btn:hover, .primary-btn:focus, input[type="submit"]:hover, input[type="submit"]:focus, .nf-field-element input[type=button]:hover, .nf-field-element input[type=button]:focus {
     background-color: #12abc9; }
-  .primary-btn:active, .comment-reply-link:active, #submit:active, input[type="submit"]:active, .nf-field-element input[type=button]:active {
+  .primary-btn:active, input[type="submit"]:active, .nf-field-element input[type=button]:active {
     background-color: #24caeb; }
 
 /******************************************************************
@@ -1448,7 +1461,7 @@ textarea,
   padding: 0 12px;
   margin-bottom: 14px;
   font-size: 1em;
-  color: #ACC0C4;
+  color: #acc0c4;
   border-radius: 3px;
   vertical-align: middle;
   -webkit-box-shadow: none;
@@ -1682,7 +1695,7 @@ input[type="password"] {
   letter-spacing: 0.3em; }
 
 label {
-  color: #ACC0C4; }
+  color: #acc0c4; }
 
 textarea {
   max-width: 100%;
@@ -1707,7 +1720,7 @@ select {
   padding: 1.2rem;
   text-align: left; }
   .nf-form-cont .nf-form-title h3 {
-    color: #3BD0ED;
+    color: #3bd0ed;
     margin-top: 0;
     font-size: 1rem;
     font-weight: 500;
@@ -1738,170 +1751,149 @@ possible. This is called at the top of the main stylsheet
 and will be used across all viewports.
 
 ******************************************************************/
-/*********************
-GENERAL STYLES
-*********************/
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .flex--column {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .flex--column_reverse {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: reverse;
+          -ms-flex-direction: column-reverse;
+              flex-direction: column-reverse; }
+  .flex--row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row; }
+    .flex--row_reverse {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: reverse;
+          -ms-flex-direction: row-reverse;
+              flex-direction: row-reverse; }
+
 body {
+  background-color: #fff;
+  color: #5c6b80;
   font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 100%;
-  line-height: 1.5;
-  color: #5c6b80;
-  background-color: #fff;
+  -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+  line-height: 1.5; }
 
 img {
   image-rendering: auto; }
 
-#inner-header, #inner-footer {
+#inner-header,
+#inner-footer {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column; }
 
 .about-us {
-  text-align: left;
-  margin: 3em 0; }
+  margin: 3em 0;
+  text-align: left; }
 
 #inner-footer .footer_logo {
   -ms-flex-item-align: center;
       align-self: center;
   margin-top: 2em; }
   #inner-footer .footer_logo img {
-    width: 100%;
     height: auto;
-    max-width: 200px; }
+    max-width: 200px;
+    width: 100%; }
 
 #inner-footer .nav {
-  opacity: 1;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  height: auto;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  height: auto;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center; }
+          justify-content: center;
+  opacity: 1; }
   #inner-footer .nav li {
-    border-bottom: 0px; }
+    border-bottom: 0; }
 
 .mobile-hide {
   display: none; }
 
-/********************
-WORDPRESS BODY CLASSES
-style a page via class
-********************/
-/* for sites that are read right to left (i.e. hebrew) */
-/* home page */
-/* blog template page */
-/* archive page */
-/* date archive page */
-/* replace the number to the corresponding page number */
-/* search page */
-/* search result page */
-/* no results search page */
-/* individual paged search (i.e. body.search-paged-3) */
-/* 404 page */
-/* single post page */
-/* individual post page by id (i.e. body.postid-73) */
-/* individual paged single (i.e. body.single-paged-3) */
-/* attatchment page */
-/* individual attatchment page (i.e. body.attachmentid-763) */
-/* style mime type pages */
-/* author page */
-/* user nicename (i.e. body.author-samueladams) */
-/* paged author archives (i.e. body.author-paged-4) for page 4 */
-/* category page */
-/* individual category page (i.e. body.category-6) */
-/* replace the number to the corresponding page number */
-/* tag page */
-/* individual tag page (i.e. body.tag-news) */
-/* replace the number to the corresponding page number */
-/* custom page template page */
-/* individual page template (i.e. body.page-template-contact-php */
-/* replace the number to the corresponding page number */
-/* parent page template */
-/* child page template */
-/* replace the number to the corresponding page number */
-/* if user is logged in */
-/* paged items like search results or archives */
-/* individual paged (i.e. body.paged-3) */
-/*********************
-LAYOUT & GRID STYLES
-*********************/
 .wrap {
-  width: 96%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  width: 96%; }
 
-/*********************
-LINK STYLES
-*********************/
-a, a:visited {
-  color: #E0D03D;
-  /* on hover */
-  /* on click */
-  /* mobile tap color */ }
-  a:hover, a:focus, a:visited:hover, a:visited:focus {
-    color: #cebd21; }
-  a:link, a:visited:link {
-    /*
-		this highlights links on iPhones/iPads.
-		so it basically works like the :hover selector
-		for mobile devices.
-		*/
+a,
+a:visited {
+  color: #ef6826; }
+  a:focus, a:hover,
+  a:visited:focus,
+  a:visited:hover {
+    color: #d75110; }
+  a:link,
+  a:visited:link {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3); }
 
-/******************************************************************
-H1, H2, H3, H4, H5 STYLES
-******************************************************************/
-.inner-page h2, .inner-page .h2 {
-  margin-bottom: .9em;
-  border-bottom: 1px solid #3BD0ED; }
-
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
-  text-rendering: optimizelegibility;
-  font-weight: 500;
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5 {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  /*
-	if you're going to use webfonts, be sure to check your weights
-	http://css-tricks.com/watch-your-font-weight/
-	*/
-  /* removing text decoration from all headline links */ }
-  h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
-    text-decoration: none; }
+  font-weight: 500;
+  text-rendering: optimizelegibility; }
 
-h1, .h1 {
+h1,
+.h1 {
+  color: #3bd0ed;
   font-size: 2.5em;
-  line-height: 1.333em;
-  color: #3BD0ED; }
+  line-height: 1.333em; }
 
-h2, .h2 {
+h2,
+.h2 {
   font-size: 1.75em;
+  font-weight: bold;
   line-height: 1.4em;
   margin-bottom: 0.375em;
-  font-weight: bold;
   text-transform: uppercase; }
 
-h3, .h3 {
+h3,
+.h3 {
   font-size: 1.125em;
   font-weight: 700; }
 
-h4, .h4 {
+h4,
+.h4 {
   font-size: 1.1em;
   font-weight: 700; }
 
-h5, .h5 {
-  font-size: 0.846em;
+h5,
+.h5 {
+  font-size: .846em;
+  letter-spacing: 2px;
   line-height: 2.09em;
-  text-transform: uppercase;
-  letter-spacing: 2px; }
+  text-transform: uppercase; }
 
-/*********************
-HEADER STYLES
-*********************/
+a {
+  text-decoration: none; }
+
+.inner-page h2,
+.inner-page .h2 {
+  border-bottom: 1px solid #3bd0ed;
+  margin-bottom: 0.9em; }
+
 .header {
   background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(rgba(250, 250, 250, 0.7)));
   background-image: linear-gradient(white 0%, rgba(250, 250, 250, 0.7) 100%);
@@ -1911,35 +1903,24 @@ HEADER STYLES
     background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(white)) !important;
     background-image: linear-gradient(white 0%, white 100%) !important; }
     .header--inner .nav li a {
-      color: #3BD0ED; }
+      color: #3bd0ed; }
       .header--inner .nav li a:hover {
         color: #12abc9;
-        text-shadow: 0px 0px 1px #5F7C82; }
+        text-shadow: 0 0 1px #5f7c82; }
     .header--inner #mobile-nav {
-      color: #3BD0ED; }
+      color: #3bd0ed; }
   .header .logo {
     margin-bottom: 1em;
-    margin-top: 2em;
     margin-left: auto;
-    margin-right: auto; }
+    margin-right: auto;
+    margin-top: 2em; }
     .header .logo img {
-      width: 100%;
       height: auto;
-      max-width: 250px; }
+      max-width: 250px;
+      width: 100%; }
     .header .logo a {
       color: #fff; }
 
-/*********************
-NAVIGATION STYLES
-*********************/
-/*
-all navs have a .nav class applied via
-the wp_menu function; this is so we can
-easily write one group of styles for
-the navs on the site so our css is cleaner
-and more scalable.
-
-*/
 .header-nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1954,19 +1935,19 @@ ul[id^="menu-"] {
   width: 100%; }
 
 #mobile-nav {
-  text-align: center;
+  color: #3bd0ed;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
   margin-bottom: 1em;
-  margin-top: 0em;
+  margin-top: 0;
+  text-align: center;
   -webkit-transition: all .5s;
   transition: all .5s;
   position: relative;
   z-index: 99;
   -webkit-box-ordinal-group: 5;
       -ms-flex-order: 4;
-          order: 4;
-  color: #3BD0ED;
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 500; }
+          order: 4; }
   #mobile-nav.show {
     margin-top: 0em;
     padding: .5em; }
@@ -2010,15 +1991,12 @@ ul[id^="menu-"] {
       padding-left: 30px; }
 
 /* end .nav */
-/*********************
-POSTS & CONTENT STYLES
-*********************/
 .content-area {
   text-align: left; }
 
 .highlight {
   display: inline;
-  background: #e0d03d;
+  background: #ef6826;
   padding: 0.25em;
   opacity: 1; }
 
@@ -2118,7 +2096,7 @@ POSTS & CONTENT STYLES
         background-color: rgba(172, 192, 196, 0.3);
         margin-top: 0;
         margin-bottom: 0;
-        color: #5F7C82 !important;
+        color: #5f7c82 !important;
         text-transform: uppercase;
         font-weight: 700;
         border-top-left-radius: 0.5rem;
@@ -2187,7 +2165,7 @@ POSTS & CONTENT STYLES
 .articles h2 {
   border-bottom: 1px solid #e8edee;
   text-align: left;
-  color: #3BD0ED;
+  color: #3bd0ed;
   padding-bottom: .5rem;
   font-size: 1.5rem;
   margin-top: 1rem; }
@@ -2248,9 +2226,9 @@ article {
               box-shadow: 0px 0px !important;
       border: 0px !important; }
     .single article img {
-      -webkit-box-shadow: 5px 5px #3BD0ED;
-              box-shadow: 5px 5px #3BD0ED;
-      border: 1px solid #3BD0ED; }
+      -webkit-box-shadow: 5px 5px #3bd0ed;
+              box-shadow: 5px 5px #3bd0ed;
+      border: 1px solid #3bd0ed; }
 
 div[class^="content_section--"] {
   padding: 0em 0 1em 0; }
@@ -2276,16 +2254,16 @@ div[class^="content_section--"] {
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse; }
   .content_section--image_right img {
-    -webkit-box-shadow: -5px 5px #3BD0ED !important;
-            box-shadow: -5px 5px #3BD0ED !important; }
+    -webkit-box-shadow: -5px 5px #3bd0ed !important;
+            box-shadow: -5px 5px #3bd0ed !important; }
 
 .content_section--half img {
   width: 100%;
   max-width: 1440px;
   height: auto;
   display: block;
-  -webkit-box-shadow: 5px 5px #3BD0ED;
-          box-shadow: 5px 5px #3BD0ED; }
+  -webkit-box-shadow: 5px 5px #3bd0ed;
+          box-shadow: 5px 5px #3bd0ed; }
 
 .content_section--content {
   -webkit-box-orient: vertical;
@@ -2294,10 +2272,10 @@ div[class^="content_section--"] {
           flex-direction: column; }
   .content_section--content h1 {
     text-transform: normal;
-    color: #3BD0ED;
+    color: #3bd0ed;
     margin-bottom: 0; }
   .content_section--content .sub-head {
-    color: #ACC0C4;
+    color: #acc0c4;
     font-weight: 400;
     margin: 0;
     font-size: 1.3rem;
@@ -2334,7 +2312,7 @@ div[class^="content_section--"] {
 .content_section .contact-email, .content_section .contact-address {
   padding-top: 1rem; }
   .content_section .contact-email a, .content_section .contact-address a {
-    color: #3BD0ED; }
+    color: #3bd0ed; }
   .content_section .contact-email .fas, .content_section .contact-address .fas {
     color: #084854;
     padding-right: .5rem;
@@ -2363,7 +2341,7 @@ div[class^="content_section--"] {
       text-decoration: none; }
       .featured-content .articles a .h2 {
         text-decoration: none;
-        color: #3BD0ED; }
+        color: #3bd0ed; }
     .featured-content .articles li {
       margin-top: 1em;
       margin-bottom: 1em;
@@ -2460,7 +2438,7 @@ div[class^="content_section--"] {
   font-size: 2em;
   float: left;
   outline: 0;
-  color: #3BD0ED;
+  color: #3bd0ed;
   text-decoration: none;
   display: inline-block;
   width: 35px; }
@@ -2512,7 +2490,7 @@ i#prev:hover, i#next:hover {
     margin: 0 0 1.5em; }
   .entry-content table {
     width: 100%;
-    border: 1px solid #ACC0C4;
+    border: 1px solid #acc0c4;
     margin-bottom: 1.5em; }
     .entry-content table caption {
       margin: 0 0 7px;
@@ -2521,24 +2499,24 @@ i#prev:hover, i#next:hover {
       text-transform: uppercase;
       letter-spacing: 1px; }
   .entry-content tr {
-    border-bottom: 1px solid #ACC0C4; }
+    border-bottom: 1px solid #acc0c4; }
     .entry-content tr:nth-child(even) {
       background-color: #e8edee; }
   .entry-content td {
     padding: 7px;
-    border-right: 1px solid #ACC0C4; }
+    border-right: 1px solid #acc0c4; }
     .entry-content td:last-child {
       border-right: 0; }
   .entry-content th {
     background-color: #e8edee;
-    border-bottom: 1px solid #ACC0C4;
-    border-right: 1px solid #ACC0C4; }
+    border-bottom: 1px solid #acc0c4;
+    border-right: 1px solid #acc0c4; }
     .entry-content th:last-child {
       border-right: 0; }
   .entry-content blockquote {
     margin: 0 0 1.5em 0.75em;
     padding: 0 0 0 0.75em;
-    border-left: 3px solid #3BD0ED;
+    border-left: 3px solid #3bd0ed;
     font-style: italic;
     color: #9fa6b4; }
   .entry-content dd {
@@ -2581,7 +2559,6 @@ i#prev:hover, i#next:hover {
     text-align: center; }
 
 /* end .wp-caption */
-/* image gallery styles */
 .gallery-columns-2 .gallery-item {
   max-width: 50%; }
 
@@ -2615,14 +2592,9 @@ i#prev:hover, i#next:hover {
   .gallery .gallery-item .gallery-icon img {
     margin-bottom: 0; }
 
-/* end .gallery */
-/* gallery caption styles */
 .tags {
   margin: 0; }
 
-/******************************************************************
-PAGE NAVI STYLES
-******************************************************************/
 .pagination,
 .wp-prev-next {
   margin: 1.5em 0; }
@@ -2642,7 +2614,7 @@ PAGE NAVI STYLES
     float: left;
     display: inline;
     overflow: hidden;
-    border-right: 1px solid #ACC0C4; }
+    border-right: 1px solid #acc0c4; }
   .pagination a, .pagination span {
     margin: 0;
     text-decoration: none;
@@ -2653,212 +2625,60 @@ PAGE NAVI STYLES
     padding: 0.75em;
     min-width: 1em;
     display: block;
-    color: #3BD0ED; }
+    color: #3bd0ed; }
     .pagination a:hover, .pagination a:focus, .pagination span:hover, .pagination span:focus {
-      background-color: #3BD0ED;
+      background-color: #3bd0ed;
       color: #fff; }
   .pagination .current {
-    cursor: default;
-    color: #5c6b80; }
+    color: #5c6b80;
+    cursor: default; }
     .pagination .current:hover, .pagination .current:focus {
       background-color: #fff;
       color: #5c6b80; }
 
-/* end .bones_page_navi */
-/* fallback previous & next links */
 .wp-prev-next .prev-link {
   float: left; }
 
 .wp-prev-next .next-link {
   float: right; }
 
-/* end .wp-prev-next */
-/******************************************************************
-COMMENT STYLES
-******************************************************************/
-/* h3 comment title */
-#comments-title {
-  padding: 0.75em;
-  margin: 0;
-  border-top: 1px solid #e8edee;
-  /* number of comments span */ }
-
-.commentlist {
-  margin: 0;
-  list-style-type: none; }
-
-.comment {
-  position: relative;
-  clear: both;
-  overflow: hidden;
-  padding: 1.5em;
-  border-bottom: 1px solid #e8edee;
-  /* vcard */
-  /* end .commentlist .vcard */
-  /* end children */
-  /* general comment classes */ }
-  .comment .comment-author {
-    padding: 7px;
-    border: 0; }
-  .comment .vcard {
-    margin-left: 50px; }
-    .comment .vcard cite.fn {
-      font-weight: 700;
-      font-style: normal; }
-    .comment .vcard time {
-      display: block;
-      font-size: 0.9em;
-      font-style: italic; }
-      .comment .vcard time a {
-        color: #9fa6b4;
-        text-decoration: none; }
-        .comment .vcard time a:hover {
-          text-decoration: underline; }
-    .comment .vcard .avatar {
-      position: absolute;
-      left: 16px;
-      border-radius: 50%; }
-  .comment:last-child {
-    margin-bottom: 0; }
-  .comment .children {
-    margin: 0;
-    /* variations */
-    /* change number for different depth */ }
-  .comment[class*=depth-] {
-    margin-top: 1.1em; }
-  .comment.depth-1 {
-    margin-left: 0;
-    margin-top: 0; }
-  .comment:not(.depth-1) {
-    margin-top: 0;
-    margin-left: 7px;
-    padding: 7px; }
-  .comment.odd {
-    background-color: #fff; }
-  .comment.even {
-    background: #e8edee; }
-
-/* comment meta */
-/* comment content */
-.comment_content p {
-  margin: 0.7335em 0 1.5em;
-  font-size: 1em;
-  line-height: 1.5em; }
-
-/* end .commentlist .comment_content */
-/* comment reply link */
-.comment-reply-link {
-  font-size: 0.9em;
-  float: right; }
-
-/* end .commentlist .comment-reply-link */
-/* edit comment link */
-.comment-edit-link {
-  font-style: italic;
-  margin: 0 7px;
-  text-decoration: none;
-  font-size: 0.9em; }
-
-/******************************************************************
-COMMENT FORM STYLES
-******************************************************************/
-.comment-respond {
-  padding: 1.5em;
-  border-top: 1px solid #e8edee; }
-
-#reply-title {
-  margin: 0; }
-
-.logged-in-as {
-  color: #9fa6b4;
-  font-style: italic;
-  margin: 0; }
-  .logged-in-as a {
-    color: #5c6b80; }
-
-.comment-form-comment {
-  margin: 1.5em 0 0.75em; }
-
-.form-allowed-tags {
-  padding: 1.5em;
-  background-color: #e8edee;
-  font-size: 0.9em; }
-
-/* comment submit button */
-#submit {
-  float: right;
-  font-size: 1em; }
-
-/* comment form title */
-#comment-form-title {
-  margin: 0 0 1.1em; }
-
-/* cancel comment reply link */
-/* logged in comments */
-/* allowed tags */
-#allowed_tags {
-  margin: 1.5em 10px 0.7335em 0; }
-
-/* no comments */
-.nocomments {
-  margin: 0 20px 1.1em; }
-
-/*********************
-SIDEBARS & ASIDES
-*********************/
-.widget ul li {
-  /* deep nesting */ }
-
 .no-widgets {
   background-color: #fff;
-  padding: 1.5em;
-  text-align: center;
   border: 1px solid #ccc;
   border-radius: 2px;
-  margin-bottom: 1.5em; }
+  margin-bottom: 1.5em;
+  padding: 1.5em;
+  text-align: center; }
 
-/*********************
-FOOTER STYLES
-*********************/
 .footer {
-  clear: both;
-  background-color: #12abc9;
-  color: #e8edee;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
-  padding-top: 2rem; }
+  background-color: #12abc9;
+  clear: both;
+  color: #e8edee;
+  padding-top: 2rem;
+  width: 100%; }
   .footer .physical_address {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
     text-align: center; }
   .footer .social_platforms {
+    font-size: 2em;
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
-    text-align: center;
-    font-size: 2em; }
+    text-align: center; }
     .footer .social_platforms a {
       color: #fff;
+      margin: 0 .3em;
       text-decoration: none;
       -webkit-transition: all .5s;
-      transition: all .5s;
-      margin: 0 .3em; }
+      transition: all .5s; }
       .footer .social_platforms a:hover {
         color: #084854; }
 
-/*
-	if you checked out the link above:
-	http://www.alistapart.com/articles/organizing-mobile/
-	you'll want to style the footer nav
-	a bit more in-depth. Remember to keep
-	it simple because you'll have to
-	override these styles for the desktop
-	view.
-	*/
-/* end .footer-links */
 .copyright {
   padding: 0 1em; }
 
@@ -2960,7 +2780,7 @@ NAVIGATION STYLES
       border-radius: 20px 0 0 20px;
       padding: 0 1em;
       height: 0;
-      background-color: #3BD0ED;
+      background-color: #3bd0ed;
       border: 0;
       height: 30px;
       color: #fff; }
@@ -2971,7 +2791,7 @@ NAVIGATION STYLES
       border: 0;
       background: transparent;
       position: relative;
-      background-color: #3BD0ED;
+      background-color: #3bd0ed;
       height: 30px;
       border-radius: 0 20px 20px 0;
       padding-right: 1em;
@@ -3313,7 +3133,8 @@ though, go for it.
     -webkit-filter: none !important;
             filter: none !important;
     -ms-filter: none !important; }
-  a, a:visited {
+  a,
+  a:visited {
     color: #444 !important;
     text-decoration: underline; }
     a:after, a:visited:after {

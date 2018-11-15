@@ -32,7 +32,7 @@ if ( post_password_required() ) {
 ?>
 <div id="product-<?php the_ID(); ?>" <?php wc_product_class(); ?>>
 	<div class="row">
-		<div class="col-xs-4">
+		<div class="col-xs-12 col-md-6">
 			<?php
 				/**
 				 * Hook: woocommerce_before_single_product_summary.
@@ -43,8 +43,8 @@ if ( post_password_required() ) {
 				do_action( 'woocommerce_before_single_product_summary' );
 			?>
 		</div>
-		<div class="col-xs-8">
-			<div class="summary entry-summary">
+		<div class="col-xs-12 col-md-6 flex">
+			<div class="summary entry-summary flex flex--column">
 			<?php
 				/**
 				 * Hook: woocommerce_single_product_summary.
@@ -60,21 +60,14 @@ if ( post_password_required() ) {
 				 */
 				do_action( 'woocommerce_single_product_summary' );
 			?>
-		</div>
-
-			<?php
-				/**
-				 * Hook: woocommerce_after_single_product_summary.
-				 *
-				 * @hooked woocommerce_output_product_data_tabs - 10
-				 * @hooked woocommerce_upsell_display - 15
-				 * @hooked woocommerce_output_related_products - 20
-				 */
-				do_action( 'woocommerce_after_single_product_summary' );
-			?>
+			<?php if(get_field('executive_summary')) : {
+				echo "<div class='executive_summary'>";
+				the_field('executive_summary');
+				echo "</div>";
+			}
+			endif; ?>
+			</div>
 		</div>
 	</div>
-	<?php the_field('vendor_specific'); ?>
 </div>
-
 <?php do_action( 'woocommerce_after_single_product' ); ?>

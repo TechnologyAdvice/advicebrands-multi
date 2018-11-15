@@ -17,18 +17,6 @@ read those. Below, we need to import only the stuff IE can't
 understand (what's inside the media queries). We also need to
 import the mixins file so SASS can understand the variables.
 ******************************************************************/
-/******************************************************************
-Site Name:
-Author:
-
-Stylesheet: Variables
-
-Here is where we declare all our variables like colors, fonts,
-base values, and defaults. We want to make sure this file ONLY
-contains variables that way our files don't get all messy.
-No one likes a mess.
-
-******************************************************************/
 /*********************
 COLORS
 Need help w/ choosing your colors? Try this site out:
@@ -234,7 +222,7 @@ NAVIGATION STYLES
     border-radius: 20px 0 0 20px;
     padding: 0 1em;
     height: 0;
-    background-color: #3BD0ED;
+    background-color: #3bd0ed;
     border: 0;
     height: 30px;
     color: #fff; }
@@ -245,7 +233,7 @@ NAVIGATION STYLES
     border: 0;
     background: transparent;
     position: relative;
-    background-color: #3BD0ED;
+    background-color: #3bd0ed;
     height: 30px;
     border-radius: 0 20px 20px 0;
     padding-right: 1em;
