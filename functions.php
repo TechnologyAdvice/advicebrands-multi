@@ -310,7 +310,6 @@ add_action( 'acf/save_post', 'generate_options_css', 20 ); //Parse the output an
 WOOCOMMERCE
 ***************/
 
-
 /**
  * Remove the breadcrumbs
  */
@@ -330,6 +329,20 @@ add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
 /**
  * Remove and reorder product hooks
  */
+
+ /**
+  * Hook: woocommerce_single_product_summary.
+  *
+  * @hooked woocommerce_template_single_title - 5
+  * @hooked woocommerce_template_single_rating - 10
+  * @hooked woocommerce_template_single_price - 10
+  * @hooked woocommerce_template_single_excerpt - 20
+  * @hooked woocommerce_template_single_add_to_cart - 30
+  * @hooked woocommerce_template_single_meta - 40
+  * @hooked woocommerce_template_single_sharing - 50
+  * @hooked WC_Structured_Data::generate_product_data() - 60
+  */
+
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20 );
@@ -341,13 +354,13 @@ add_filter( 'woocommerce_is_sold_individually','custom_remove_all_quantity_field
 add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 10 );
 
 /* change "add to cart" button to "download now" */
-add_filter( 'woocommerce_product_single_add_to_cart_text', 'woo_custom_single_add_to_cart_text' );  // 2.1 +
+add_filter( 'woocommerce_product_single_add_to_cart_text', 'woo_custom_single_add_to_cart_text' );
 
 function woo_custom_single_add_to_cart_text() {
     return __( 'Download Now', 'woocommerce' );
 }
 
-add_filter( 'woocommerce_product_add_to_cart_text', 'woo_custom_product_add_to_cart_text' );  // 2.1 +
+add_filter( 'woocommerce_product_add_to_cart_text', 'woo_custom_product_add_to_cart_text' );
 
 function woo_custom_product_add_to_cart_text() {
     return __( 'Download Now', 'woocommerce' );

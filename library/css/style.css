@@ -596,8 +596,13 @@ BOX SIZING
 /* @include box-sizing(border-box); */
 /* NOTE: value of "padding-box" is only supported in Gecko. So
 probably best not to use it. I mean, were you going to anyway? */
-.woocommerce div.product div.images, .woocommerce div.product div.summary {
-  width: 100%; }
+.woocommerce div.product {
+  margin-top: 3em; }
+  .woocommerce div.product div.images, .woocommerce div.product div.summary {
+    width: 100%; }
+
+.woocommerce-tabs ul.tabs, .woocommerce-tabs h2 {
+  display: none; }
 
 .container-fluid,
 .container {
@@ -2024,6 +2029,10 @@ POSTS & CONTENT STYLES
 
 .inner-page .overlay {
   background: rgba(59, 208, 237, 0.8); }
+
+.overlay--dark {
+  background: rgba(0, 0, 0, 0.8) !important;
+  width: 100%; }
 
 .overlay {
   display: -webkit-box;

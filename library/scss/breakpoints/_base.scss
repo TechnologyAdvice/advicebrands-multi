@@ -398,6 +398,11 @@ $title-lineheight: $title-pad + 1;
 	}
 }
 
+.overlay--dark {
+	background: rgba($black, .8) !important;
+	width: 100%;
+}
+
 .overlay {
 	display: flex;
 	flex-direction: column;

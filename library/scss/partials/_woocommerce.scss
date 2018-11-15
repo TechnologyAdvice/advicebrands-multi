@@ -1,9 +1,17 @@
 .woocommerce {
   div {
     &.product {
+      margin-top:3em;
+
       div.images, div.summary {
         width:100%;
       }
     }
+  }
+}
+
+.woocommerce-tabs {
+    ul.tabs, h2 {
+    display: none;
   }
 }
