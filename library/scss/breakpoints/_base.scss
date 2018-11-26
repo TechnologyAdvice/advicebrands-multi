@@ -350,9 +350,7 @@ $title-lineheight: $title-pad + 1;
 }
 
 .inner-page {
-    .overlay {
-        background: rgba($primary, 0.8);
-    }
+    .overlay {}
 }
 
 .overlay--dark {
@@ -367,6 +365,7 @@ $title-lineheight: $title-pad + 1;
 
     &--inner {
         @include hero-height-inner;
+        background: rgba($primary, 0.4);
     }
 }
 

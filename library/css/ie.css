@@ -303,9 +303,6 @@ come into play. Have fun!
 /*********************
 GENERAL STYLES
 *********************/
-.overlay {
-  background: rgba(59, 208, 237, 0); }
-
 .hero {
   min-height: 400px; }
   .hero--text {

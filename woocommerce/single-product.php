@@ -53,7 +53,7 @@ get_header(); ?>
 	<?php
 		$es = get_field('executive_summary');
 
-		if( $es ) : ?>
+		if( $es['description'] ) : ?>
 		<div class="executive_summary">
 			<div class='wrap flex flex--column'>
 				<h2>Executive Summary</h2>

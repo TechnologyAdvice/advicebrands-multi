@@ -611,7 +611,8 @@ probably best not to use it. I mean, were you going to anyway? */
 .woocommerce .button.button.alt {
   background-color: #ef6826;
   font-weight: 400;
-  min-width: 200px; }
+  min-width: 200px;
+  color: #fff !important; }
   .woocommerce .button.button.alt:hover {
     background-color: #d25010; }
 
@@ -2024,9 +2025,6 @@ ul[id^="menu-"] {
   left: 0.25em;
   padding-left: 0; }
 
-.inner-page .overlay {
-  background: rgba(59, 208, 237, 0.8); }
-
 .overlay--dark {
   background: rgba(0, 0, 0, 0.8) !important;
   width: 100%; }
@@ -2042,7 +2040,8 @@ ul[id^="menu-"] {
   width: 100%; }
   .overlay--inner {
     height: 120px;
-    min-height: 120px !important; }
+    min-height: 120px !important;
+    background: rgba(59, 208, 237, 0.4); }
 
 .hero {
   text-align: center;
@@ -2881,8 +2880,6 @@ come into play. Have fun!
   /*********************
 GENERAL STYLES
 *********************/
-  .overlay {
-    background: rgba(59, 208, 237, 0); }
   .hero {
     min-height: 400px; }
     .hero--text {
