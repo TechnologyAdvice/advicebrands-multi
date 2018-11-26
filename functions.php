@@ -381,17 +381,19 @@ function themeprefix_add_to_cart_redirect() {
 
 add_filter('wc_add_to_cart_message_html', '__return_false');
 
-function wc_billing_field_strings($translated_text, $text, $domain)
+  function custom_wc_translations($translated)
   {
-    switch ($translated_text) {
-      case 'Billing details':
-        $translated_text = __('Your Information', 'woocommerce');
-        break;
-    }
-    return $translated_text;
+    $text = array(
+      'Your order' => 'Your guide',
+      'Billing details' => 'Complete this form to get your free guide.',
+      'Additional information' => 'Disclaimer',
+      'Place order' => 'Download Now',
+    );
+    $translated = str_ireplace(array_keys($text), $text, $translated);
+    return $translated;
   }
-  add_filter('gettext', 'wc_billing_field_strings', 20, 3);
-  
+
+  add_filter('gettext', 'custom_wc_translations', 20);
 
 
 // END WOOCOMMERCE
