@@ -381,6 +381,19 @@ function themeprefix_add_to_cart_redirect() {
 
 add_filter('wc_add_to_cart_message_html', '__return_false');
 
+function wc_billing_field_strings($translated_text, $text, $domain)
+  {
+    switch ($translated_text) {
+      case 'Billing details':
+        $translated_text = __('Your Information', 'woocommerce');
+        break;
+    }
+    return $translated_text;
+  }
+  add_filter('gettext', 'wc_billing_field_strings', 20, 3);
+  
+
+
 // END WOOCOMMERCE
 
 
