@@ -346,6 +346,12 @@ add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20 );
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 5 );
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_rating', 10 );
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_sharing', 50 );
+remove_action( 'woocommerce_single_product_summary', 'WC_Structured_Data::generate_product_data()', 60 );
+
 
 function custom_remove_all_quantity_fields( $return, $product ) {return true;}
 add_filter( 'woocommerce_is_sold_individually','custom_remove_all_quantity_fields', 10, 2 );
@@ -366,9 +372,16 @@ function woo_custom_product_add_to_cart_text() {
     return __( 'Download Now', 'woocommerce' );
 }
 
-/****************
-END WOOCOMMERCE
-*****************/
+add_filter('woocommerce_add_to_cart_redirect', 'themeprefix_add_to_cart_redirect');
+function themeprefix_add_to_cart_redirect() {
+  global $woocommerce;
+  $checkout_url = wc_get_checkout_url();
+  return $checkout_url;
+}
+
+add_filter('wc_add_to_cart_message_html', '__return_false');
+
+// END WOOCOMMERCE
 
 
 //include 'partials/custom_fields.php';

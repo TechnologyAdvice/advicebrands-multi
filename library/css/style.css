@@ -612,6 +612,8 @@ probably best not to use it. I mean, were you going to anyway? */
   background-color: #ef6826;
   font-weight: 400;
   min-width: 200px; }
+  .woocommerce .button.button.alt:hover {
+    background-color: #d25010; }
 
 .woocommerce-tabs ul.tabs,
 .woocommerce-tabs h2 {
@@ -1826,6 +1828,22 @@ img {
 .mobile-hide {
   display: none; }
 
+.executive_summary {
+  background-color: #fff;
+  padding-bottom: 2em; }
+  .executive_summary h2 {
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 1em;
+    padding-bottom: .5em; }
+  .executive_summary .content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .executive_summary .description {
+    text-align: left; }
+
 .wrap {
   margin: 0 auto;
   width: 96%; }
@@ -1866,8 +1884,7 @@ h2,
   font-size: 1.75em;
   font-weight: bold;
   line-height: 1.4em;
-  margin-bottom: 0.375em;
-  text-transform: uppercase; }
+  margin-bottom: 0.375em; }
 
 h3,
 .h3 {
@@ -1966,10 +1983,7 @@ ul[id^="menu-"] {
   height: 0;
   -webkit-transition: all .5s;
   transition: all .5s;
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  /* end .menu li */
-  /* highlight current page */
-  /* end current highlighters */ }
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif; }
   .nav.show {
     opacity: 1;
     height: 100%; }
@@ -1990,7 +2004,6 @@ ul[id^="menu-"] {
     .nav li ul.children li a {
       padding-left: 30px; }
 
-/* end .nav */
 .content-area {
   text-align: left; }
 
@@ -2440,7 +2453,6 @@ div[class^="content_section--"] {
   outline: 0;
   color: #3bd0ed;
   text-decoration: none;
-  display: inline-block;
   width: 35px; }
 
 i#prev {
@@ -2525,9 +2537,9 @@ i#prev:hover, i#next:hover {
     color: #787878;
     margin-bottom: 1.5em; }
   .entry-content img {
-    margin: 0 0 1.5em 0;
-    max-width: 100%;
-    height: auto; }
+    height: auto;
+    margin: 0 0 1.5em;
+    max-width: 100%; }
   .entry-content .size-auto,
   .entry-content .size-full,
   .entry-content .size-large,
@@ -2611,22 +2623,23 @@ i#prev:hover, i#next:hover {
   .pagination li {
     padding: 0;
     margin: 0;
-    float: left;
     display: inline;
     overflow: hidden;
     border-right: 1px solid #acc0c4; }
-  .pagination a, .pagination span {
+  .pagination a,
+  .pagination span {
     margin: 0;
     text-decoration: none;
-    padding: 0;
     line-height: 1em;
     font-size: 1em;
     font-weight: normal;
-    padding: 0.75em;
+    padding: .75em;
     min-width: 1em;
     display: block;
     color: #3bd0ed; }
-    .pagination a:hover, .pagination a:focus, .pagination span:hover, .pagination span:focus {
+    .pagination a:hover, .pagination a:focus,
+    .pagination span:hover,
+    .pagination span:focus {
       background-color: #3bd0ed;
       color: #fff; }
   .pagination .current {
@@ -2763,14 +2776,19 @@ NAVIGATION STYLES
       .menu ul li {
         text-align: left;
         /*
-			plan your menus and drop-downs wisely.
-			*/ }
+            plan your menus and drop-downs wisely.
+            */ }
         .menu ul li a {
           /*
-				you can use hover styles here even though this size
-				has the possibility of being a mobile device.
-				*/ }
+                you can use hover styles here even though this size
+                has the possibility of being a mobile device.
+                */ }
   /* end .menu */
+  .executive_summary .content {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row; }
   #searchform {
     display: -webkit-box;
     display: -ms-flexbox;

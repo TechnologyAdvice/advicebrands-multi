@@ -18,177 +18,187 @@ anymore, so just be aware that if you drop
 them in here, they won't work.
 */
 
-
 /*********************
 NAVIGATION STYLES
 *********************/
 
 #inner-header {
-	align-items: center;
-	justify-content: center;
+    align-items: center;
+    justify-content: center;
 
-	.header-nav {
-		flex-direction: row;
-		align-items: center;
-		justify-content: center;
-	}
+    .header-nav {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
 
-	.logo {
-		margin:0;
-		display: flex;
+    .logo {
+        margin: 0;
+        display: flex;
 
-		img {
-			max-width: 450px;
-			padding: 1rem 0;
-			width: auto;
-		}
-	}
+        img {
+            max-width: 450px;
+            padding: 1rem 0;
+            width: auto;
+        }
+    }
 }
 
 #mobile-nav {
-	display: none;
+    display: none;
 }
 
 .nav {
-	flex-direction: row;
-	height: auto;
-	opacity: 1;
-	justify-content: flex-end;
+    flex-direction: row;
+    height: auto;
+    opacity: 1;
+    justify-content: flex-end;
 
-	li {
-		border-bottom: 0;
-	}
+    li {
+        border-bottom: 0;
+    }
 }
 
 .mobile-hide {
-	display: inline-block;
+    display: inline-block;
 }
 
 /* .menu is clearfixed inside mixins.scss */
 .menu {
-	ul {
-		li {
-			text-align: left;
+    ul {
+        li {
+            text-align: left;
 
-			a {
+            a {
+                /*
+                you can use hover styles here even though this size
+                has the possibility of being a mobile device.
+                */
+                &:hover, &:focus {}
+            }
 
-				/*
-				you can use hover styles here even though this size
-				has the possibility of being a mobile device.
-				*/
-				&:hover, &:focus {
+            &:first-child {}
 
-				}
-			}
+            &:last-child {}
 
-			&:first-child {}
-			&:last-child {}
+            /*
+            plan your menus and drop-downs wisely.
+            */
+            ul.sub-menu,
+            ul.children {
+                li {
+                    a {
+                        &:hover,
+                        &:focus {}
 
-			/*
-			plan your menus and drop-downs wisely.
-			*/
-			ul.sub-menu,
-			ul.children {
-				li {
-					a {
-						&:hover,
-						&:focus {}
-						&:link {}
-					}
-					&:first-child {}
-					&:last-child {}
-				}
-			}
-		} /* end .menu ul li */
+                        &:link {}
+                    }
 
-		/* highlight current page */
-		li.current-menu-item,
-		li.current_page_item,
-		li.current_page_ancestor {
-			a {}
-		}  /* end current highlighters */
-	} /* end .menu ul */
+                    &:first-child {}
+
+                    &:last-child {}
+                }
+            }
+        } /* end .menu ul li */
+
+        /* highlight current page */
+        li.current-menu-item,
+        li.current_page_item,
+        li.current_page_ancestor {
+            a {}
+        } /* end current highlighters */
+    } /* end .menu ul */
 } /* end .menu */
+
+.executive_summary {
+    .content {
+        flex-direction: row;
+    }
+}
 
 
 #searchform {
-	display: flex;
+    display: flex;
 
-	input[type="search"] {
-		margin-bottom: 0;
-		border-radius: 20px 0 0 20px;
-		padding: 0 1em;
-		height: 0;
-		background-color: $primary;
-		border:0;
-		height: 30px;
-		color: $white;
+    input[type="search"] {
+        margin-bottom: 0;
+        border-radius: 20px 0 0 20px;
+        padding: 0 1em;
+        height: 0;
+        background-color: $primary;
+        border: 0;
+        height: 30px;
+        color: $white;
 
-		&:focus {
-			background-color: $white;
-			color: gray;
-		}
-	}
+        &:focus {
+            background-color: $white;
+            color: gray;
+        }
+    }
 
-	#searchsubmit {
-		border:0;
-		background: transparent;
-		position: relative;
-		background-color: $primary;
-		height: 30px;
-		border-radius: 0 20px 20px 0;
-		padding-right: 1em;
-		color: $white;
-	}
+    #searchsubmit {
+        border: 0;
+        background: transparent;
+        position: relative;
+        background-color: $primary;
+        height: 30px;
+        border-radius: 0 20px 20px 0;
+        padding-right: 1em;
+        color: $white;
+    }
 }
+
 /*********************
 POSTS & CONTENT STYLES
 *********************/
 
 .overlay {
-	@include hero-height;
+    @include hero-height;
 
-	&--inner {
-
-	}
+    &--inner {}
 }
 
 .content_section {
-	&--content_left {
-		.content_section--content {text-align: left;}
-	}
+    &--content_left {
+        .content_section--content {
+            text-align: left;
+        }
+    }
 
-	&--content_center {
-		.content_section--content {text-align: center;}
-	}
+    &--content_center {
+        .content_section--content {
+            text-align: center;
+        }
+    }
 
-	&--content_right {
-		.content_section--content {text-align: right;}
-	}
+    &--content_right {
+        .content_section--content {
+            text-align: right;
+        }
+    }
 }
 
 /* entry content */
 .entry-content {
+    /* at this larger size, we can start to align images */
+    .alignleft, img.alignleft {
+        margin-right: 1.5em;
+        display: inline;
+        float: left;
+    }
 
+    .alignright, img.alignright {
+        margin-left: 1.5em;
+        display: inline;
+        float: right;
+    }
 
-	/* at this larger size, we can start to align images */
-	.alignleft, img.alignleft {
-		margin-right: 1.5em;
-		display: inline;
-		float: left;
-	}
-	.alignright, img.alignright {
-		margin-left: 1.5em;
-		display: inline;
-		float: right;
-	}
-	.aligncenter, img.aligncenter {
-		margin-right: auto;
-		margin-left: auto;
-		display: block;
-		clear: both;
-	}
-
+    .aligncenter, img.aligncenter {
+        margin-right: auto;
+        margin-left: auto;
+        display: block;
+        clear: both;
+    }
 } /* end .entry-content */
 
 /*********************
@@ -196,13 +206,11 @@ FOOTER STYLES
 *********************/
 
 #inner-footer {
-	.footer {
-		&_logo {
-			img {
-
-			}
-		}
-	}
+    .footer {
+        &_logo {
+            img {}
+        }
+    }
 }
 
 /*
@@ -210,7 +218,7 @@ check your menus here. do they look good?
 do they need tweaking?
 */
 .footer-links {
-	ul {
-		li {}
-	}
+    ul {
+        li {}
+    }
 } /* end .footer-links */

@@ -50,8 +50,21 @@ get_header(); ?>
 			do_action( 'woocommerce_after_main_content' );
 		?>
 	</div>
+	<?php
+		$es = get_field('executive_summary');
+
+		if( $es ) : ?>
+		<div class="executive_summary">
+			<div class='wrap flex flex--column'>
+				<h2>Executive Summary</h2>
+				<div class="flex content">
+					<div class="col-xs-12 col-sm-2"><img src="<?php echo $es['logo']['sizes']['thumbnail'] ?>"></div>
+					<div class="col-xs-12 col-sm-10 description"><?php echo $es['description'] ?></div>
+				</div>
+			</div>
+		</div>
+		<?php endif; ?>
 </div>
-<div><?php the_field('vendor_specific'); ?></div>
 <?php get_footer();
 
 /* Omit closing PHP tag at the end of PHP files to avoid "headers already sent" issues. */

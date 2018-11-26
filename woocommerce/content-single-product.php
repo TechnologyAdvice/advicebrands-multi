@@ -45,6 +45,8 @@ if ( post_password_required() ) {
 		</div>
 		<div class="col-xs-12 col-md-6 flex">
 			<div class="summary entry-summary flex flex--column">
+				<div class="product_title entry-title"><?php the_title(); ?></div>
+				<div class="woocommerce-product-details__short-description"><?php the_field('product_description'); ?></div>
 			<?php
 				/**
 				 * Hook: woocommerce_single_product_summary.
@@ -60,9 +62,10 @@ if ( post_password_required() ) {
 				 */
 				do_action( 'woocommerce_single_product_summary' );
 			?>
-			<?php if(get_field('executive_summary')) : {
-				echo "<div class='executive_summary'>";
-				the_field('executive_summary');
+			
+			<?php if(get_field('bullets')) : {
+				echo "<div class='bullets'>";
+				the_field('bullets');
 				echo "</div>";
 			}
 			endif; ?>

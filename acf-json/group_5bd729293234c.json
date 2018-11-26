@@ -3,6 +3,25 @@
     "title": "Product Fields",
     "fields": [
         {
+            "key": "field_5bfc2733480b6",
+            "label": "Product Description",
+            "name": "product_description",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
             "key": "field_5bfc0aa21c843",
             "label": "Bullets",
             "name": "bullets",
@@ -18,7 +37,7 @@
             "default_value": "",
             "tabs": "all",
             "toolbar": "full",
-            "media_upload": 1,
+            "media_upload": 0,
             "delay": 0
         },
         {
@@ -76,7 +95,7 @@
                     "default_value": "",
                     "tabs": "all",
                     "toolbar": "full",
-                    "media_upload": 1,
+                    "media_upload": 0,
                     "delay": 0
                 }
             ]
@@ -93,13 +112,16 @@
     ],
     "menu_order": 0,
     "position": "normal",
-    "style": "default",
+    "style": "seamless",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": [
-        "the_content"
+        "the_content",
+        "excerpt",
+        "discussion",
+        "comments"
     ],
     "active": 1,
     "description": "",
-    "modified": 1543249321
+    "modified": 1543259783
 }
