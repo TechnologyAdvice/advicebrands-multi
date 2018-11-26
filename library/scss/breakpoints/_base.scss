@@ -316,13 +316,6 @@ ul[id^="menu-"] {
             }
         }
     } // end .menu li
-
-    // highlight current page
-    li.current-menu-item,
-    li.current_page_item,
-    li.current_page_ancestor {
-        a {}
-    } // end current highlighters
 } // end .nav
 
 // POSTS & CONTENT STYLES
@@ -347,10 +340,6 @@ $title-lineheight: $title-pad + 1;
     position: relative;
     left: $title-pad;
     padding-left: 0;
-}
-
-.inner-page {
-    .overlay {}
 }
 
 .overlay--dark {

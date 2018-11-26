@@ -300,9 +300,6 @@ and other resources. You'll also notice the grid starts to
 come into play. Have fun!
 
 ******************************************************************/
-/*********************
-GENERAL STYLES
-*********************/
 .hero {
   min-height: 400px; }
   .hero--text {
@@ -343,15 +340,9 @@ div[class^="content_section--"] {
 #testimonial--buttons {
   display: inline-block; }
 
-/*********************
-LAYOUT & GRID STYLES
-*********************/
 .wrap {
   width: 760px; }
 
-/*********************
-HEADER STYLES
-*********************/
 .header--inner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -361,73 +352,43 @@ HEADER STYLES
       -ms-flex-align: center;
           align-items: center; }
 
-/*********************
-NAVIGATION STYLES
-*********************/
 .nav {
-  border: 0;
-  /* end .menu ul li */
-  /* highlight current page */
-  /* end current highlighters */ }
+  border: 0; }
   .nav ul {
     background: #000;
     margin-top: 0; }
-  .nav li {
-    /*
-		plan your menus and drop-downs wisely.
-		*/
-    /* showing sub-menus */ }
-    .nav li a {
-      border-bottom: 0;
-      -webkit-transition: all .2s;
-      transition: all .2s;
-      /*
-			you can use hover styles here even though this size
-			has the possibility of being a mobile device.
-			*/ }
-      .nav li a:hover, .nav li a:focus {
-        text-decoration: none;
-        color: #fff; }
-    .nav li ul.sub-menu,
-    .nav li ul.children {
-      margin-top: 0;
-      border: 1px solid #ccc;
-      border-top: 0;
-      position: absolute;
-      visibility: hidden;
-      z-index: 8999;
-      /* highlight sub-menu current page */ }
-      .nav li ul.sub-menu li,
-      .nav li ul.children li {
-        /*
-				if you need to go deeper, go nuts
-				just remember deeper menus suck
-				for usability. k, bai.
-				*/ }
-        .nav li ul.sub-menu li a,
-        .nav li ul.children li a {
-          padding-left: 10px;
-          border-right: 0;
-          display: block;
-          width: 180px;
-          border-bottom: 1px solid #ccc; }
-        .nav li ul.sub-menu li:last-child a,
-        .nav li ul.children li:last-child a {
-          border-bottom: 0; }
-        .nav li ul.sub-menu li ul,
-        .nav li ul.children li ul {
-          top: 0;
-          left: 100%; }
-    .nav li:hover > ul {
-      top: auto;
-      visibility: visible; }
-
-/* end .nav */
-/*********************
-SIDEBARS & ASIDES
-*********************/
-.sidebar {
-  /* margin-top: 2.2em; */ }
+  .nav li a {
+    border-bottom: 0;
+    -webkit-transition: all .2s;
+    transition: all .2s; }
+    .nav li a:hover, .nav li a:focus {
+      text-decoration: none;
+      color: #fff; }
+  .nav li ul.sub-menu,
+  .nav li ul.children {
+    margin-top: 0;
+    border: 1px solid #ccc;
+    border-top: 0;
+    position: absolute;
+    visibility: hidden;
+    z-index: 8999; }
+    .nav li ul.sub-menu li a,
+    .nav li ul.children li a {
+      padding-left: 10px;
+      border-right: 0;
+      display: block;
+      width: 180px;
+      border-bottom: 1px solid #ccc; }
+    .nav li ul.sub-menu li:last-child a,
+    .nav li ul.children li:last-child a {
+      border-bottom: 0; }
+    .nav li ul.sub-menu li ul,
+    .nav li ul.children li ul {
+      top: 0;
+      left: 100%; }
+  .nav li:hover > ul {
+    top: auto;
+    visibility: visible; }
 
 .widgettitle {
   border-bottom: 2px solid #444;
@@ -437,8 +398,7 @@ SIDEBARS & ASIDES
   padding: 0 10px;
   margin: 2.2em 0; }
   .widget ul li {
-    margin-bottom: 0.75em;
-    /* deep nesting */ }
+    margin-bottom: 0.75em; }
     .widget ul li ul {
       margin-top: 0.75em;
       padding-left: 1em; }
@@ -476,19 +436,6 @@ FOOTER STYLES
   #inner-footer .footer_logo {
     margin-top: 0; }
 
-/*
-you'll probably need to do quite a bit
-of overriding here if you styled them for
-mobile. Make sure to double check these!
-*/
-.footer-links ul li {
-  /*
-			be careful with the depth of your menus.
-			it's very rare to have multi-depth menus in
-			the footer.
-			*/ }
-
-/* end .footer-links */
 /******************************************************************
 Site Name:
 Author:
