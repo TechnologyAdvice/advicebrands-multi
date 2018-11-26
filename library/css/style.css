@@ -619,6 +619,12 @@ probably best not to use it. I mean, were you going to anyway? */
 .woocommerce-tabs h2 {
   display: none; }
 
+.woocommerce-checkout #payment, .woocommerce-checkout-payment {
+  background: #fff; }
+
+.woocommerce #payment #place_order, .woocommerce-page #payment #place_order {
+  float: left; }
+
 .container-fluid,
 .container {
   margin-right: auto;

@@ -1,57 +1,65 @@
 .woocommerce {
-  div {
-    &.product {
-      margin-top: 3em;
+    div {
+        &.product {
+            margin-top: 3em;
 
-      .product_title {
-        border-bottom: $accent solid 2px;
-        color: $white;
-        font-size: 2em;
-        font-weight: 600;
-        line-height: 1;
-        margin-bottom: 0.5em;
-        padding-bottom: 0.5em;
-      }
+            .product_title {
+                border-bottom: $accent solid 2px;
+                color: $white;
+                font-size: 2em;
+                font-weight: 600;
+                line-height: 1;
+                margin-bottom: 0.5em;
+                padding-bottom: 0.5em;
+            }
 
-      .woocommerce-product-details__short-description {
-        p {
-          color: $white;
+            .woocommerce-product-details__short-description {
+                p {
+                    color: $white;
+                }
+            }
+
+            div.images,
+            div.summary {
+                width: 100%;
+            }
+
+            div.summary {
+                justify-content: center;
+            }
+
+            .posted_in {
+                color: $white;
+
+                a {
+                    color: $accent !important;
+                }
+            }
         }
-      }
+    }
 
-      div.images,
-      div.summary {
-        width: 100%;
-      }
+    .button.button.alt {
+        background-color: $accent;
+        font-weight: 400;
+        min-width: 200px;
 
-      div.summary {
-        justify-content: center;
-      }
-
-      .posted_in {
-        color: $white;
-
-        a {
-          color: $accent !important;
+        &:hover {
+            background-color: darken($accent, 10%);
         }
-      }
     }
-  }
-
-  .button.button.alt {
-    background-color: $accent;
-    font-weight: 400;
-    min-width: 200px;
-
-    &:hover {
-      background-color: darken($accent, 10%);
-    }
-  }
 }
 
 .woocommerce-tabs {
-  ul.tabs,
-  h2 {
-    display: none;
-  }
+    ul.tabs,
+    h2 {
+        display: none;
+    }
+}
+
+.woocommerce-checkout #payment, .woocommerce-checkout-payment {
+    background: #fff;
+}
+
+.woocommerce #payment #place_order, .woocommerce-page #payment #place_order {
+  float: left;
 }
