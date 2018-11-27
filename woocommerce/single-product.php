@@ -58,7 +58,7 @@ get_header(); ?>
 			<div class='wrap flex flex--column'>
 				<h2>Executive Summary</h2>
 				<div class="flex content">
-					<div class="col-xs-12 col-sm-2"><img src="<?php echo $es['logo']['sizes']['thumbnail'] ?>"></div>
+					<div class="col-xs-12 col-sm-2"><img src="<?php echo $es['logo']['sizes']['logo'] ?>"></div>
 					<div class="col-xs-12 col-sm-10 description"><?php echo $es['description'] ?></div>
 				</div>
 			</div>

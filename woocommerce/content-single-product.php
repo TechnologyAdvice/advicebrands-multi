@@ -64,7 +64,7 @@ if ( post_password_required() ) {
 			?>
 			
 			<?php if(get_field('bullets')) : {
-				echo "<div class='bullets'>";
+				echo "<div class='bullets woocommerce-product-details__short-description'>";
 				the_field('bullets');
 				echo "</div>";
 			}

@@ -1852,7 +1852,8 @@ img {
         -ms-flex-direction: column;
             flex-direction: column; }
   .executive_summary .description {
-    text-align: left; }
+    text-align: left;
+    margin-top: -1em; }
 
 .wrap {
   margin: 0 auto;
