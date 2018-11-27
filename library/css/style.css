@@ -626,6 +626,9 @@ probably best not to use it. I mean, were you going to anyway? */
 .woocommerce #payment #place_order, .woocommerce-page #payment #place_order {
   float: left; }
 
+.woocommerce-Price-amount.amount {
+  display: none; }
+
 .container-fluid,
 .container {
   margin-right: auto;
