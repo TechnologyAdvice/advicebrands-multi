@@ -27,6 +27,12 @@ and will be used across all viewports.
     &--row {
         flex-direction: row;
 
+        &_collapse {
+            @media only screen and (max-width: 48em) {
+                flex-direction: column;
+            }
+        }
+
         &_reverse {
             flex-direction: row-reverse;
         }
@@ -355,6 +361,7 @@ $title-lineheight: $title-pad + 1;
 
     &--inner {
         @include hero-height-inner;
+
         background: rgba($primary, 0.4);
     }
 }
@@ -410,7 +417,7 @@ $title-lineheight: $title-pad + 1;
 
         &_articles {
             width: 100%;
-            background: linear-gradient(to bottom, rgba($gradient-1, 0.4) 0%, rgba($gradient-1, 0.7) 100%);
+            background: linear-gradient(to bottom, rgba($gradient-1, 0.8) 0%, rgba($gradient-1, 1) 100%);
             justify-content: space-around;
             margin-left: 0;
             margin-right: 0;
@@ -458,7 +465,12 @@ $title-lineheight: $title-pad + 1;
             background-color: $dark-primary;
             left: -46em;
             padding-left: 46.5em;
-            width: 74em;
+            width: 64em;
+
+            @media only screen and (min-width: 48em) {
+                width: 74em;
+            }
+
             position: relative;
             padding-top: .5em;
             padding-bottom: .5em;
@@ -799,6 +811,8 @@ div[class^="content_section--"] {
         img {
             box-shadow: $box-shadow;
             transition: all .2s;
+            width: 100%;
+            height: auto;
 
             &:hover {
                 box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);

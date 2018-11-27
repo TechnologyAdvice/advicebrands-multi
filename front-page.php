@@ -19,32 +19,33 @@
 	<div class="hero--content_articles row">
 		<div class="row">
 		<!--first block-->
-			<div class="col-sm-4">
+			<div class="col-xs-12 col-sm-4">
+				<?php $tag_one = get_field('box_one_tag', 'option'); ?>
 				<?php
-						$meta_query  = WC()->query->get_meta_query();
-						$tax_query   = WC()->query->get_tax_query();
-						$tax_query[] = array(
-							 'taxonomy' => 'product_visibility',
-							 'field'    => 'name',
-							 'terms'    => 'featured',
-							 'operator' => 'IN',
-						);
+					$meta_query = WC()->query->get_meta_query();
+					$tax_query = WC()->query->get_tax_query();
+					$tax_query[] = array(
+						'taxonomy' => 'product_visibility',
+						'field' => 'name',
+						'terms' => 'featured',
+						'operator' => 'IN',
+					);
 
-						$args = array(
-							 'post_type'           => 'product',
-							 'post_status'         => 'publish',
-							 'ignore_sticky_posts' => 1,
-							 'product_cat'				 => 'business intelligence',
-							 'posts_per_page'      => 2,
-							 'orderby'             => $atts['orderby'],
-							 'order'               => $atts['order'],
-							 'meta_query'          => $meta_query,
-							 'tax_query'           => $tax_query,
-						);
+					$args = array(
+						'post_type' => 'product',
+						'post_status' => 'publish',
+						'ignore_sticky_posts' => 1,
+						'product_tag' => $tag_one,
+						'posts_per_page' => 2,
+						'orderby' => $atts['orderby'],
+						'order' => $atts['order'],
+						'meta_query' => $meta_query,
+						'tax_query' => $tax_query,
+					);
 		        $loop = new WP_Query( $args );
 		        while ( $loop->have_posts() ) : $loop->the_post(); global $product;
 				?>
-				<div class="col-sm-5 article__thumbnail">
+				<div class="col-xs-5 article__thumbnail">
 					<a href="<?php echo get_permalink( $loop->post->ID ) ?>" title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>">
 
 							<?php if (has_post_thumbnail( $loop->post->ID )) echo get_the_post_thumbnail($loop->post->ID, 'shop_catalog'); ?>
@@ -58,32 +59,33 @@
 			</div>
 		<!--end first block-->
 		<!--second block-->
-			<div class="col-sm-4">
+			<div class="col-xs-12 col-sm-4">
+				<?php $tag_two = get_field('box_two_tag', 'option'); ?>
 				<?php
-						$meta_query  = WC()->query->get_meta_query();
-						$tax_query   = WC()->query->get_tax_query();
-						$tax_query[] = array(
-							 'taxonomy' => 'product_visibility',
-							 'field'    => 'name',
-							 'terms'    => 'featured',
-							 'operator' => 'IN',
-						);
+					$meta_query = WC()->query->get_meta_query();
+					$tax_query = WC()->query->get_tax_query();
+					$tax_query[] = array(
+						'taxonomy' => 'product_visibility',
+						'field' => 'name',
+						'terms' => 'featured',
+						'operator' => 'IN',
+					);
 
-						$args = array(
-							 'post_type'           => 'product',
-							 'post_status'         => 'publish',
-							 'ignore_sticky_posts' => 1,
-							 'product_cat'				 => 'business intelligence',
-							 'posts_per_page'      => 2,
-							 'orderby'             => $atts['orderby'],
-							 'order'               => $atts['order'],
-							 'meta_query'          => $meta_query,
-							 'tax_query'           => $tax_query,
-						);
+					$args = array(
+						'post_type' => 'product',
+						'post_status' => 'publish',
+						'ignore_sticky_posts' => 1,
+						'product_tag' => $tag_two,
+						'posts_per_page' => 2,
+						'orderby' => $atts['orderby'],
+						'order' => $atts['order'],
+						'meta_query' => $meta_query,
+						'tax_query' => $tax_query,
+					);
 		        $loop = new WP_Query( $args );
 		        while ( $loop->have_posts() ) : $loop->the_post(); global $product;
 				?>
-				<div class="col-sm-5 article__thumbnail">
+				<div class="col-xs-5 article__thumbnail">
 					<a href="<?php echo get_permalink( $loop->post->ID ) ?>" title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>">
 
 							<?php if (has_post_thumbnail( $loop->post->ID )) echo get_the_post_thumbnail($loop->post->ID, 'shop_catalog'); ?>
@@ -97,7 +99,8 @@
 			</div>
 		<!--end second block-->
 		<!--third block-->
-			<div class="col-sm-4">
+			<div class="col-xs-12 col-sm-4">
+				<?php $tag_three = get_field('box_three_tag', 'option'); ?>
 				<?php
 						$meta_query  = WC()->query->get_meta_query();
 						$tax_query   = WC()->query->get_tax_query();
@@ -112,7 +115,7 @@
 							 'post_type'           => 'product',
 							 'post_status'         => 'publish',
 							 'ignore_sticky_posts' => 1,
-							 'product_cat'				 => 'business intelligence',
+							 'product_tag'		   => $tag_three,
 							 'posts_per_page'      => 2,
 							 'orderby'             => $atts['orderby'],
 							 'order'               => $atts['order'],
@@ -122,7 +125,7 @@
 		        $loop = new WP_Query( $args );
 		        while ( $loop->have_posts() ) : $loop->the_post(); global $product;
 				?>
-				<div class="col-sm-5 article__thumbnail">
+				<div class="col-xs-5 article__thumbnail">
 					<a href="<?php echo get_permalink( $loop->post->ID ) ?>" title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>">
 
 							<?php if (has_post_thumbnail( $loop->post->ID )) echo get_the_post_thumbnail($loop->post->ID, 'shop_catalog'); ?>

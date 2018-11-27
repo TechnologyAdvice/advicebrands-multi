@@ -30,14 +30,14 @@
 <ul class="row articles">
   <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
   <li class="col-xs-12">
-    <div class="wrap row">
-      <div class="col-xs-4 img">
+    <div class="wrap row flex--row_collapse">
+      <div class="col-xs-12 col-sm-4 img">
         <a href="<?php echo get_permalink( $loop->post->ID ) ?>" title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>">
           <?php if (has_post_thumbnail( $loop->post->ID )) echo get_the_post_thumbnail($loop->post->ID, 'product'); ?>
         </a>
       </div>
-      <div class="col-xs-1 spacer">&nbsp;</div>
-      <div class="col-xs-7 content">
+      <div class="col-xs-0 col-sm-1 spacer">&nbsp;</div>
+      <div class="col-xs-12 col-sm-7 content">
         <a href="<?php echo get_permalink( $loop->post->ID ) ?>" title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>" class="h2">
           <?php the_title(); ?>
         </a>
