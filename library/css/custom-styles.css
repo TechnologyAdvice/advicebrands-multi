@@ -5,45 +5,51 @@
 // Primary
 
 // Primary - Color
-#testimonial--buttons i, .content_section .contact-email a, .content_section .contact-address a, body.site h1,body.site h2,body.site h3,body.site h4,body.site h5,body.site h6, body.site a:hover, .header--inner .nav li a, .nf-form-cont .nf-form-title h3, #mobile-nav, .featured-content .articles a {color:#3BD0ED !important;}
+#testimonial--buttons i, .content_section .contact-email a, .content_section .contact-address a, body.site h1,body.site h2,body.site h3,body.site h4,body.site h5,body.site h6, body.site a:hover, .header--inner .nav li a, .nf-form-cont .nf-form-title h3, #mobile-nav, .featured-content .articles a {color:#dd9933 !important;}
+
+#searchform input[type="search"], #searchform #searchsubmit {background-color:#dd9933 !important;}
+
+.featured-content h1 {color:#dd9933 !important;}
+
+.hero--text p {border-right:#dd9933 !important;}
 
 // Primary - Background-Color
-input[type="search"], #searchsubmit, .primary-btn, .comment-reply-link, #submit, input[type="submit"], .nf-field-element input[type=button], .primary-btn:active, .comment-reply-link:active, #submit:active, input[type="submit"]:active, .nf-field-element input[type=button]:active, .article__thumbnail--overlay .reveal {background-color:#3BD0ED !important;}
+input[type="search"], #searchsubmit, .primary-btn, .comment-reply-link, #submit, input[type="submit"], .nf-field-element input[type=button], .primary-btn:active, .comment-reply-link:active, #submit:active, input[type="submit"]:active, .nf-field-element input[type=button]:active, .article__thumbnail--overlay .reveal {background-color:#dd9933 !important;}
 
 // Primary - Background
-.highlight {background:#3BD0ED !important;}
+.highlight {background:#dd9933 !important;}
 
 // Primary - Shadow
 
 .single article .thumbnail img {
-      -webkit-box-shadow: 5px 5px #3BD0ED !important;
-      box-shadow: 5px 5px #3BD0ED !important;
-      border: 1px solid #3BD0ED !important; }
+      -webkit-box-shadow: 5px 5px #dd9933 !important;
+      box-shadow: 5px 5px #dd9933 !important;
+      border: 1px solid #dd9933 !important; }
 
 // Primary Medium
 
-.primary-btn:hover, .comment-reply-link:hover, #submit:hover, .primary-btn:focus, .comment-reply-link:focus, #submit:focus, input[type="submit"]:hover, input[type="submit"]:focus, .nf-field-element input[type=button]:hover, .nf-field-element input[type=button]:focus { background-color: #12abc9 !important; }
+.primary-btn:hover, .comment-reply-link:hover, #submit:hover, .primary-btn:focus, .comment-reply-link:focus, #submit:focus, input[type="submit"]:hover, input[type="submit"]:focus, .nf-field-element input[type=button]:hover, .nf-field-element input[type=button]:focus { background-color: #dd9933 !important; }
 
-.hero--content_articles {background: linear-gradient(to bottom, rgba(#3BD0ED, 0.5) 0%, rgba(#12abc9, 0.7) 100%);}
+.hero--content_articles {background: linear-gradient(to bottom, rgba(#dd9933, 0.5) 0%, rgba(#dd9933, 0.7) 100%);}
 
-body.site a:active, .featured-content__header h1 {color:#12abc9;}
+body.site a:active, .featured-content__header h1 {color:#dd9933;}
 
-.footer {background-color:#12abc9 !important; }
+.footer {background-color:#dd9933 !important; }
 
-// Primary Dark
+// Primary Dark - Color
 
-.hero--hero-text {color:#084854 !important;}
+.content_section--testimonials .testimonial--client-name,.content_section--testimonials .testimonial--client-title, .content_section .contact-email .fas, .content_section .contact-address .fas, i#prev:hover, i#next:hover, .article__thumbnail:hover .article__thumbnail--overlay .reveal:before {color:#dd9933;}
 
-.content_section--testimonials .testimonial--client-name,.content_section--testimonials .testimonial--client-title, .content_section .contact-email .fas, .content_section .contact-address .fas, i#prev:hover, i#next:hover, .article__thumbnail:hover .article__thumbnail--overlay .reveal:before {color:#084854;}
+body.site a, .hero--hero-text {color:#dd9933 !important;}
 
-body.site a {color:#084854 !important;}
+.featured-content h1, .hero--text p {background-color:#dd9933 !important;}
 
 // Accent
 
 // Text
 
 body.site  {
-  color:#5c6b80 !important;
+  color:#dd9933 !important;
 }
 
 // White

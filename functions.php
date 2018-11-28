@@ -285,7 +285,6 @@ function starter_fonts() {
 
 add_action('wp_enqueue_scripts', 'starter_fonts');
 
-wp_enqueue_style( 'custom-styles', get_template_directory_uri() . '/library/css/custom-styles.css' );
 
 //Call custom-styles.php
 function generate_options_css() {
@@ -296,6 +295,12 @@ function generate_options_css() {
     file_put_contents($ss_dir . '/library/css/custom-styles.css', $css, LOCK_EX); // Save it as a css file
 }
 add_action( 'acf/save_post', 'generate_options_css', 20 ); //Parse the output and write the CSS file on post save
+
+function load_css()
+  {
+    wp_enqueue_style('custom-styles', get_stylesheet_directory_uri() . '/library/css/custom-styles.css', array(), 0.256, 'all');
+  }
+  add_action('wp_print_styles', 'load_css', 99);
 
 include 'woocommerce/woo-functions.php';
 
