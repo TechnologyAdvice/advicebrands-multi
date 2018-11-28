@@ -42,52 +42,46 @@
     display: inline-block;
 }
 
-/* .menu is clearfixed inside mixins.scss */
+// .menu is clearfixed inside mixins.scss
 .menu {
     ul {
         li {
             text-align: left;
 
-            a {
-                /*
-                you can use hover styles here even though this size
-                has the possibility of being a mobile device.
-                */
-                &:hover, &:focus {}
-            }
+            // a {
+                // &:hover, &:focus {}
+            // }
 
-            &:first-child {}
+            // &:first-child {}
 
-            &:last-child {}
+            // &:last-child {}
 
-            /*
-            plan your menus and drop-downs wisely.
-            */
-            ul.sub-menu,
-            ul.children {
-                li {
-                    a {
-                        &:hover,
-                        &:focus {}
+            // plan your menus and drop-downs wisely.
+            //ul.sub-menu,
+            //ul.children {
+            //    li {
+            //        a {
+            //            &:hover,
+            //            &:focus {}
+            //
+            //            &:link {}
+            //        }
+            //
+            //        &:first-child {}
+            //
+            //        &:last-child {}
+            //    }
+            //}
+        } // end .menu ul li 
 
-                        &:link {}
-                    }
-
-                    &:first-child {}
-
-                    &:last-child {}
-                }
-            }
-        } /* end .menu ul li */
-
-        /* highlight current page */
-        li.current-menu-item,
-        li.current_page_item,
-        li.current_page_ancestor {
-            a {}
-        } /* end current highlighters */
-    } /* end .menu ul */
-} /* end .menu */
+        // highlight current page 
+        //li.current-menu-item,
+        //li.current_page_item,
+        //li.current_page_ancestor {
+            //a {}
+        //} // end current highlighters 
+    } // end .menu ul 
+} // end .menu 
 
 .executive_summary {
     .content {
@@ -127,14 +121,10 @@
     }
 }
 
-/*********************
-POSTS & CONTENT STYLES
-*********************/
+// POSTS & CONTENT STYLES
 
 .overlay {
     @include hero-height;
-
-    &--inner {}
 }
 
 .content_section {
@@ -157,9 +147,8 @@ POSTS & CONTENT STYLES
     }
 }
 
-/* entry content */
+// entry content
 .entry-content {
-    /* at this larger size, we can start to align images */
     .alignleft, img.alignleft {
         margin-right: 1.5em;
         display: inline;
@@ -178,26 +167,20 @@ POSTS & CONTENT STYLES
         display: block;
         clear: both;
     }
-} /* end .entry-content */
+} // end .entry-content
 
-/*********************
-FOOTER STYLES
-*********************/
+// FOOTER STYLES
 
-#inner-footer {
-    .footer {
-        &_logo {
-            img {}
-        }
-    }
-}
-
-/*
-check your menus here. do they look good?
-do they need tweaking?
-*/
-.footer-links {
-    ul {
-        li {}
-    }
-} /* end .footer-links */
+// #inner-footer {
+//     .footer {
+//         &_logo {
+//             img {}
+//         }
+//     }
+// }
+// 
+// .footer-links {
+//     ul {
+//         li {}
+//     }
+// }

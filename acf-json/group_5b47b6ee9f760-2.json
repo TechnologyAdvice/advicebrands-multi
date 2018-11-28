@@ -440,7 +440,7 @@
                     "key": "field_5aec6b392614e",
                     "label": "Social Name",
                     "name": "social_name",
-                    "type": "text",
+                    "type": "radio",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -449,11 +449,18 @@
                         "class": "",
                         "id": ""
                     },
+                    "choices": {
+                        "facebook": "Facebook",
+                        "twitter-square": "Twitter",
+                        "linkedin": "LinkedIn",
+                        "youtube-square": "YouTube"
+                    },
+                    "allow_null": 0,
+                    "other_choice": 0,
                     "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
+                    "layout": "horizontal",
+                    "return_format": "array",
+                    "save_other_choice": 0
                 }
             ]
         },
@@ -582,5 +589,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1543422665
+    "modified": 1543423930
 }

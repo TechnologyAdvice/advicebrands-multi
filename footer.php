@@ -37,27 +37,27 @@
 					</div>
 					<div class="social_platforms col-xs-12 col-md-6 last">
 						<?php
-								// check if the repeater field has rows of data
-								if( have_rows('social_platforms', 'option') ):
+						// check if the repeater field has rows of data
+						if (have_rows('social_platforms', 'option')) :
 								// loop through the rows of data
-									while ( have_rows('social_platforms', 'option') ) : the_row();
+						while (have_rows('social_platforms', 'option')) : the_row();
 										// display a sub field value
-									?>
-											<a href="<?php the_sub_field('social_link') ?>" class="fab fa-<?php the_sub_field('social_name')?>" target="_blank"></a>
-								<?php
-									endwhile;
-								else :
-									// no rows found
-								endif;
-								?>
+
+						$social_name = get_sub_field('social_name');
+						?>
+								<a href="<?php the_sub_field('social_link') ?>" class="fab fa-<?php echo $social_name['value']; ?>" target="_blank" label="<?php echo $social_name['label']; ?>"></a>
+							<?php
+						endwhile;
+						else :
+								// no rows found
+						endif;
+						?>
 					</div>
 				</div>
 		</footer>
 		<?php endif; ?>
 		<?php // all js scripts are loaded in library/starter.php ?>
 		<?php wp_footer(); ?>
-
-			<!--script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script-->
 		<!-- close container -->
 		</div>
 	</body>

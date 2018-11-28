@@ -176,25 +176,9 @@ probably best not to use it. I mean, were you going to anyway? */
 .mobile-hide {
   display: inline-block; }
 
-/* .menu is clearfixed inside mixins.scss */
-.menu {
-  /* end .menu ul */ }
-  .menu ul {
-    /* end .menu ul li */
-    /* highlight current page */
-    /* end current highlighters */ }
-    .menu ul li {
-      text-align: left;
-      /*
-            plan your menus and drop-downs wisely.
-            */ }
-      .menu ul li a {
-        /*
-                you can use hover styles here even though this size
-                has the possibility of being a mobile device.
-                */ }
+.menu ul li {
+  text-align: left; }
 
-/* end .menu */
 .executive_summary .content {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -227,9 +211,6 @@ probably best not to use it. I mean, were you going to anyway? */
     padding-right: 1em;
     color: #fff; }
 
-/*********************
-POSTS & CONTENT STYLES
-*********************/
 .overlay {
   height: 100vh;
   min-height: 905px; }
@@ -243,32 +224,22 @@ POSTS & CONTENT STYLES
 .content_section--content_right .content_section--content {
   text-align: right; }
 
-/* entry content */
-.entry-content {
-  /* at this larger size, we can start to align images */ }
-  .entry-content .alignleft, .entry-content img.alignleft {
-    margin-right: 1.5em;
-    display: inline;
-    float: left; }
-  .entry-content .alignright, .entry-content img.alignright {
-    margin-left: 1.5em;
-    display: inline;
-    float: right; }
-  .entry-content .aligncenter, .entry-content img.aligncenter {
-    margin-right: auto;
-    margin-left: auto;
-    display: block;
-    clear: both; }
+.entry-content .alignleft, .entry-content img.alignleft {
+  margin-right: 1.5em;
+  display: inline;
+  float: left; }
 
-/* end .entry-content */
-/*********************
-FOOTER STYLES
-*********************/
-/*
-check your menus here. do they look good?
-do they need tweaking?
-*/
-/* end .footer-links */
+.entry-content .alignright, .entry-content img.alignright {
+  margin-left: 1.5em;
+  display: inline;
+  float: right; }
+
+.entry-content .aligncenter, .entry-content img.aligncenter {
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  clear: both; }
+
 /******************************************************************
 Site Name:
 Author:
