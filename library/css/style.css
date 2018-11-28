@@ -2070,7 +2070,7 @@ ul[id^="menu-"] {
   .overlay--inner {
     height: 120px;
     min-height: 120px !important;
-    background: rgba(59, 208, 237, 0.4); }
+    background: rgba(102, 102, 102, 0.4); }
 
 .hero {
   text-align: center;
@@ -2118,8 +2118,8 @@ ul[id^="menu-"] {
       height: 100%; }
     .hero--content_articles {
       width: 100%;
-      background: -webkit-gradient(linear, left top, left bottom, from(rgba(53, 160, 182, 0.8)), to(#35a0b6));
-      background: linear-gradient(to bottom, rgba(53, 160, 182, 0.8) 0%, #35a0b6 100%);
+      background: -webkit-gradient(linear, left top, left bottom, from(rgba(215, 215, 215, 0.8)), to(#353535));
+      background: linear-gradient(to bottom, rgba(215, 215, 215, 0.8) 0%, #353535 100%);
       -ms-flex-pack: distribute;
           justify-content: space-around;
       margin-left: 0;
@@ -2194,7 +2194,6 @@ ul[id^="menu-"] {
       .hero--text p {
         width: 74em; } }
   .hero--hero-text {
-    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
     display: block;
     text-transform: uppercase;
     color: #084854;

@@ -250,7 +250,22 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "#3BD0ED"
+            "default_value": ""
+        },
+        {
+            "key": "field_5bfefe3247b9a",
+            "label": "Primary Light",
+            "name": "primary_light",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "default_value": ""
         },
         {
             "key": "field_5b4ca0afe8583",
@@ -265,7 +280,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "#12abc9"
+            "default_value": ""
         },
         {
             "key": "field_5b4ca0c9e8584",
@@ -280,7 +295,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "#084854"
+            "default_value": ""
         },
         {
             "key": "field_5b4c9cb1eba36",
@@ -295,7 +310,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "#E0D03D"
+            "default_value": ""
         },
         {
             "key": "field_5b4c9d03eba37",
@@ -310,7 +325,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "#5c6b80"
+            "default_value": ""
         },
         {
             "key": "field_5b47b8f842ef1",
@@ -589,5 +604,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1543423930
+    "modified": 1543438335
 }

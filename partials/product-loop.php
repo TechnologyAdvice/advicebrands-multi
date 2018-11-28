@@ -38,9 +38,9 @@
       </div>
       <div class="col-xs-0 col-sm-1 spacer">&nbsp;</div>
       <div class="col-xs-12 col-sm-7 content">
-        <a href="<?php echo get_permalink( $loop->post->ID ) ?>" title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>" class="h2">
+        <h2><a href="<?php echo get_permalink( $loop->post->ID ) ?>" title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>">
           <?php the_title(); ?>
-        </a>
+        </a></h2>
         <?php the_field('product_description'); ?>
         <?php echo apply_filters( 'the_content', $post->post_excerpt ); ?>
         <a href="<?php echo get_permalink( $loop->post->ID ) ?>" title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>" class="primary-btn" style="max-width:200px;color:white !important;">Learn More</a>
