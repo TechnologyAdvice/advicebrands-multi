@@ -425,6 +425,19 @@ $title-lineheight: $title-pad + 1;
             &-header {
                 background-color: rgba(245, 245, 255, 0.9);
                 margin-top: auto;
+                height: 2em;
+            }
+
+            &__title {
+                margin-top: -1.7em;
+                text-transform: uppercase;
+                color: $dark-primary;
+            }
+
+            &__container {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
             }
 
             > div {

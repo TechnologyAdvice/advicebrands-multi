@@ -85,6 +85,8 @@ function custom_wc_translations($translated)
         'Billing details' => 'Complete this form to get your free guide.',
         'Additional information' => 'Disclaimer',
         'Place order' => 'Download Now',
+        'Proceed to checkout' => 'Proceed to Download',
+        'Update cart' => 'Update',
     );
     $translated = str_ireplace(array_keys($text), $text, $translated);
     return $translated;

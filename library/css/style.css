@@ -618,6 +618,9 @@ probably best not to use it. I mean, were you going to anyway? */
   .woocommerce .button.button.alt:hover {
     background-color: #d25010; }
 
+.woocommerce .entry-content td {
+  border-right: 0 !important; }
+
 .woocommerce-tabs ul.tabs,
 .woocommerce-tabs h2 {
   display: none; }
@@ -630,6 +633,20 @@ probably best not to use it. I mean, were you going to anyway? */
 
 .woocommerce-Price-amount.amount {
   display: none; }
+
+.woocommerce-cart table.cart img {
+  width: 100%;
+  max-width: 300px; }
+
+.woocommerce-page .cart-collaterals .cart_totals h2,
+.woocommerce-page .cart-collaterals .cart_totals table {
+  display: none; }
+
+.woocommerce #content table.cart td.actions, .woocommerce table.cart td.actions, .woocommerce-page #content table.cart td.actions, .woocommerce-page table.cart td.actions {
+  background: #fff; }
+
+.woocommerce table.shop_table td {
+  border-right: 0; }
 
 .container-fluid,
 .container {
@@ -2109,7 +2126,23 @@ ul[id^="menu-"] {
       margin-right: 0; }
       .hero--content_articles-header {
         background-color: rgba(245, 245, 255, 0.9);
-        margin-top: auto; }
+        margin-top: auto;
+        height: 2em; }
+      .hero--content_articles__title {
+        margin-top: -1.7em;
+        text-transform: uppercase;
+        color: #084854; }
+      .hero--content_articles__container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center; }
       .hero--content_articles > div {
         max-Width: 1440px; }
         .hero--content_articles > div > div {

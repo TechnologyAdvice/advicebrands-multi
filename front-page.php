@@ -15,12 +15,14 @@
 			</main>
 		</div>
 	</div>
-	<div class="hero--content_articles-header">header row</div>
+	<div class="hero--content_articles-header"></div>
 	<div class="hero--content_articles row">
 		<div class="row">
 		<!--first block-->
-			<div class="col-xs-12 col-sm-4">
+			<div class="col-xs-12 col-sm-4 flex flex--column">
 				<?php $tag_one = get_field('box_one_tag', 'option'); ?>
+				<div class="hero--content_articles__title"><?php echo $tag_one; ?></div>
+				<div class="hero--content_articles__container">
 				<?php
 					$meta_query = WC()->query->get_meta_query();
 					$tax_query = WC()->query->get_tax_query();
@@ -45,6 +47,7 @@
 		        $loop = new WP_Query( $args );
 		        while ( $loop->have_posts() ) : $loop->the_post(); global $product;
 				?>
+				
 				<div class="col-xs-5 article__thumbnail">
 					<a href="<?php echo get_permalink( $loop->post->ID ) ?>" title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>">
 
@@ -55,12 +58,15 @@
 					</a>
 				</div>
 				<?php endwhile; ?>
+				</div>
 				<?php wp_reset_query(); ?>
 			</div>
 		<!--end first block-->
 		<!--second block-->
-			<div class="col-xs-12 col-sm-4">
+			<div class="col-xs-12 col-sm-4 flex flex--column">
 				<?php $tag_two = get_field('box_two_tag', 'option'); ?>
+				<div class="hero--content_articles__title"><?php echo $tag_two; ?></div>
+				<div class="hero--content_articles__container">
 				<?php
 					$meta_query = WC()->query->get_meta_query();
 					$tax_query = WC()->query->get_tax_query();
@@ -95,12 +101,15 @@
 					</a>
 				</div>
 				<?php endwhile; ?>
+				</div>
 				<?php wp_reset_query(); ?>
 			</div>
 		<!--end second block-->
 		<!--third block-->
-			<div class="col-xs-12 col-sm-4">
+			<div class="col-xs-12 col-sm-4 flex flex--column">
 				<?php $tag_three = get_field('box_three_tag', 'option'); ?>
+				<div class="hero--content_articles__title"><?php echo $tag_three; ?></div>
+				<div class="hero--content_articles__container">
 				<?php
 						$meta_query  = WC()->query->get_meta_query();
 						$tax_query   = WC()->query->get_tax_query();
@@ -135,6 +144,7 @@
 					</a>
 				</div>
 				<?php endwhile; ?>
+				</div>
 				<?php wp_reset_query(); ?>
 			</div>
 		<!--end third block-->

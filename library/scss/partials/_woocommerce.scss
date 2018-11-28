@@ -15,7 +15,7 @@
 
             .woocommerce-product-details__short-description {
                 color: $white;
-                
+
                 p {
                     color: $white;
                 }
@@ -50,6 +50,10 @@
             background-color: darken($accent, 10%);
         }
     }
+
+    .entry-content td {
+        border-right: 0 !important;
+    }
 }
 
 .woocommerce-tabs {
@@ -64,9 +68,29 @@
 }
 
 .woocommerce #payment #place_order, .woocommerce-page #payment #place_order {
-  float: left;
+    float: left;
 }
 
 .woocommerce-Price-amount.amount {
     display: none;
+}
+
+.woocommerce-cart table.cart img {
+    width: 100%;
+    max-width: 300px;
+}
+
+.woocommerce-page .cart-collaterals .cart_totals {
+    h2,
+    table {
+        display: none;
+    }
+}
+
+.woocommerce #content table.cart td.actions, .woocommerce table.cart td.actions, .woocommerce-page #content table.cart td.actions, .woocommerce-page table.cart td.actions {
+    background: $white;
+}
+
+.woocommerce table.shop_table td {
+    border-right: 0;
 }
