@@ -60,11 +60,7 @@
 					<div id="inner-header" class="wrap">
 						<div class="header-nav row">
 							<a href="/" rel="nofollow" class="logo col-xs-12 col-sm-2">
-									<?php if( get_field('secondary_logo', 'option')): ?>
-										<img src="<?php the_field('secondary_logo', 'option'); ?>">
-									<?php elseif( get_field('primary_logo', 'option')) : ?>
-										<img src="<?php the_field('primary_logo', 'option'); ?>">
-									<?php endif; ?>
+								<img src="<?php the_field('primary_logo', 'option'); ?>">
 							</a>
 						<?php endif; ?>
 						<?php wp_reset_postdata(); ?>

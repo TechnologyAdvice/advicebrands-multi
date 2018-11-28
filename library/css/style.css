@@ -2767,27 +2767,6 @@ larger than an iPhone but smaller than a tablet. Let's call them
 tweeners.
 *********************/
 @media only screen and (min-width: 48em) {
-  /******************************************************************
-Site Name:
-Author:
-
-Stylesheet: 48em and Up Stylesheet
-
-
-A word of warning. This size COULD be a larger mobile device,
-so you still want to keep it pretty light and simply expand
-upon your base.scss styles.
-
-******************************************************************/
-  /*
-IMPORTANT NOTE ABOUT SASS 3.3 & UP
-You can't use @extend within media queries
-anymore, so just be aware that if you drop
-them in here, they won't work.
-*/
-  /*********************
-NAVIGATION STYLES
-*********************/
   #inner-header {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -2810,7 +2789,10 @@ NAVIGATION STYLES
       margin: 0;
       display: -webkit-box;
       display: -ms-flexbox;
-      display: flex; }
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
       #inner-header .logo img {
         max-width: 450px;
         padding: 1rem 0;
@@ -3030,9 +3012,6 @@ come into play. Have fun!
       .widget ul li ul {
         margin-top: 0.75em;
         padding-left: 1em; }
-  /*********************
-FOOTER STYLES
-*********************/
   #inner-footer {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -3061,7 +3040,14 @@ FOOTER STYLES
           -ms-flex-align: center;
               align-items: center; }
     #inner-footer .footer_logo {
-      margin-top: 0; } }
+      margin-top: 0;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
 
 /*********************
 DESKTOP

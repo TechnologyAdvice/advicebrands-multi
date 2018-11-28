@@ -47,7 +47,7 @@
             "label": "Secondary Logo",
             "name": "secondary_logo",
             "type": "image",
-            "instructions": "This logo is optional. If used it will be included on the homepage header and in the footer in place of the Primary Logo. Use this when a \"White Version\" of the logo is needed for contrast.",
+            "instructions": "This logo is optional. If used it will be included in the footer in place of the Primary Logo. Use this when a \"White Version\" of the logo is needed for contrast.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -582,5 +582,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1543353621
+    "modified": 1543422665
 }

@@ -164,9 +164,8 @@ div[class^="content_section--"] {
     }
 }
 
-/*********************
-FOOTER STYLES
-*********************/
+//FOOTER STYLES
+
 #inner-footer {
     flex-direction: row;
 
@@ -188,5 +187,7 @@ FOOTER STYLES
 
     .footer_logo {
         margin-top: 0;
+        display: flex;
+        flex-direction: column;
     }
 }

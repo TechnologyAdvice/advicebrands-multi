@@ -1,26 +1,4 @@
-/******************************************************************
-Site Name:
-Author:
-
-Stylesheet: 48em and Up Stylesheet
-
-
-A word of warning. This size COULD be a larger mobile device,
-so you still want to keep it pretty light and simply expand
-upon your base.scss styles.
-
-******************************************************************/
-
-/*
-IMPORTANT NOTE ABOUT SASS 3.3 & UP
-You can't use @extend within media queries
-anymore, so just be aware that if you drop
-them in here, they won't work.
-*/
-
-/*********************
-NAVIGATION STYLES
-*********************/
+// NAVIGATION STYLES
 
 #inner-header {
     align-items: center;
@@ -35,6 +13,7 @@ NAVIGATION STYLES
     .logo {
         margin: 0;
         display: flex;
+        justify-content: center;
 
         img {
             max-width: 450px;
