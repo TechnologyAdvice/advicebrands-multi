@@ -21,7 +21,7 @@
 		<!--first block-->
 			<div class="col-xs-12 col-sm-4 flex flex--column">
 				<?php $tag_one = get_field('box_one_tag', 'option'); ?>
-				<div class="hero--content_articles__title"><?php echo $tag_one; ?></div>
+				<a href="product-tag/<?php echo $tag_one; ?>" class="hero--content_articles__title"><?php echo $tag_one; ?> <i class="fas fa-chevron-circle-right"></i></a>
 				<div class="hero--content_articles__container">
 				<?php
 					$meta_query = WC()->query->get_meta_query();
@@ -65,7 +65,7 @@
 		<!--second block-->
 			<div class="col-xs-12 col-sm-4 flex flex--column">
 				<?php $tag_two = get_field('box_two_tag', 'option'); ?>
-				<div class="hero--content_articles__title"><?php echo $tag_two; ?></div>
+				<a href="product-tag/<?php echo $tag_two; ?>" class="hero--content_articles__title"><?php echo $tag_two; ?> <i class="fas fa-chevron-circle-right"></i></a>
 				<div class="hero--content_articles__container">
 				<?php
 					$meta_query = WC()->query->get_meta_query();
@@ -108,7 +108,7 @@
 		<!--third block-->
 			<div class="col-xs-12 col-sm-4 flex flex--column">
 				<?php $tag_three = get_field('box_three_tag', 'option'); ?>
-				<div class="hero--content_articles__title"><?php echo $tag_three; ?></div>
+				<a href="product-tag/<?php echo $tag_three; ?>" class="hero--content_articles__title"><?php echo $tag_three; ?> <i class="fas fa-chevron-circle-right"></i></a>
 				<div class="hero--content_articles__container">
 				<?php
 						$meta_query  = WC()->query->get_meta_query();
