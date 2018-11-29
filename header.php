@@ -252,7 +252,13 @@
 							<main id="main" class="col-xs-12" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 								<div class="hero--text">
 									<h1>
-										<span class="hero--hero-text"><?php the_title(); ?></span>
+										<span class="hero--hero-text">
+											<?php if (is_product_tag()) : ?>
+												<?php single_tag_title(); ?>
+											<?php else : ?>
+											<?php the_title(); ?>
+											<?php endif; ?>
+										</span>
 									</h1>
 								</div>
 							</main>
