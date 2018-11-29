@@ -52,7 +52,7 @@ body.site  {
 
 /* Primary - Light */
 
-.footer-nav li a, .footer .social_platforms a {color:<?php the_field('primary_light', 'option'); ?> !important;}
+.footer-nav li a, .footer .social_platforms a, .hero--inner .hero--hero-text {color:<?php the_field('primary_light', 'option'); ?> !important;}
 
 /* White */
 #wpadminbar a {color: white !important;}

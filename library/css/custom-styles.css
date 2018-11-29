@@ -24,8 +24,6 @@
       border: 1px solid #4b89c0 !important; }
 
 
-
-
 /* Primary Medium */
 
 .primary-btn:hover, .comment-reply-link:hover, #submit:hover, .primary-btn:focus, .comment-reply-link:focus, #submit:focus, input[type="submit"]:hover, input[type="submit"]:focus, .nf-field-element input[type=button]:hover, .nf-field-element input[type=button]:focus { background-color: #285c8a !important; }
@@ -54,7 +52,7 @@ body.site  {
 
 /* Primary - Light */
 
-.footer-nav li a, .footer .social_platforms a {color:#b0daff !important;}
+.footer-nav li a, .footer .social_platforms a, .hero--inner .hero--hero-text {color:#b0daff !important;}
 
 /* White */
 #wpadminbar a {color: white !important;}
