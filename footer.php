@@ -25,8 +25,8 @@
 	    					'theme_location' => 'footer-links',             // where it's located in the theme
 	    					'before' => '',                                 // before the menu
 	    					'after' => '',                                  // after the menu
-	    					'link_before' => '',                            // before each link
-	    					'link_after' => '',                             // after each link
+	    					'link_before' => '<h6>',                            // before each link
+	    					'link_after' => '</h6>',                             // after each link
 	    					'depth' => 0,                                   // limit the depth of the nav
 	    					'fallback_cb' => 'starter_footer_links_fallback'  // fallback function
 							)); ?>

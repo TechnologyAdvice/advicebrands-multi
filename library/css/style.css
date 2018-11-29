@@ -648,6 +648,17 @@ probably best not to use it. I mean, were you going to anyway? */
 .woocommerce table.shop_table td {
   border-right: 0; }
 
+.woocommerce-cart-form__cart-item .product-thumbnail img {
+  -webkit-box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.4) !important;
+          box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.4) !important; }
+
+.woocommerce-cart-form__cart-item .product-name {
+  font-size: 1.5em;
+  font-weight: bold;
+  padding-top: 2em !important;
+  width: 50%;
+  vertical-align: top !important; }
+
 .container-fluid,
 .container {
   margin-right: auto;
@@ -2018,8 +2029,11 @@ ul[id^="menu-"] {
   opacity: 0;
   height: 0;
   -webkit-transition: all .5s;
-  transition: all .5s;
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  transition: all .5s; }
+  .nav h6 {
+    margin: 0;
+    font-size: 1em;
+    font-weight: normal; }
   .nav.show {
     opacity: 1;
     height: 100%; }
@@ -2237,13 +2251,15 @@ ul[id^="menu-"] {
   color: #084854;
   padding-right: .5rem; }
 
-.articles h2 {
-  border-bottom: 1px solid #e8edee;
-  text-align: left;
-  color: #3bd0ed;
-  padding-bottom: .5rem;
-  font-size: 1.5rem;
-  margin-top: 1rem; }
+.articles {
+  width: 100%; }
+  .articles h2 {
+    border-bottom: 1px solid #e8edee;
+    text-align: left;
+    color: #3bd0ed;
+    padding-bottom: .5rem;
+    font-size: 1.5rem;
+    margin-top: 1rem; }
 
 .article__thumbnail {
   padding: 1em;

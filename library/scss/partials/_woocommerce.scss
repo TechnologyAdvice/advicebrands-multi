@@ -94,3 +94,19 @@
 .woocommerce table.shop_table td {
     border-right: 0;
 }
+
+.woocommerce-cart-form__cart-item {
+    .product-thumbnail {
+        img {
+            box-shadow: $box-shadow !important;
+        }
+    }
+
+    .product-name {
+        font-size: 1.5em;
+        font-weight: bold;
+        padding-top: 2em !important;
+        width: 50%;
+        vertical-align: top !important;
+    }
+}

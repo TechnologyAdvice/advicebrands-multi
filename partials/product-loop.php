@@ -27,10 +27,10 @@
     );
 
     $loop = new WP_Query( $args ); ?>
-<ul class="row articles">
+<ul class="articles">
   <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
   <li class="col-xs-12">
-    <div class="wrap row flex--row_collapse">
+    <div class="wrap flex flex--row_collapse">
       <div class="col-xs-12 col-sm-4 img">
         <a href="<?php echo get_permalink( $loop->post->ID ) ?>" title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>">
           <?php if (has_post_thumbnail( $loop->post->ID )) echo get_the_post_thumbnail($loop->post->ID, 'product'); ?>
