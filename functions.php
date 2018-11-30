@@ -127,9 +127,9 @@ function starter_theme_customizer($wp_customize) {
   // Uncomment the below lines to remove the default customize sections
 
   // $wp_customize->remove_section('title_tagline');
-  // $wp_customize->remove_section('colors');
+   $wp_customize->remove_section('colors');
    $wp_customize->remove_section('background_image');
-  // $wp_customize->remove_section('static_front_page');
+   $wp_customize->remove_section('static_front_page');
   // $wp_customize->remove_section('nav');
 
   // Uncomment the below lines to remove the default controls
@@ -167,7 +167,7 @@ function theme_enqueue_styles() {
 
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 
-/************* ACTIVE SIDEBARS ********************/
+// ACTIVE SIDEBARS 
 
 // Sidebars & Widgetizes Areas
 function starter_register_sidebars() {
