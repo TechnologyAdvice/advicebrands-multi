@@ -218,43 +218,43 @@ function starter_register_sidebars() {
 } // don't remove this bracket!
 
 /*
- * Remove Original Tag Meta Box - courtesy of https://rudrastyh.com/wordpress/tag-metabox-like-categories.html
+ * Remove Original Tag Meta Box 
  */
-function rudr_post_tags_meta_box_remove() {
-	$id = 'tagsdiv-post_tag'; // you can find it in a page source code (Ctrl+U)
-	$post_type = 'post'; // remove only from post edit screen
+function product_tags_meta_box_remove() {
+	$id = 'tagsdiv-product_tag'; // you can find it in a page source code (Ctrl+U)
+	$post_type = 'product'; // remove only from post edit screen
 	$position = 'side';
 	remove_meta_box( $id, $post_type, $position );
 }
-add_action( 'admin_menu', 'rudr_post_tags_meta_box_remove');
+add_action( 'admin_menu', 'product_tags_meta_box_remove');
 
 /*
  * Add Category style Tag box
  */
-function rudr_add_new_tags_metabox(){
-	$id = 'rudrtagsdiv-post_tag'; // it should be unique
+function add_new_product_tags_metabox(){
+	$id = 'producttagsdiv-post_tag'; // it should be unique
 	$heading = 'Tags'; // meta box heading
-	$callback = 'rudr_metabox_content'; // the name of the callback function
-	$post_type = 'post';
+	$callback = 'product_metabox_content'; // the name of the callback function
+	$post_type = 'product';
 	$position = 'side';
 	$pri = 'default'; // priority, 'default' is good for us
 	add_meta_box( $id, $heading, $callback, $post_type, $position, $pri );
 }
-add_action( 'admin_menu', 'rudr_add_new_tags_metabox');
+add_action( 'admin_menu', 'add_new_product_tags_metabox');
 
 /*
  * Fill
  */
- function rudr_metabox_content($post) {
+ function product_metabox_content($post) {
  		// get all blog post tags as an array of objects
- 		$all_tags = get_terms( array('taxonomy' => 'post_tag', 'hide_empty' => 0) );
+ 		$all_tags = get_terms( array('taxonomy' => 'product_tag', 'hide_empty' => 0) );
  		// get all tags assigned to a post
- 		$all_tags_of_post = get_the_terms( $post->ID, 'post_tag' );
+ 		$all_tags_of_product = get_the_terms( $post->ID, 'product_tag' );
 
  		// create an array of post tags ids
  		$ids = array();
- 		if ( $all_tags_of_post ) {
- 			foreach ($all_tags_of_post as $tag ) {
+ 		if ( $all_tags_of_product ) {
+ 			foreach ($all_tags_of_product as $tag ) {
  				$ids[] = $tag->term_id;
  			}
  		}
