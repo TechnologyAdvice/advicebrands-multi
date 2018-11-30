@@ -621,6 +621,9 @@ probably best not to use it. I mean, were you going to anyway? */
 .woocommerce .entry-content td {
   border-right: 0 !important; }
 
+.woocommerce a.button {
+  font-weight: normal; }
+
 .woocommerce-tabs ul.tabs,
 .woocommerce-tabs h2 {
   display: none; }
@@ -2302,7 +2305,6 @@ ul[id^="menu-"] {
 
 article {
   display: block;
-  margin: 3em 0;
   text-align: left; }
   .single article {
     margin-top: 0; }

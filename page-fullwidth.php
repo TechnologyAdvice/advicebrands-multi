@@ -21,9 +21,9 @@
 
 
 
-								<section class="entry-content " itemprop="articleBody">
+								<section class="entry-content" itemprop="articleBody">
 
-									<?php	the_content(); ?>
+									<?php the_content(); ?>
 
 								</section>
 

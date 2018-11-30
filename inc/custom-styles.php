@@ -5,11 +5,11 @@
 
 /* Primary - Background Color  */
 
-#searchform input[type="search"], #searchform #searchsubmit, .primary-btn, input[type="submit"], .nf-field-element input[type=button] {background-color:<?php the_field('primary', 'option'); ?> !important;}
+.woocommerce a.button, #searchform input[type="search"], #searchform #searchsubmit, .primary-btn, input[type="submit"], .nf-field-element input[type=button] {background-color:<?php the_field('primary', 'option'); ?> !important;}
 
 /* Primary - Color  */
 
-.featured-content h1 {color:<?php the_field('primary', 'option'); ?> !important;}
+.featured-content h1, .hero--content_articles__title:hover {color:<?php the_field('primary', 'option'); ?> !important;}
 
 .hero--text p {border-right-color:<?php the_field('primary', 'option'); ?> !important;}
 
@@ -26,7 +26,7 @@
 
 /* Primary Medium */
 
-.primary-btn:hover, .comment-reply-link:hover, #submit:hover, .primary-btn:focus, .comment-reply-link:focus, #submit:focus, input[type="submit"]:hover, input[type="submit"]:focus, .nf-field-element input[type=button]:hover, .nf-field-element input[type=button]:focus { background-color: <?php the_field('primary_medium','option');?> !important; }
+.woocommerce a.button:hover,.primary-btn:hover, .comment-reply-link:hover, #submit:hover, .primary-btn:focus, .comment-reply-link:focus, #submit:focus, input[type="submit"]:hover, input[type="submit"]:focus, .nf-field-element input[type=button]:hover, .nf-field-element input[type=button]:focus { background-color: <?php the_field('primary_medium','option');?> !important; }
 
 body.site a:active, .featured-content__header h1 {color:<?php the_field('primary_medium','option');?> !important;}
 
@@ -52,8 +52,8 @@ body.site  {
 
 /* Primary - Light */
 
-.footer-nav li a, .footer .social_platforms a, .hero--inner .hero--hero-text {color:<?php the_field('primary_light', 'option'); ?> !important;}
+.footer-nav li a, .footer .social_platforms a, .hero--inner .hero--hero-text, .article__thumbnail:hover h3 {color:<?php the_field('primary_light', 'option'); ?> !important;}
 
 /* White */
-#wpadminbar a {color: white !important;}
+#wpadminbar a, .woocommerce a.button {color: white !important;}
 input[type="search"]:focus {background-color:white !important;}
