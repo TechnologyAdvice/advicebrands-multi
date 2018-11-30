@@ -3,15 +3,12 @@
 	<div class="hero--content">
 		<div id="inner-content">
 			<main id="main" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog" style="height:100%;">
-				<?php if (have_posts()) : ?>
-					<div class="hero--text wrap">
-						<h1>
-							<span class="hero--hero-text"><?php the_field('hero_text', 'option'); ?></span>
-						</h1>
-						<p><?php the_field('secondary_content', 'option'); ?></p>
-					</div>
-				<?php endif; ?>
-				<?php wp_reset_postdata(); ?>
+				<div class="hero--text wrap">
+					<h1>
+						<span class="hero--hero-text"><?php the_field('hero_text', 'option'); ?></span>
+					</h1>
+					<p><?php the_field('secondary_content', 'option'); ?></p>
+				</div>
 			</main>
 		</div>
 	</div>

@@ -1,3 +1,4 @@
+<!-- header front -->
 <!doctype html>
 
 <!--[if lt IE 7]><html <?php language_attributes(); ?> class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
@@ -44,7 +45,6 @@
 </head>
 <body <?php body_class('site'); ?> itemscope itemtype="http://schema.org/WebPage">
 	<div id="container">
-		<?php if (have_posts()) : ?>
 		<?php
 			$attachment_id = get_field('site_image', 'option');
 			$size = "full"; // (thumbnail, medium, large, full or custom size)
@@ -62,7 +62,6 @@
 							<a href="/" rel="nofollow" class="logo col-xs-12 col-sm-2">
 								<img src="<?php the_field('primary_logo', 'option'); ?>">
 							</a>
-						<?php endif; ?>
 						<?php wp_reset_postdata(); ?>
 						<div class="col-xs-12 col-sm-7">
 							<nav role="navigation" class="row" itemscope itemtype="http://schema.org/SiteNavigationElement">
