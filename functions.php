@@ -108,55 +108,7 @@ new image size.
   - Create some boilerplate Sections, Controls and Settings
 */
 
-function starter_theme_customizer($wp_customize) {
-  // $wp_customize calls go here.
-  //
-  // Text color
-    $wp_customize->add_setting( 'text_color', array(
-      'default'   => '',
-      'transport' => 'refresh',
-    ) );
-
-    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'text_color', array(
-      'section' => 'colors',
-      'label'   => esc_html__( 'Text color', 'theme' ),
-    ) ) );
-
-
-
-  // Uncomment the below lines to remove the default customize sections
-
-  // $wp_customize->remove_section('title_tagline');
-   $wp_customize->remove_section('colors');
-   $wp_customize->remove_section('background_image');
-   $wp_customize->remove_section('static_front_page');
-  // $wp_customize->remove_section('nav');
-
-  // Uncomment the below lines to remove the default controls
-  // $wp_customize->remove_control('blogdescription');
-
-  // Uncomment the following to change the default section titles
-    $wp_customize->get_section('colors')->title = __( 'Theme Colors' );
-  // $wp_customize->get_section('background_image')->title = __( 'Images' );
-}
-
-add_action( 'customize_register', 'starter_theme_customizer' );
-
-function theme_get_customizer_css() {
-    ob_start();
-
-    $text_color = get_theme_mod( 'text_color', '' );
-    if ( ! empty( $text_color ) ) {
-      ?>
-      body {
-        color: <?php echo $text_color; ?>;
-      }
-      <?php
-    }
-
-    $css = ob_get_clean();
-    return $css;
-  }
+include 'inc/customizer.php';
 
 
 function theme_enqueue_styles() {
@@ -287,20 +239,20 @@ add_action('wp_enqueue_scripts', 'starter_fonts');
 
 
 //Call custom-styles.php
-function generate_options_css() {
-    $ss_dir = get_stylesheet_directory();
-    ob_start(); // Capture all output into buffer
-    require($ss_dir . '/inc/custom-styles.php'); // Grab the custom-style.php file
-    $css = ob_get_clean(); // Store output in a variable, then flush the buffer
-    file_put_contents($ss_dir . '/library/css/custom-styles.css', $css, LOCK_EX); // Save it as a css file
-}
-add_action( 'acf/save_post', 'generate_options_css', 20 ); //Parse the output and write the CSS file on post save
+//function generate_options_css() {
+//    $ss_dir = get_stylesheet_directory();
+//    ob_start(); // Capture all output into buffer
+//    require($ss_dir . '/inc/custom-styles.php'); // Grab the custom-style.php file
+//    $css = ob_get_clean(); // Store output in a variable, then flush the buffer
+//    file_put_contents($ss_dir . '/library/css/custom-styles.css', $css, LOCK_EX); // Save it as a css file
+//}
+//add_action( 'acf/save_post', 'generate_options_css', 20 ); //Parse the output and write the CSS file on post save
 
-function load_css()
-  {
-    wp_enqueue_style('custom-styles', get_stylesheet_directory_uri() . '/library/css/custom-styles.css', array(), 0.256, 'all');
-  }
-  add_action('wp_print_styles', 'load_css', 99);
+//function load_css()
+//  {
+//    wp_enqueue_style('custom-styles', get_stylesheet_directory_uri() . '/library/css/custom-styles.css', array(), 0.256, 'all');
+//  }
+//  add_action('wp_print_styles', 'load_css', 99);
 
 include 'woocommerce/woo-functions.php';
 
