@@ -14,78 +14,78 @@ and will be used across all viewports.
 //  GENERAL STYLES
 
 .flex {
-    display: flex;
+  display: flex;
 
-    &--column {
+  &--column {
+    flex-direction: column;
+
+    &_reverse {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &--row {
+    flex-direction: row;
+
+    &_collapse {
+      @media only screen and (max-width: 48em) {
         flex-direction: column;
-
-        &_reverse {
-            flex-direction: column-reverse;
-        }
+      }
     }
 
-    &--row {
-        flex-direction: row;
-
-        &_collapse {
-            @media only screen and (max-width: 48em) {
-                flex-direction: column;
-            }
-        }
-
-        &_reverse {
-            flex-direction: row-reverse;
-        }
+    &_reverse {
+      flex-direction: row-reverse;
     }
+  }
 }
 
 body {
-    background-color: $white;
-    color: $text-color;
-    font-family: $body-text;
-    font-size: 100%;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    line-height: 1.5;
+  background-color: $white;
+  color: $text-color;
+  font-family: $body-text;
+  font-size: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
 }
 
 img {
-    image-rendering: auto;
+  image-rendering: auto;
 }
 
 #inner-header,
 #inner-footer {
-    flex-direction: column;
+  flex-direction: column;
 }
 
 .about-us {
-    margin: 3em 0;
-    text-align: left;
+  margin: 3em 0;
+  text-align: left;
 }
 
 #inner-footer {
-    .footer_logo {
-        align-self: center;
-        margin-top: 2em;
+  .footer_logo {
+    align-self: center;
+    margin-top: 2em;
 
-        img {
-            height: auto;
-            max-width: 120px;
-            width: 100%;
-        }
+    img {
+      height: auto;
+      max-width: 120px;
+      width: 100%;
     }
+  }
 
-    .nav {
-        flex-direction: row;
-        flex-wrap: wrap;
-        height: auto;
-        justify-content: center;
-        opacity: 1;
+  .nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: auto;
+    justify-content: center;
+    opacity: 1;
 
-        li {
-            border-bottom: 0;
-        }
+    li {
+      border-bottom: 0;
     }
+  }
 }
 
 .mobile-hide {

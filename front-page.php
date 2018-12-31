@@ -44,7 +44,7 @@
 		        $loop = new WP_Query( $args );
 		        while ( $loop->have_posts() ) : $loop->the_post(); global $product;
 				?>
-				
+
 				<div class="col-xs-5 article__thumbnail">
 					<a href="<?php echo get_permalink( $loop->post->ID ) ?>" title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>">
 
