@@ -16,8 +16,27 @@
             .woocommerce-product-details__short-description {
                 color: $white;
 
+                h4 {
+                  margin-bottom: 1em;
+                }
+
                 p {
                     color: $white;
+                }
+
+                ul {
+
+                  li {
+                    margin-bottom: .5em;
+
+                    &:before {
+                      content: "\f111";
+                      @include fa-outline;
+                      font-size: .7em;
+                      color: $accent;
+                      margin-right: .5em;
+                    }
+                  }
                 }
             }
 

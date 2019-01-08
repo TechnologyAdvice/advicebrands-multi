@@ -1,8 +1,8 @@
-<?php 
+<?php
 function starter_theme_customizer($wp_customize)
 {
   // $wp_customize calls go here.
-	
+
 	// Primary
     $wp_customize->add_setting('primary_color', array(
         'default' => '',
@@ -138,6 +138,7 @@ function theme_get_customizer_css()
         ?>
         .woocommerce div.product .product_title {border-bottom-color:<?php echo $accent_color; ?> !important;}
         .woocommerce .button.button.alt {background-color:<?php echo $accent_color; ?> !important;}
+				.woocommerce div.product .woocommerce-product-details__short-description ul li:before {color:<?php echo $accent_color; ?> !important;}
       <?php
 
     }

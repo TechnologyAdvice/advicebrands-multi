@@ -30,6 +30,17 @@ http://web-design-weekly.com/blog/2013/05/12/handy-sass-mixins/
   min-height: 120px !important;
 }
 
+// FONTAWESOME //
+@mixin fa-solid {
+  font-family: $fontawesome;
+  font-weight: 900;
+}
+
+@mixin fa-outline {
+  font-family: $fontawesome;
+  font-weight: 400;
+}
+
 /*********************
 TRANSITION
 *********************/

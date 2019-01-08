@@ -596,8 +596,19 @@ probably best not to use it. I mean, were you going to anyway? */
     padding-bottom: 0.5em; }
   .woocommerce div.product .woocommerce-product-details__short-description {
     color: #fff; }
+    .woocommerce div.product .woocommerce-product-details__short-description h4 {
+      margin-bottom: 1em; }
     .woocommerce div.product .woocommerce-product-details__short-description p {
       color: #fff; }
+    .woocommerce div.product .woocommerce-product-details__short-description ul li {
+      margin-bottom: .5em; }
+      .woocommerce div.product .woocommerce-product-details__short-description ul li:before {
+        content: "\f111";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 400;
+        font-size: .7em;
+        color: #ef6826;
+        margin-right: .5em; }
   .woocommerce div.product div.images,
   .woocommerce div.product div.summary {
     width: 100%; }
@@ -2175,10 +2186,7 @@ ul[id^="menu-"] {
         .hero--content_articles > div > div {
           display: -webkit-box;
           display: -ms-flexbox;
-          display: flex;
-          -webkit-box-pack: center;
-              -ms-flex-pack: center;
-                  justify-content: center; }
+          display: flex; }
           .hero--content_articles > div > div:nth-child(2) {
             border-left: 1px solid #084854;
             border-right: 1px solid #084854; }
