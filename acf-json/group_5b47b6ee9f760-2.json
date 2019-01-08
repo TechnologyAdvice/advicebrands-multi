@@ -222,112 +222,6 @@
             ]
         },
         {
-            "key": "field_5b4c9bcbeba34",
-            "label": "Site Colors",
-            "name": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 1
-        },
-        {
-            "key": "field_5b4c9bdceba35",
-            "label": "Primary",
-            "name": "primary",
-            "type": "color_picker",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "20",
-                "class": "",
-                "id": ""
-            },
-            "default_value": ""
-        },
-        {
-            "key": "field_5bfefe3247b9a",
-            "label": "Primary Light",
-            "name": "primary_light",
-            "type": "color_picker",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "20",
-                "class": "",
-                "id": ""
-            },
-            "default_value": ""
-        },
-        {
-            "key": "field_5b4ca0afe8583",
-            "label": "Primary Medium",
-            "name": "primary_medium",
-            "type": "color_picker",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "20",
-                "class": "",
-                "id": ""
-            },
-            "default_value": ""
-        },
-        {
-            "key": "field_5b4ca0c9e8584",
-            "label": "Primary Dark",
-            "name": "primary_dark",
-            "type": "color_picker",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "20",
-                "class": "",
-                "id": ""
-            },
-            "default_value": ""
-        },
-        {
-            "key": "field_5b4c9cb1eba36",
-            "label": "Accent",
-            "name": "accent",
-            "type": "color_picker",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "20",
-                "class": "",
-                "id": ""
-            },
-            "default_value": ""
-        },
-        {
-            "key": "field_5b4c9d03eba37",
-            "label": "Text",
-            "name": "text",
-            "type": "color_picker",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "20",
-                "class": "",
-                "id": ""
-            },
-            "default_value": ""
-        },
-        {
             "key": "field_5b47b8f842ef1",
             "label": "Physical Address",
             "name": "",
@@ -604,5 +498,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1543438335
+    "modified": 1546982797
 }
