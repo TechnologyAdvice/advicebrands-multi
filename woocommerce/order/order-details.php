@@ -13,7 +13,7 @@
  * @see 	https://docs.woocommerce.com/document/template-structure/
  * @author  WooThemes
  * @package WooCommerce/Templates
- * @version 3.3.0
+ * @version 3.5.2
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -33,9 +33,3 @@ if ( $show_downloads ) {
 	wc_get_template( 'order/order-downloads.php', array( 'downloads' => $downloads, 'show_title' => true ) );
 }
 ?>
-
-
-<?php
-if ( $show_customer_details ) {
-	wc_get_template( 'order/order-details-customer.php', array( 'order' => $order ) );
-}

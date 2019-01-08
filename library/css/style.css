@@ -673,6 +673,9 @@ probably best not to use it. I mean, were you going to anyway? */
   width: 50%;
   vertical-align: top !important; }
 
+.product__download-content {
+  min-height: calc(100vh - 480px); }
+
 .container-fluid,
 .container {
   margin-right: auto;

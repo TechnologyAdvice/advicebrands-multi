@@ -133,3 +133,11 @@
         vertical-align: top !important;
     }
 }
+
+.product {
+  &__download {
+    &-content {
+      min-height: calc(100vh - 480px);
+    }
+  }
+}
