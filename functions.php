@@ -145,30 +145,11 @@ function starter_register_sidebars() {
 
 } // don't remove this bracket!
 
-
-
 function starter_fonts() {
   wp_enqueue_style('googleFonts', '//fonts.googleapis.com/css?family=Montserrat:400,500,700|Roboto:300,400,700');
 }
 
 add_action('wp_enqueue_scripts', 'starter_fonts');
-
-
-//Call custom-styles.php
-//function generate_options_css() {
-//    $ss_dir = get_stylesheet_directory();
-//    ob_start(); // Capture all output into buffer
-//    require($ss_dir . '/inc/custom-styles.php'); // Grab the custom-style.php file
-//    $css = ob_get_clean(); // Store output in a variable, then flush the buffer
-//    file_put_contents($ss_dir . '/library/css/custom-styles.css', $css, LOCK_EX); // Save it as a css file
-//}
-//add_action( 'acf/save_post', 'generate_options_css', 20 ); //Parse the output and write the CSS file on post save
-
-//function load_css()
-//  {
-//    wp_enqueue_style('custom-styles', get_stylesheet_directory_uri() . '/library/css/custom-styles.css', array(), 0.256, 'all');
-//  }
-//  add_action('wp_print_styles', 'load_css', 99);
 
 include 'woocommerce/woo-functions.php';
 
