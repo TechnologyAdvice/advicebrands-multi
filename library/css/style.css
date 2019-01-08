@@ -639,6 +639,12 @@ probably best not to use it. I mean, were you going to anyway? */
 .woocommerce-tabs h2 {
   display: none; }
 
+.woocommerce-pagination ul {
+  border: 0 !important; }
+  .woocommerce-pagination ul li {
+    border-right: 0 !important;
+    margin: 0 .5em; }
+
 .woocommerce-checkout #payment, .woocommerce-checkout-payment {
   background: #fff; }
 
@@ -2119,12 +2125,20 @@ ul[id^="menu-"] {
   .hero--inner {
     height: 120px;
     min-height: 120px !important; }
+    .hero--inner .hero--text {
+      margin-bottom: auto; }
     .hero--inner .hero--hero-text {
       font-size: 3.5rem;
-      line-height: 1; }
+      line-height: 1;
+      max-width: 100%;
+      color: #fff !important; }
     .hero--inner .hero--background-image {
       height: 120px;
       min-height: 120px !important; }
+    .hero--inner #main {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
   .hero--background-image {
     height: 100vh;
     min-height: 905px;
@@ -2305,7 +2319,6 @@ ul[id^="menu-"] {
   .article__thumbnail:hover img {
     opacity: 0.8; }
   .article__thumbnail:hover h3 {
-    color: black !important;
     font-weight: normal; }
 
 .first {

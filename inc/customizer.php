@@ -128,7 +128,7 @@ function theme_get_customizer_css()
     if (!empty($primary_dark_color)) {
         ?>
         body.site a, .hero--hero-text {color:<?php echo $primary_dark_color; ?> !important;}
-        .featured-content h1, .hero--text p {background-color:<?php echo $primary_dark_color; ?> !important;}
+        .featured-content h1, .hero--text p, .woocommerce nav.woocommerce-pagination ul li span.current {background-color:<?php echo $primary_dark_color; ?> !important;}
       <?php
 
     }
@@ -146,7 +146,7 @@ function theme_get_customizer_css()
     $primary_light_color = get_theme_mod('primary_light_color', '');
     if (!empty($primary_light_color)) {
         ?>
-        .footer-nav li a, .footer .social_platforms a, .hero--inner .hero--hero-text, .article__thumbnail:hover h3 {color:<?php echo $primary_light_color; ?> !important;}
+        .footer-nav li a, .footer .social_platforms a, .article__thumbnail:hover h3, .woocommerce nav.woocommerce-pagination ul li span.current {color:<?php echo $primary_light_color; ?> !important;}
         #wpadminbar a, .woocommerce a.button {color: white !important;}
         input[type="search"]:focus {background-color: white !important;}
       <?php

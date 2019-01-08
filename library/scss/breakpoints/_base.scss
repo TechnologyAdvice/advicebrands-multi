@@ -381,13 +381,23 @@ $title-lineheight: $title-pad + 1;
     &--inner {
         @include hero-height-inner;
 
+        .hero--text {
+          margin-bottom: auto;
+        }
+
         .hero--hero-text {
             font-size: 3.5rem;
             line-height: 1;
+            max-width: 100%;
+            color: #fff !important;
         }
 
         .hero--background-image {
             @include hero-height-inner;
+        }
+
+        #main {
+          display: flex;
         }
     }
 
@@ -609,7 +619,6 @@ $title-lineheight: $title-pad + 1;
         }
 
         h3 {
-            color: black !important;
             font-weight: normal;
         }
     }

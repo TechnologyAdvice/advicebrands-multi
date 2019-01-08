@@ -77,13 +77,24 @@
     a.button {
         font-weight: normal;
     }
-}
 
-.woocommerce-tabs {
+    &-tabs {
     ul.tabs,
     h2 {
         display: none;
     }
+  }
+
+  &-pagination {
+    ul {
+      border:0 !important;
+
+      li {
+        border-right:0 !important;
+        margin:0 .5em;
+      }
+    }
+  }
 }
 
 .woocommerce-checkout #payment, .woocommerce-checkout-payment {
