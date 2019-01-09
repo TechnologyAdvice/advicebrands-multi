@@ -89,7 +89,7 @@
 		<?php endif; ?>
 		<div class="hero hero--inner"><div>
 	</div>
-<?php 
+<?php
 } else { ?>
 	<!-- header (other) -->
 	<header class="header header--inner" role="banner" itemscope itemtype="http://schema.org/WPHeader">
@@ -144,13 +144,13 @@
 								<div class="hero--text">
 									<h1>
 										<span class="hero--hero-text">
-											<?php 
-												if (is_product_tag()) : { 
+											<?php
+												if (is_product_tag()) : {
 													single_tag_title();
-												} elseif (is_shop()) : { 
-													echo "Library"; 
-												} else : { 
-													the_title(); 
+												} elseif (is_shop()) : {
+													echo "Library";
+												} else : {
+													the_title();
 												} endif;
 											?>
 										</span>
@@ -162,5 +162,5 @@
 				</div>
 			</div>
 		</div>
-<?
+<?php
 } ?>
