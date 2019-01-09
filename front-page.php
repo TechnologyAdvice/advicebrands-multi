@@ -36,10 +36,8 @@
 						'ignore_sticky_posts' => 1,
 						'product_tag' => $tag_one,
 						'posts_per_page' => 2,
-						'orderby' => $atts['desc'],
-						'order' => $atts['order'],
+						'orderby' => 'desc',
 						'meta_query' => $meta_query,
-						'tax_query' => $tax_query,
 					);
 		        $loop = new WP_Query( $args );
 		        while ( $loop->have_posts() ) : $loop->the_post(); global $product;
@@ -80,9 +78,7 @@
 						'ignore_sticky_posts' => 1,
 						'product_tag' => $tag_two,
 						'posts_per_page' => 2,
-						'orderby' => $atts['desc'],
-						'order' => $atts['order'],
-						'meta_query' => $meta_query,
+						'orderby' => 'desc',
 						'tax_query' => $tax_query,
 					);
 		        $loop = new WP_Query( $args );
@@ -121,12 +117,10 @@
 							 'post_type'           => 'product',
 							 'post_status'         => 'publish',
 							 'ignore_sticky_posts' => 1,
-							 'product_tag'		   => $tag_three,
+							 'product_tag'		     => $tag_three,
 							 'posts_per_page'      => 2,
-							 'orderby'             => $atts['desc'],
-							 'order'               => $atts['order'],
+							 'orderby'             => 'desc',
 							 'meta_query'          => $meta_query,
-							 'tax_query'           => $tax_query,
 						);
 		        $loop = new WP_Query( $args );
 		        while ( $loop->have_posts() ) : $loop->the_post(); global $product;

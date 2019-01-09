@@ -18,11 +18,10 @@
        'post_status'         => 'publish',
        'ignore_sticky_posts' => 1,
        'posts_per_page'      => 5,
-       'hide_empty'          => yes,
+       'hide_empty'          => true,
        'order'               => 'ASC',
        'meta_query'          => $meta_query,
        'tax_query'           => $tax_query,
-       'include'             => $ids,
        'taxonomy'            => 'product_cat',
     );
 
