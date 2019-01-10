@@ -1,11 +1,10 @@
 <!--404-->
-<?php get_header(); ?>
+<?php get_header('404'); ?>
 
-			<div id="content">
+			<div id="content" style="height:100vh;">
 
-				<div id="inner-content" class="wrap cf row">
-
-					<main id="main" class="col-xs-12 col-sm-8 col-lg-9 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+				<div id="inner-content" class="wrap row" style="background:#fff;height: 50vh; display: flex; justify-content: center; align-items: center;">
+					<main id="main" class="col-xs-12 col-md-10" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
 						<article id="post-not-found" class="hentry cf">
 
@@ -27,12 +26,6 @@
 
 							</section>
 
-							<footer class="article-footer">
-
-									<p><?php _e( 'This is the 404.php template.', 'startertheme' ); ?></p>
-
-							</footer>
-
 						</article>
 
 					</main>
@@ -40,5 +33,4 @@
 				</div>
 
 			</div>
-
-<?php get_footer(); ?>
+			<?php get_footer(); ?>

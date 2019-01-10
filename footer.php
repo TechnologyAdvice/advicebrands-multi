@@ -3,7 +3,7 @@
 		include 'partials/logo-bar.php';
 } ?>
 		<footer class="footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
-				<?php if(have_posts()) : the_post(); ?>
+				<?php the_post(); ?>
 				<div id="inner-footer" class="wrap row">
 					<?php if( get_field('secondary_logo', 'option')): ?>
 						<div class="col-xs-12 col-md-3 footer_logo">
@@ -55,7 +55,6 @@
 					</div>
 				</div>
 		</footer>
-		<?php endif; ?>
 		<?php // all js scripts are loaded in library/starter.php ?>
 		<?php wp_footer(); ?>
 		<!-- close container -->
