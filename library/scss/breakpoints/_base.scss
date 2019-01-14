@@ -474,9 +474,13 @@ $title-lineheight: $title-pad + 1;
                 > div {
                     display: flex;
 
+                    @media only screen and (max-width: 64em) {
+                      padding-left: 0;
+                      padding-right: 0;
+                    }
+
                     &:nth-child(2) {
-                        border-left: 1px solid $dark-primary;
-                        border-right: 1px solid $dark-primary;
+                        background-color: rgba($black, 0.1);
                     }
                 }
             }

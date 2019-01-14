@@ -43,7 +43,7 @@
 		        while ( $loop->have_posts() ) : $loop->the_post(); global $product;
 				?>
 
-				<div class="col-xs-5 article__thumbnail">
+				<div class="col-xs-6 article__thumbnail">
 					<a href="<?php echo get_permalink( $loop->post->ID ) ?>" title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>">
 
 							<?php if (has_post_thumbnail( $loop->post->ID )) echo get_the_post_thumbnail($loop->post->ID, 'shop_catalog'); ?>
@@ -84,7 +84,7 @@
 		        $loop = new WP_Query( $args );
 		        while ( $loop->have_posts() ) : $loop->the_post(); global $product;
 				?>
-				<div class="col-xs-5 article__thumbnail">
+				<div class="col-xs-6 article__thumbnail">
 					<a href="<?php echo get_permalink( $loop->post->ID ) ?>" title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>">
 
 							<?php if (has_post_thumbnail( $loop->post->ID )) echo get_the_post_thumbnail($loop->post->ID, 'shop_catalog'); ?>
@@ -125,7 +125,7 @@
 		        $loop = new WP_Query( $args );
 		        while ( $loop->have_posts() ) : $loop->the_post(); global $product;
 				?>
-				<div class="col-xs-5 article__thumbnail">
+				<div class="col-xs-6 article__thumbnail">
 					<a href="<?php echo get_permalink( $loop->post->ID ) ?>" title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>">
 
 							<?php if (has_post_thumbnail( $loop->post->ID )) echo get_the_post_thumbnail($loop->post->ID, 'shop_catalog'); ?>

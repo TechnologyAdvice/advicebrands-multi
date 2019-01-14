@@ -2204,9 +2204,12 @@ ul[id^="menu-"] {
           display: -webkit-box;
           display: -ms-flexbox;
           display: flex; }
+          @media only screen and (max-width: 64em) {
+            .hero--content_articles > div > div {
+              padding-left: 0;
+              padding-right: 0; } }
           .hero--content_articles > div > div:nth-child(2) {
-            border-left: 1px solid #084854;
-            border-right: 1px solid #084854; }
+            background-color: rgba(0, 0, 0, 0.1); }
       .hero--content_articles h2 {
         background-color: rgba(172, 192, 196, 0.3);
         margin-top: 0;
