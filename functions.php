@@ -65,30 +65,12 @@ if ( ! isset( $content_width ) ) {
 /************* THUMBNAIL SIZE OPTIONS *************/
 
 // Thumbnail sizes
+add_image_size( 'feature-thumb', 350, 350, array( 'left', 'top' ) );
 add_image_size( 'logo', 300, false );
 add_image_size( 'product', 400, false );
 add_image_size( 'full-width', 1440, false );
 
 
-
-/*
-add_filter( 'image_size_names_choose', 'starter_custom_image_sizes' );
-
-function starter_custom_image_sizes( $sizes ) {
-    return array_merge( $sizes, array(
-        'gallery-image' => __('Gallery Image'),
-        'starter-thumb-600' => __('600px by 150px'),
-        'starter-thumb-300' => __('300px by 100px'),
-    ) );
-}
-*/
-/*
-The function above adds the ability to use the dropdown menu to select
-the new images sizes you have just created from within the media manager
-when you add media to your content blocks. If you add more image sizes,
-duplicate one of the lines in the array and name it according to your
-new image size.
-*/
 
 
 

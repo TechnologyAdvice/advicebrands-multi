@@ -46,7 +46,7 @@
 				<div class="col-xs-6 article__thumbnail">
 					<a href="<?php echo get_permalink( $loop->post->ID ) ?>" title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>">
 
-							<?php if (has_post_thumbnail( $loop->post->ID )) echo get_the_post_thumbnail($loop->post->ID, 'shop_catalog'); ?>
+							<?php the_post_thumbnail('feature-thumb'); ?>
 
 							<h3><?php the_title(); ?></h3>
 
@@ -87,7 +87,7 @@
 				<div class="col-xs-6 article__thumbnail">
 					<a href="<?php echo get_permalink( $loop->post->ID ) ?>" title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>">
 
-							<?php if (has_post_thumbnail( $loop->post->ID )) echo get_the_post_thumbnail($loop->post->ID, 'shop_catalog'); ?>
+							<?php the_post_thumbnail('feature-thumb'); ?>
 
 							<h3><?php the_title(); ?></h3>
 
@@ -128,7 +128,7 @@
 				<div class="col-xs-6 article__thumbnail">
 					<a href="<?php echo get_permalink( $loop->post->ID ) ?>" title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>">
 
-							<?php if (has_post_thumbnail( $loop->post->ID )) echo get_the_post_thumbnail($loop->post->ID, 'shop_catalog'); ?>
+							<?php the_post_thumbnail('feature-thumb'); ?>
 
 							<h3><?php the_title(); ?></h3>
 
