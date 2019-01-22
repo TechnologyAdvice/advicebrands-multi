@@ -213,7 +213,7 @@ probably best not to use it. I mean, were you going to anyway? */
 
 .overlay {
   height: 100vh;
-  min-height: 905px; }
+  min-height: 975px; }
 
 .content_section--content_left .content_section--content {
   text-align: left; }
@@ -259,8 +259,8 @@ come into play. Have fun!
     text-shadow: 0px 0px 0px #084854;
     margin-top: auto; }
   .hero--hero-text {
-    font-size: 5.5rem;
-    line-height: .8; }
+    font-size: 5rem;
+    line-height: 1; }
   .hero--line-two {
     font-size: 3.5rem; }
   .hero--logo-bar {

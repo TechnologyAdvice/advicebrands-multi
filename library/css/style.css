@@ -2141,7 +2141,7 @@ ul[id^="menu-"] {
       display: flex; }
   .hero--background-image {
     height: 100vh;
-    min-height: 905px;
+    min-height: 975px;
     background-size: cover;
     background-position: 50%;
     background-attachment: inherit;
@@ -2462,19 +2462,19 @@ div[class^="content_section--"] {
       .featured-content .articles a .h2 {
         text-decoration: none;
         color: #3bd0ed; }
-    .featured-content .articles li {
+    .featured-content .articles > li {
       margin-top: 1em;
       margin-bottom: 1em;
       padding: 1em; }
-      .featured-content .articles li .img {
+      .featured-content .articles > li .img {
         -webkit-box-ordinal-group: 2;
             -ms-flex-order: 1;
                 order: 1; }
-      .featured-content .articles li .spacer {
+      .featured-content .articles > li .spacer {
         -webkit-box-ordinal-group: 3;
             -ms-flex-order: 2;
                 order: 2; }
-      .featured-content .articles li .content {
+      .featured-content .articles > li .content {
         -webkit-box-ordinal-group: 4;
             -ms-flex-order: 3;
                 order: 3;
@@ -2490,14 +2490,14 @@ div[class^="content_section--"] {
         -webkit-box-direction: normal;
             -ms-flex-direction: column;
                 flex-direction: column; }
-      .featured-content .articles li:nth-child(even) {
+      .featured-content .articles > li:nth-child(even) {
         background-color: #e8edee;
         padding: 3em 0; }
-        .featured-content .articles li:nth-child(even) .img {
+        .featured-content .articles > li:nth-child(even) .img {
           -webkit-box-ordinal-group: 4;
               -ms-flex-order: 3;
                   order: 3; }
-        .featured-content .articles li:nth-child(even) .content {
+        .featured-content .articles > li:nth-child(even) .content {
           -webkit-box-ordinal-group: 2;
               -ms-flex-order: 1;
                   order: 1; }
@@ -2891,7 +2891,7 @@ tweeners.
       color: #fff; }
   .overlay {
     height: 100vh;
-    min-height: 905px; }
+    min-height: 975px; }
   .content_section--content_left .content_section--content {
     text-align: left; }
   .content_section--content_center .content_section--content {
@@ -2938,8 +2938,8 @@ come into play. Have fun!
       text-shadow: 0px 0px 0px #084854;
       margin-top: auto; }
     .hero--hero-text {
-      font-size: 5.5rem;
-      line-height: .8; }
+      font-size: 5rem;
+      line-height: 1; }
     .hero--line-two {
       font-size: 3.5rem; }
     .hero--logo-bar {

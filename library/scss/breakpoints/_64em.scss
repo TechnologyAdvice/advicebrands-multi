@@ -23,8 +23,8 @@ come into play. Have fun!
     }
 
     &--hero-text {
-        font-size: 5.5rem;
-        line-height: .8;
+        font-size: 5rem;
+        line-height: 1;
     }
 
     &--line-two {
@@ -124,7 +124,7 @@ div[class^="content_section--"] {
                         border-bottom: 0;
                     }
 				}
-				
+
                 ul {
                     top: 0;
                     left: 100%;
