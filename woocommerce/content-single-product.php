@@ -45,7 +45,7 @@ if ( post_password_required() ) {
 		</div>
 		<div class="col-xs-12 col-md-6 flex">
 			<div class="summary entry-summary flex flex--column">
-				<div class="product_title entry-title"><?php the_title(); ?></div>
+				<h1 class="product_title entry-title"><?php the_title(); ?></h1>
 				<div class="woocommerce-product-details__short-description"><?php the_field('product_description'); ?></div>
 			<?php
 				/**
@@ -62,7 +62,7 @@ if ( post_password_required() ) {
 				 */
 				do_action( 'woocommerce_single_product_summary' );
 			?>
-			
+
 			<?php if(get_field('bullets')) : {
 				echo "<div class='bullets woocommerce-product-details__short-description'>";
 				the_field('bullets');
