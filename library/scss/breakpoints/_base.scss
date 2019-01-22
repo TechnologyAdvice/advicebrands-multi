@@ -808,6 +808,7 @@ div[class^="content_section--"] {
 
     .articles {
         text-align: left;
+        margin-bottom: 0;
 
         a {
             text-decoration: none;
@@ -837,6 +838,10 @@ div[class^="content_section--"] {
                 justify-content: center;
                 display: flex;
                 flex-direction: column;
+            }
+
+            &:last-of-type {
+              margin-bottom: 0;
             }
 
             &:nth-child(even) {
