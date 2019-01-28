@@ -76,7 +76,7 @@ function starter_theme_customizer($wp_customize)
     $wp_customize->remove_section('background_image');
     $wp_customize->remove_section('static_front_page');
     $wp_customize->remove_panel('widgets');
-    $wp_customize->remove_section('custom_css');
+    // $wp_customize->remove_section('custom_css');
     $wp_customize->remove_control("background_color");
 
   // Uncomment the following to change the default section titles
