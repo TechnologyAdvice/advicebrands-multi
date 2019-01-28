@@ -70,6 +70,10 @@ add_image_size( 'logo', 300, false );
 add_image_size( 'product', 400, false );
 add_image_size( 'full-width', 1440, false );
 
+add_filter( 'single_product_archive_thumbnail_size', function( $size ) {
+return 'feature-thumb';
+} );
+
 
 
 

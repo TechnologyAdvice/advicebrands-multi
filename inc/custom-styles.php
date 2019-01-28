@@ -44,6 +44,10 @@ body.site a, .hero--hero-text {color:<?php the_field('primary_dark','option');?>
 
 .woocommerce .button.button.alt {background-color:<?php the_field('accent', 'option'); ?> !important;}
 
+.woocommerce-error::before {color:<?php the_field('accent', 'option'); ?> !important;}
+
+.woocommerce-error {border-top-color:<?php the_field('accent', 'option'); ?> !important;}
+
 /* Text */
 
 body.site  {

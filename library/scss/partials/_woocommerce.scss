@@ -59,6 +59,25 @@
         }
     }
 
+    h2.woocommerce-loop-product__title {
+      @media only screen and (min-width: 48em) {
+        min-height: 85px;
+      }
+    }
+
+    .woocommerce-notices-wrapper {
+      position: absolute;
+      width: 100%;
+      max-width: 1030px;
+      z-index: 99;
+      margin-top: 1em;
+    }
+
+    .woocommerce-error, .woocommerce-info, .woocommerce-message {
+      background-color: #f7f7f7;
+      box-shadow: 1px 1px 5px rgba($black, 0.6);
+    }
+
     .button.button.alt {
         background-color: $accent;
         font-weight: 400;
